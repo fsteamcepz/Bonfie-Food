@@ -1,0 +1,33 @@
+# Ігнорувати конкретні JSON-файли
+Huggingface.json
+Clarifai.json
+client_secret_email.json
+client_secret_food_analyzer.json
+Edamam_Products.json
+Edamam_Recipes.json
+Edamam_Nutrition.json
+
+# Ігнорувати всі файли у папці bin/Debug
+bin/Debug/
+
+# Ігнорувати всі файли у папках bin/ та obj/
+bin/
+obj/
+
+# Ігнорувати бінарні файли
+*.exe
+*.dll
+*.pdb
+*.resources
+
+# Ігнорувати файли NuGet
+packages/
+*.nupkg
+
+# Ігнорувати системні файли Visual Studio
+*.user
+*.vs/
+*.suo
+
+# Ігнорувати файли .env
+.env
