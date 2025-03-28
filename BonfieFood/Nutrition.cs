@@ -229,9 +229,9 @@ namespace BonfieFood
                             age--;
                         }                            
 
-                        decimal bmr = gender.ToLower() == "чоловік"
-                            ? 88.36m + (13.4m * weight.Value) + (4.8m * height.Value) - (5.7m * age)
-                            : 447.6m + (9.2m * weight.Value) + (3.1m * height.Value) - (4.3m * age);
+                        decimal? bmr = (gender == "Чоловік")
+                                ? (10m * weight) + (6.25m * height) - (5m * age) + 5m
+                                : (10m * weight) + (6.25m * height) - (5m * age) - 161m;
 
                         decimal activityMultiplier = GetActivityMultiplierById(physicalActivityId.Value);
                         return (int)(bmr * activityMultiplier);

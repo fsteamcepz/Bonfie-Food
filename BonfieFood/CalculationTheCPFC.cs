@@ -191,10 +191,11 @@ namespace BonfieFood
             int bmiCategoryId = GetBMICategoryId(bmiCategory);
 
             // розрахунок добової норми калорій (TDEE – Total Daily Energy Expenditure)
-            // Формула "Гарріса Бенедикта"
+            // Формула "Міффліна-Сен-Джора"
             decimal bmr = (genderUser == "Чоловік")
-                ? 88.36m + (13.4m * weightUser) + (4.8m * heightUser) - (5.7m * ageUser)
-                : 447.6m + (9.2m * weightUser) + (3.1m * heightUser) - (4.3m * ageUser);
+                    ? (10m * weightUser) + (6.25m * heightUser) - (5m * ageUser) + 5m
+                    : (10m * weightUser) + (6.25m * heightUser) - (5m * ageUser) - 161m;
+
 
             decimal activityMultiplier = GetActivityMultiplier(physicalActivityUser);
             int dailyCalories = (int)(bmr * activityMultiplier);

@@ -72,7 +72,7 @@ namespace BonfieFood
 
                         db.closeConnection();
 
-                        label_CPFC.Text = "Total Daily Energy Expenditure";
+                        label_CPFC.Text = "Total Daily Energy";
                         calculateTheCPFC.Text = "Update TDEE";
 
                         if (bmr == 0)
@@ -112,7 +112,7 @@ namespace BonfieFood
                         myFat.Text = "0" + "\nfat";
                         myCarbs.Text = "0" + "\ncarbs";
 
-                        label_CPFC.Text = "Total Daily Energy Expenditure";
+                        label_CPFC.Text = "Total Daily Energy";
                         calculateTheCPFC.Text = "Calculate TDEE";
                     }
                 }
@@ -172,7 +172,7 @@ namespace BonfieFood
             // Добова норма КБЖВ
             UpdateDailyCalories(dailyCalories);
 
-            label_CPFC.Text = "Total Daily Energy Expenditure";
+            label_CPFC.Text = "Total Daily Energy";
             calculateTheCPFC.Text = "Update TDEE";
         }
         private void UpdateAge(int currentAge)
@@ -332,15 +332,15 @@ namespace BonfieFood
 
         private void ConfigureInfoCPFC()
         {
-            toolTip_formula.ToolTipTitle = "Формула «Гарріса-Бенедикта»";
-            toolTip_formula.SetToolTip(info_dish, "TDEE розраховується за формулою Гарріса-Бенедикта,<br>" +
+            toolTip_formula.ToolTipTitle = "Формула «Міффлін-Сан-Джеора»";
+            toolTip_formula.SetToolTip(info_dish, "TDEE розраховується за формулою «Міффлін-Сан-Джеора»,<br>" +
                                                   "яка враховує зріст, вагу, вік і стать для визначення<br>" +
                                                   "базового метаболізму (BMR). Потім загальна добова<br>" +
                                                   "потреба в калоріях розраховується за формулою:<br>" +
                                                   "TDEE = BMR × коефіцієнт активності.<br><br>" +
                                                   "Розрахунок BMR:<br>" +
-                                                  "Чоловіки: 88.36 + (13.4 × ВАГА) + (4.8 × ЗРІСТ) - (5.7 × ВІК)<br>" +
-                                                  "Жінки: 447.6 + (9.2 × ВАГА) + (3.1 × ЗРІСТ) - (4.3 × ВІК)");
+                                                  "Чоловіки: (10 × ВАГА) + (6.25 × ЗРІСТ) - (5 × ВІК) + 4<br>" +
+                                                  "Жінки: (10 × ВАГА) + (6.25 × ЗРІСТ) - (5 × ВІК)");
 
             info_dish.MouseEnter += (sender, e) =>
             {
