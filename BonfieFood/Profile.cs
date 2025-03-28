@@ -72,8 +72,8 @@ namespace BonfieFood
 
                         db.closeConnection();
 
-                        label_CPFC.Text = "The daily rate of CPFC";
-                        calculateTheCPFC.Text = "Update CPFC";
+                        label_CPFC.Text = "Total Daily Energy Expenditure";
+                        calculateTheCPFC.Text = "Update TDEE";
 
                         if (bmr == 0)
                         {
@@ -112,8 +112,8 @@ namespace BonfieFood
                         myFat.Text = "0" + "\nfat";
                         myCarbs.Text = "0" + "\ncarbs";
 
-                        label_CPFC.Text = "The daily rate of CPFC";
-                        calculateTheCPFC.Text = "Calculate CPFC";
+                        label_CPFC.Text = "Total Daily Energy Expenditure";
+                        calculateTheCPFC.Text = "Calculate TDEE";
                     }
                 }
             }
