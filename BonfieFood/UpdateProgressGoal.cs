@@ -109,10 +109,15 @@ namespace BonfieFood
         private void LoadUserData()
         {
             string query = @"SELECT gc.categoryName, gp.progressValue, ug.isCompleted
-                     FROM GoalCategories gc
-                     JOIN UserGoals ug ON ug.id_Category = gc.idCategory
-                     LEFT JOIN GoalProgress gp ON gp.id_UserGoals = ug.idUserGoals
-                     WHERE ug.id_User = @id_User AND ug.goalDate = @goalDate";
+                             FROM GoalCategories gc
+                             JOIN UserGoals ug ON ug.id_Category = gc.idCategory
+                             LEFT JOIN GoalProgress gp ON gp.id_UserGoals = ug.idUserGoals
+                             WHERE ug.id_User = @id_User
+                                   AND ug.goalDate = @goalDate
+                                   AND gp.progressDate = (
+                                        SELECT MAX(progressDate)
+                                        FROM GoalProgress
+                                        WHERE id_UserGoals = ug.idUserGoals)";
 
             using (SqlCommand cmd = new SqlCommand(query, db.getConnection()))
             {
@@ -122,7 +127,7 @@ namespace BonfieFood
                 db.openConnection();
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    bool foundActiveGoal = false;
+                    bool isFoundActiveGoal = false;
                     string activeCategory = "";
                     decimal activeProgress = 0m;
 
@@ -140,13 +145,13 @@ namespace BonfieFood
                         {
                             activeCategory = categoryName;
                             activeProgress = progress;
-                            foundActiveGoal = true;
+                            isFoundActiveGoal = true;
                             break;
                         }
                     }
                     db.closeConnection();
 
-                    if (foundActiveGoal)
+                    if (isFoundActiveGoal)
                     {
                         updateGoal.SelectedItem = activeCategory;
                         InactiveGoal();

@@ -186,11 +186,12 @@ namespace BonfieFood
 
             string bmiCategory = GetBMICategory(bmi);
 
-            // Отримуємо id для activity та bmiCategory
+            // отримуємо id для activity та bmiCategory
             int activityId = GetActivityId(physicalActivityUser);
             int bmiCategoryId = GetBMICategoryId(bmiCategory);
 
-            // розрахунок добової норми калорій (BMR). Формула "Гарріса Бенедикта"
+            // розрахунок добової норми калорій (TDEE – Total Daily Energy Expenditure)
+            // Формула "Гарріса Бенедикта"
             decimal bmr = (genderUser == "Чоловік")
                 ? 88.36m + (13.4m * weightUser) + (4.8m * heightUser) - (5.7m * ageUser)
                 : 447.6m + (9.2m * weightUser) + (3.1m * heightUser) - (4.3m * ageUser);
@@ -201,8 +202,8 @@ namespace BonfieFood
 
             // зберігаємо дані
             string querySelect = @"SELECT COUNT(*)
-                                    FROM UserHealthMetrics
-                                    WHERE id_User = @id_User";
+                                   FROM UserHealthMetrics
+                                   WHERE id_User = @id_User";
 
             using (SqlCommand cmdCount = new SqlCommand(querySelect, db.getConnection()))
             {

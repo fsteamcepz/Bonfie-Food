@@ -390,9 +390,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
             this.label2.Location = new System.Drawing.Point(85, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 32);
+            this.label2.Size = new System.Drawing.Size(183, 32);
             this.label2.TabIndex = 56;
-            this.label2.Text = "Calculate CPFC";
+            this.label2.Text = "Calculate TDEE";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2DragControl2

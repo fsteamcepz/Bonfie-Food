@@ -172,8 +172,8 @@ namespace BonfieFood
             // Добова норма КБЖВ
             UpdateDailyCalories(dailyCalories);
 
-            label_CPFC.Text = "The daily rate of CPFC";
-            calculateTheCPFC.Text = "Update CPFC";
+            label_CPFC.Text = "Total Daily Energy Expenditure";
+            calculateTheCPFC.Text = "Update TDEE";
         }
         private void UpdateAge(int currentAge)
         {
@@ -332,13 +332,15 @@ namespace BonfieFood
 
         private void ConfigureInfoCPFC()
         {
-            toolTip_formula.ToolTipTitle = "Формула «Гарріса Бенедикта»";
-            toolTip_formula.SetToolTip(info_dish, "КБЖВ розраховується за формулою Гарріса-Бенедикта,<br>" +
-                                                   "яка враховує – зріст, вагу, вік і стать для визначення<br>" +
-                                                   "добової потреби в калоріях.<br>" +
-                                                   "Розрахунок:<br>" +
-                                                   "Чоловіки: 88.36 + (13.4 × ВАГА) + (4.8 × ЗРІСТ) - (5.7 × ВІК)<br>" +
-                                                   "Жінки: 447.6 + (9.2 × ВАГА) + (3.1 × ЗРІСТ) - (4.3 × ВІК)");
+            toolTip_formula.ToolTipTitle = "Формула «Гарріса-Бенедикта»";
+            toolTip_formula.SetToolTip(info_dish, "TDEE розраховується за формулою Гарріса-Бенедикта,<br>" +
+                                                  "яка враховує зріст, вагу, вік і стать для визначення<br>" +
+                                                  "базового метаболізму (BMR). Потім загальна добова<br>" +
+                                                  "потреба в калоріях розраховується за формулою:<br>" +
+                                                  "TDEE = BMR × коефіцієнт активності.<br><br>" +
+                                                  "Розрахунок BMR:<br>" +
+                                                  "Чоловіки: 88.36 + (13.4 × ВАГА) + (4.8 × ЗРІСТ) - (5.7 × ВІК)<br>" +
+                                                  "Жінки: 447.6 + (9.2 × ВАГА) + (3.1 × ЗРІСТ) - (4.3 × ВІК)");
 
             info_dish.MouseEnter += (sender, e) =>
             {

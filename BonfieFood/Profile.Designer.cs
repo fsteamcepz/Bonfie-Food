@@ -348,9 +348,9 @@
             this.label_CPFC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
             this.label_CPFC.Location = new System.Drawing.Point(10, 16);
             this.label_CPFC.Name = "label_CPFC";
-            this.label_CPFC.Size = new System.Drawing.Size(245, 29);
+            this.label_CPFC.Size = new System.Drawing.Size(340, 29);
             this.label_CPFC.TabIndex = 56;
-            this.label_CPFC.Text = "The daily rate of CPFC";
+            this.label_CPFC.Text = "Total Daily Energy Expenditure";
             this.label_CPFC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Panel1
