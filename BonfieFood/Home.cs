@@ -6,6 +6,9 @@ using FontAwesome.Sharp;
 using System.IO;
 using System.Globalization;
 using System.Drawing.Imaging;
+using System.Reflection;
+using System.Collections.Generic;
+using System.Windows.Documents;
 
 namespace BonfieFood
 {
@@ -17,10 +20,14 @@ namespace BonfieFood
         private Panel leftBorderBtn;
         private Color pinkBar = Color.FromArgb(220, 45, 140);
         private Form currentForm;
-
         private Image originalImg;
-
         private Timer timer;
+
+        private int dailyRate;
+        private Dictionary<string, double> caloriesOfPeriodDay = new Dictionary<string, double>();
+        private int maxLineWidth = 185;
+        private int lineHeight = 12;
+        private int minWidth = 15;
 
         public Home()
         {
@@ -42,6 +49,8 @@ namespace BonfieFood
                 SetupButtonColorEffects(i);
             }
 
+            LoadDataNutrition();
+
             TransparentLabels();
             ConfigureLogOut();
             ConfigureProfileImg();
@@ -53,26 +62,25 @@ namespace BonfieFood
         }
         private void TransparentLabels()
         {
-            // 1
-            label_1.Parent = guna2PictureBox1;
-            label_1.BackColor = Color.Transparent;
-            label_1.Location = new Point(12, 15);
+            // Харчування
+            label_Nutrition.Parent = guna2PictureBox1;
+            label_Nutrition.BackColor = Color.Transparent;
+            label_Nutrition.Location = new Point(12, 15);
 
-            // 2
-            //label_dayWeekName.Text = "Wednesday";
+            // Назва тижня
             label_dayWeekName.Parent = guna2PictureBox2;
             label_dayWeekName.BackColor = Color.Transparent;
             label_dayWeekName.Location = new Point(0, 50);
 
-            //label_date.Text = "September 22, 2024";
+            // Дата (September 22, 2024")
             label_date.Parent = guna2PictureBox2;
             label_date.BackColor = Color.Transparent;
             label_date.Location = new Point(-7, 75);
 
-            // 3
-            label_3.Parent = guna2PictureBox3;
-            label_3.BackColor = Color.Transparent;
-            label_3.Location = new Point(12, 15);
+            // Рецепт
+            label_Recipe.Parent = guna2PictureBox3;
+            label_Recipe.BackColor = Color.Transparent;
+            label_Recipe.Location = new Point(12, 15);
 
             label_shortestRecipe.Parent = guna2PictureBox3;
             label_shortestRecipe.BackColor = Color.Transparent;
@@ -81,10 +89,10 @@ namespace BonfieFood
             label_longestRecipe.BackColor = Color.Transparent;
             label_longestRecipe.Location = new Point(147, 93);
 
-            // 4
-            label_4.Parent = guna2PictureBox4;
-            label_4.BackColor = Color.Transparent;
-            label_4.Location = new Point(12, 30);
+            // Цілі
+            label_Goals.Parent = guna2PictureBox4;
+            label_Goals.BackColor = Color.Transparent;
+            label_Goals.Location = new Point(12, 30);
 
             label_GoalsTotal.Parent = guna2PictureBox4;
             label_GoalsTotal.BackColor = Color.Transparent;
@@ -93,16 +101,15 @@ namespace BonfieFood
             label_GoalsDone.BackColor = Color.Transparent;
             label_GoalsDone.Location = new Point(173, 93);
 
-            // 5
-            //label_time.Text = "20:03:54";
+            // Час
             label_time.Parent = guna2PictureBox5;
             label_time.BackColor = Color.Transparent;
             label_time.Location = new Point(0, 55);
 
-            // 6
-            label_favoriteRecipes.Parent = guna2PictureBox6;
-            label_favoriteRecipes.BackColor = Color.Transparent;
-            label_favoriteRecipes.Location = new Point(12, 30);
+            // Збережені рецепти
+            label_SavedRecipes.Parent = guna2PictureBox6;
+            label_SavedRecipes.BackColor = Color.Transparent;
+            label_SavedRecipes.Location = new Point(12, 30);
 
             label_favorite.Parent = guna2PictureBox6;
             label_favorite.BackColor = Color.Transparent;
@@ -127,7 +134,164 @@ namespace BonfieFood
                 miniImg.FillColor = Color.FromArgb(67, 55, 110);
             }
         }
-        public string GetUserImgPath()
+        private void LoadDataNutrition()
+        {
+            int countPeriod = 0;
+            dailyRate = GetDailyRateUser();
+
+            string selectQuery = @"SELECT un.idUserNutrition, un.mealPeriod, un.createdAt,
+                                          unp.quantity,
+                                          p.measure, p.productName, p.calories
+                                   FROM UserNutrition un
+                                   LEFT JOIN UserNutrition_Products unp ON unp.id_UserNutrition = un.idUserNutrition
+                                   LEFT JOIN Products p ON unp.id_Product = p.idProduct
+                                   WHERE id_User = @userId AND unp.isActive = 1";
+
+            db.openConnection();
+
+            using (SqlCommand cmd = new SqlCommand(selectQuery, db.getConnection()))
+            {
+                cmd.Parameters.AddWithValue("@userId", CurrentUser.UserId);
+
+                using (SqlDataReader r = cmd.ExecuteReader())
+                {
+                    while (r.Read())
+                    {
+                        string period = r["mealPeriod"].ToString();
+                        DateTime date = Convert.ToDateTime(r["createdAt"]).Date;
+
+                        if (date == DateTime.Now.Date)
+                        {
+                            decimal caloriesProduct = Convert.ToDecimal(r["calories"]);
+
+                            if (!caloriesOfPeriodDay.ContainsKey(period))
+                            {
+                                caloriesOfPeriodDay[period] = 0;
+                            }
+                            caloriesOfPeriodDay[period] += (double)caloriesProduct;
+                        }
+                        countPeriod++;
+                    }
+                }
+            }
+
+            if (countPeriod > 0)
+            {
+                btnAddNutrition.Text = "Edit";
+            }
+
+            foreach (string period in caloriesOfPeriodDay.Keys)
+            {
+                UpdateCaloriesForPeriod(period, caloriesOfPeriodDay[period]);
+            }
+
+            db.closeConnection();
+        }
+        private void UpdateCaloriesForPeriod(string period, double calories)
+        {
+            int periodLine;
+
+            if (period == "Сніданок")
+            {
+                periodLine = (int)((calories / (dailyRate * 0.3)) * maxLineWidth);
+            }
+            else if (period == "Обід")
+            {
+
+                periodLine = (int)((calories / (dailyRate * 0.4)) * maxLineWidth);
+            }
+            else
+            {
+                periodLine = (int)((calories / (dailyRate * 0.3)) * maxLineWidth);
+            }
+
+            periodLine = Math.Min(Math.Max(periodLine, minWidth), maxLineWidth);
+
+            switch (period)
+            {
+                case "Сніданок":
+                    toolTip_Morning.ToolTipTitle = period;
+                    toolTip_Morning.SetToolTip(morningLine, $"Калорій - {calories.ToString("0")} / {((double)(dailyRate * 0.3)).ToString("0")}");
+                    morningLine.Size = new Size(periodLine, lineHeight);
+                    break;
+                case "Обід":
+                    toolTip_Lunch.ToolTipTitle = period;
+                    toolTip_Lunch.SetToolTip(lunchLine, $"Калорій - {calories.ToString("0")} / {((double)(dailyRate * 0.4)).ToString("0")}");
+                    lunchLine.Size = new Size(periodLine, lineHeight);
+                    break;
+                case "Вечеря":
+                    toolTip_Dinner.ToolTipTitle = period;
+                    toolTip_Dinner.SetToolTip(dinnerLine, $"Калорій - {calories.ToString("0")} / {((double)(dailyRate * 0.3)).ToString("0")}");
+                    dinnerLine.Size = new Size(periodLine, lineHeight);
+                    break;
+            }
+        }
+        private int GetDailyRateUser()
+        {
+            string query = @"SELECT birthDate, height, weight, gender, id_Activity
+                             FROM UserHealthMetrics
+                             WHERE id_User = @userId";
+
+            using (SqlCommand cmd = new SqlCommand(query, db.getConnection()))
+            {
+                cmd.Parameters.AddWithValue("@userId", CurrentUser.UserId);
+                db.openConnection();
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        DateTime? birthDate = (DateTime?)reader["birthDate"];
+                        int? height = (int?)reader["height"];
+                        decimal? weight = (decimal?)reader["weight"];
+                        string gender = reader["gender"].ToString();
+                        int? physicalActivityId = (int?)reader["id_Activity"];
+
+                        db.closeConnection();
+
+                        int age = DateTime.Now.Year - birthDate.Value.Year;
+                        if (birthDate.Value.Date > DateTime.Now.Date.AddYears(-age))
+                        {
+                            age--;
+                        }
+
+                        decimal? bmr = (gender == "Чоловік")
+                                ? (10m * weight) + (6.25m * height) - (5m * age) + 5m
+                                : (10m * weight) + (6.25m * height) - (5m * age) - 161m;
+
+                        decimal activityMultiplier = GetActivityMultiplierById(physicalActivityId.Value);
+                        return (int)(bmr * activityMultiplier);
+                    }
+                }
+                return 0;
+            }
+        }
+        private decimal GetActivityMultiplierById(int activityId)
+        {
+            string query = @"SELECT multiplier
+                             FROM PhysicalActivityMultipliersStandard
+                             WHERE idActivity = @activityId";
+
+            using (SqlCommand cmd = new SqlCommand(query, db.getConnection()))
+            {
+                cmd.Parameters.AddWithValue("@activityId", activityId);
+
+                db.openConnection();
+                var result = cmd.ExecuteScalar();
+                db.closeConnection();
+
+                return result != null ? Convert.ToDecimal(result) : 1.0m;
+            }
+        }
+        private void LoadDataGoals()
+        {
+
+        }
+        private void LoadDataSavedRecipes()
+        {
+
+        }
+        private string GetUserImgPath()
         {
             string imagePath = "";
             string sql = @"SELECT profilePhotoPath
@@ -281,6 +445,7 @@ namespace BonfieFood
             }
 
             Nutrition nut = new Nutrition();
+            nut.OnUpdateCalories += UpdateUserNutrition;
             nut.ShowDialog();
         }
         private bool CheckDailyRate()
@@ -306,6 +471,30 @@ namespace BonfieFood
 
                 return result != null && Convert.ToBoolean(result);
             }
+        }
+        private void UpdateUserNutrition(double totalCaloriesPerDay, double morning, double lunch, double dinner)
+        {
+            int morLine = (int)((morning / (totalCaloriesPerDay * 0.3)) * maxLineWidth);
+            int lunLine = (int)((lunch / (totalCaloriesPerDay * 0.4)) * maxLineWidth);
+            int dinLine = (int)((dinner / (totalCaloriesPerDay * 0.3)) * maxLineWidth);
+
+            // обмежуємо мін та макс довжину лінії
+            morLine = Math.Min(Math.Max(morLine, minWidth), maxLineWidth);
+            lunLine = Math.Min(Math.Max(lunLine, minWidth), maxLineWidth);
+            dinLine = Math.Min(Math.Max(dinLine, minWidth), maxLineWidth);
+
+            toolTip_Morning.ToolTipTitle = "Сніданок";
+            toolTip_Morning.SetToolTip(morningLine, $"{morning.ToString("0")} / {(totalCaloriesPerDay * 0.3).ToString("0")}");
+            toolTip_Lunch.ToolTipTitle = "Обід";
+            toolTip_Lunch.SetToolTip(lunchLine, $"{lunch.ToString("0")} / {(totalCaloriesPerDay * 0.4).ToString("0")}");
+            toolTip_Dinner.ToolTipTitle = "Вечеря";
+            toolTip_Dinner.SetToolTip(dinnerLine, $"{dinner.ToString("0")} / {(totalCaloriesPerDay * 0.3).ToString("0")}");
+
+            morningLine.Size = new Size(morLine, lineHeight);
+            lunchLine.Size = new Size(lunLine, lineHeight);
+            dinnerLine.Size = new Size(dinLine, lineHeight);
+
+            btnAddNutrition.Text = "Edit";
         }
 
         private void SetupButtonColorEffects(IconButton btn)
@@ -407,7 +596,7 @@ namespace BonfieFood
 
             toolTip_logout.SetToolTip(logout_acc, "Вийти з акаунта");
         }
-        public void ConfigureProfileImg()
+        private void ConfigureProfileImg()
         {
             if (miniImg.Image == null)
             {

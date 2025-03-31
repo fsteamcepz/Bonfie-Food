@@ -80,7 +80,7 @@ namespace BonfieFood
                     else
                     {
                         db.closeConnection();
-                        age.Value = default(DateTime);
+                        age.Value = DateTime.Today;
                         height.Value = 0;
                         weight.Value = 0m;
                         male.Checked = false;

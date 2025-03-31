@@ -23,6 +23,7 @@ namespace BonfieFood
         private double lunchCalories = 0;
         private double dinnerCalories = 0;
         private Dictionary<string, List<string>> productsOfPeriodDay = new Dictionary<string, List<string>>();
+        public event Action<double, double, double, double> OnUpdateCalories;
 
         public Nutrition()
         {
@@ -34,12 +35,6 @@ namespace BonfieFood
             nutritionGoal.Text = "0 / " + dailyRate;
             LoadUserData();
             LoadToolTips();
-
-            /*
-               1 cup Buckwheat Groats, Roasted, Cooked
-               1 chicken cutlets
-               368 ml coca cola
-            */
         }
         protected override void OnClick(EventArgs e)
         {
@@ -82,6 +77,8 @@ namespace BonfieFood
 
                 nutritionUser.Text = "";
                 btnSave.Text = "Save";
+
+                OnUpdateCalories?.Invoke(dailyRate, morningCalories, lunchCalories, dinnerCalories);
             }
             catch (Exception ex)
             {
@@ -347,24 +344,24 @@ namespace BonfieFood
             switch (period)
             {
                 case "Сніданок":
-                    morningCalories = calories;
+                    morningCalories += calories;
                     toolTip_InfoMorning.ToolTipTitle = period;
                     toolTip_InfoMorning.SetToolTip(morning, $"Калорій - {calories.ToString("0")}");
                     break;
                 case "Обід":
-                    lunchCalories = calories;
+                    lunchCalories += calories;
                     toolTip_InfoLunch.ToolTipTitle = period;
                     toolTip_InfoLunch.SetToolTip(lunch, $"Калорій - {calories.ToString("0")}");
                     break;
                 case "Вечеря":
-                    dinnerCalories = calories;
+                    dinnerCalories += calories;
                     toolTip_InfoDinner.ToolTipTitle = period;
                     toolTip_InfoDinner.SetToolTip(dinner, $"Калорій - {calories.ToString("0")}");
                     break;
             }
 
-            double totalDailyCalories = morningCalories + lunchCalories + dinnerCalories;
-            nutritionGoal.Text = totalDailyCalories.ToString("0") + " / " + dailyRate;
+            double totalCalories = morningCalories + lunchCalories + dinnerCalories;
+            nutritionGoal.Text = totalCalories.ToString("0") + " / " + dailyRate;
         }
         private void SaveProductsForPeriod(string period)
         {

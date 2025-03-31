@@ -66,8 +66,8 @@ namespace BonfieFood
                         if (weight > 0 && height > 0 && age > 0 && !string.IsNullOrEmpty(gender))
                         {
                             bmr = (gender == "Чоловік")
-                                ? 88.36m + (13.4m * weight) + (4.8m * height) - (5.7m * age)
-                                : 447.6m + (9.2m * weight) + (3.1m * height) - (4.3m * age);
+                                ? (10m * weight) + (6.25m * height) - (5m * age) + 5m
+                                : (10m * weight) + (6.25m * height) - (5m * age) - 161m;
                         }
 
                         db.closeConnection();
