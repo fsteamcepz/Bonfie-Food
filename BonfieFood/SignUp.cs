@@ -170,8 +170,8 @@ namespace BonfieFood
                     Properties.Settings.Default.Save();
 
                     this.Hide();
-                    Home homeForm = new Home();
-                    homeForm.Show();
+                    Login loginForm = new Login();
+                    loginForm.Show();
 
                     db.closeConnection();
                 }
