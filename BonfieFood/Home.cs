@@ -241,25 +241,25 @@ namespace BonfieFood
                 {
                     if (reader.Read())
                     {
-                        DateTime? birthDate = (DateTime?)reader["birthDate"];
-                        int? height = (int?)reader["height"];
-                        decimal? weight = (decimal?)reader["weight"];
-                        string gender = reader["gender"].ToString();
-                        int? physicalActivityId = (int?)reader["id_Activity"];
+                        DateTime birthDate = reader["birthDate"] != DBNull.Value ? Convert.ToDateTime(reader["birthDate"]) : default(DateTime);
+                        int age = birthDate != default(DateTime) ? DateTime.Now.Year - birthDate.Year : 0;
+                        int height = reader["height"] != DBNull.Value ? Convert.ToInt32(reader["height"]) : 0;
+                        decimal weight = reader["weight"] != DBNull.Value ? Convert.ToDecimal(reader["weight"]) : 0m;
+                        string gender = reader["gender"] != DBNull.Value ? reader["gender"].ToString() : "?";
+                        int physicalActivity = reader["id_Activity"] != DBNull.Value ? Convert.ToInt32(reader["id_Activity"]) : 0;
 
                         db.closeConnection();
 
-                        int age = DateTime.Now.Year - birthDate.Value.Year;
-                        if (birthDate.Value.Date > DateTime.Now.Date.AddYears(-age))
+                        if (age == 0 || height == 0 || weight == 0m || physicalActivity == 0)
                         {
-                            age--;
+                            return 0;
                         }
 
                         decimal? bmr = (gender == "Чоловік")
                                 ? (10m * weight) + (6.25m * height) - (5m * age) + 5m
                                 : (10m * weight) + (6.25m * height) - (5m * age) - 161m;
 
-                        decimal activityMultiplier = GetActivityMultiplierById(physicalActivityId.Value);
+                        decimal activityMultiplier = GetActivityMultiplierById(physicalActivity);
                         return (int)(bmr * activityMultiplier);
                     }
                 }
