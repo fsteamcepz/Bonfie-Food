@@ -159,8 +159,38 @@ namespace BonfieFood
                     }
                     else
                     {
-                        updateGoal.Enabled = true;
-                        progressValue.Value = 0;
+                        string queryCategory = @"SELECT gc.categoryName
+                                                 FROM GoalCategories gc
+                                                 JOIN UserGoals ug ON ug.id_Category = gc.idCategory
+                                                 WHERE ug.id_User = @id_User
+                                                       AND ug.goalDate = @goalDate AND ug.isCompleted = 0";
+
+                        using (SqlCommand cmd2 = new SqlCommand(queryCategory, db.getConnection()))
+                        {
+                            cmd2.Parameters.AddWithValue("@id_User", CurrentUser.UserId);
+                            cmd2.Parameters.AddWithValue("@goalDate", date.Date);
+
+                            db.openConnection();
+                            using (SqlDataReader r = cmd2.ExecuteReader())
+                            {
+                                if (r.Read())
+                                {
+                                    string categoryName = r["categoryName"] != DBNull.Value
+                                        ? r["categoryName"].ToString()
+                                        : "";
+
+                                    updateGoal.SelectedItem = categoryName;
+                                    InactiveGoal();
+                                    progressValue.Value = 0;
+                                }
+                                else
+                                {
+                                    updateGoal.Enabled = false;
+                                    progressValue.Value = 0;
+                                }
+                            }
+                            db.closeConnection();
+                        }
                     }
                 }
             }

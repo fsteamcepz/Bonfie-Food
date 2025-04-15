@@ -50,6 +50,7 @@ namespace BonfieFood
             }
 
             LoadDataNutrition();
+            LoadDataGoals();
 
             TransparentLabels();
             ConfigureLogOut();
@@ -97,9 +98,9 @@ namespace BonfieFood
             label_GoalsTotal.Parent = guna2PictureBox4;
             label_GoalsTotal.BackColor = Color.Transparent;
             label_GoalsTotal.Location = new Point(173, 72);
-            label_GoalsDone.Parent = guna2PictureBox4;
-            label_GoalsDone.BackColor = Color.Transparent;
-            label_GoalsDone.Location = new Point(173, 93);
+            label_GoalsCompleted.Parent = guna2PictureBox4;
+            label_GoalsCompleted.BackColor = Color.Transparent;
+            label_GoalsCompleted.Location = new Point(173, 93);
 
             // Час
             label_time.Parent = guna2PictureBox5;
@@ -285,7 +286,60 @@ namespace BonfieFood
         }
         private void LoadDataGoals()
         {
+            int completedGoals = 0, lineCompleted;
+            int totalGoals = 0, lineTotal;
+            int maxWidth = 149;
 
+            string queryTotal = @"SELECT COUNT(isCompleted)
+                                  FROM UserGoals
+                                  WHERE id_User = @UserId";
+            string queryCom = @"SELECT COUNT(*)
+                                FROM UserGoals
+                                WHERE id_User = @UserId AND isCompleted = 1";
+            
+            using (SqlCommand tot = new SqlCommand(queryTotal, db.getConnection()))
+            {
+                tot.Parameters.AddWithValue("@UserId", CurrentUser.UserId);
+                db.openConnection();
+                totalGoals = Convert.ToInt32(tot.ExecuteScalar());
+                db.closeConnection();
+            }
+            using (SqlCommand com = new SqlCommand(queryCom, db.getConnection()))
+            {
+                com.Parameters.AddWithValue("@UserId", CurrentUser.UserId);
+                db.openConnection();
+                completedGoals = Convert.ToInt32(com.ExecuteScalar());
+                db.closeConnection();
+            }
+            
+            lineTotal = Math.Min(Math.Max(totalGoals + minWidth, minWidth), maxWidth);
+            lineCompleted = Math.Min(Math.Max(completedGoals + minWidth, minWidth), maxWidth);            
+
+            toolTip_TotalGoals.ToolTipTitle = "Всього цілей";
+            toolTip_TotalGoals.SetToolTip(totalGoalsLine, " ");
+            if (totalGoals > 0)
+            {
+                totalGoalsLine.Size = new Size(lineTotal, lineHeight);
+                label_GoalsTotal.Text = totalGoals.ToString();
+            }
+            else
+            {
+                totalGoalsLine.Size = new Size(minWidth, lineHeight);
+                label_GoalsTotal.Text = "0";
+            }
+
+            toolTip_Competed.ToolTipTitle = "Виконаних цілей";
+            toolTip_Competed.SetToolTip(competedGoalsLine, " ");
+            if (completedGoals > 0)
+            {
+                competedGoalsLine.Size = new Size(lineCompleted, lineHeight);
+                label_GoalsCompleted.Text = completedGoals.ToString();
+            }
+            else
+            {
+                competedGoalsLine.Size = new Size(minWidth, lineHeight);
+                label_GoalsCompleted.Text = "0";
+            }
         }
         private void LoadDataSavedRecipes()
         {
@@ -403,8 +457,11 @@ namespace BonfieFood
         private void calendarBtn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, pinkBar);
-            CurrentPage(new Calendar());
             iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
+
+            Calendar calendar = new Calendar();
+            calendar.GoalsUpdated += LoadDataGoals;
+            CurrentPage(calendar);
         }
         private void settingsBtn_Click(object sender, EventArgs e)
         {
@@ -447,6 +504,15 @@ namespace BonfieFood
             Nutrition nut = new Nutrition();
             nut.OnUpdateCalories += UpdateUserNutrition;
             nut.ShowDialog();
+        }
+        private void btnViewGoals_Click(object sender, EventArgs e)
+        {
+            ActivateButton(calendarBtn, pinkBar);
+            iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
+
+            Calendar calendar = new Calendar();
+            calendar.GoalsUpdated += LoadDataGoals;
+            CurrentPage(calendar);
         }
         private bool CheckDailyRate()
         {

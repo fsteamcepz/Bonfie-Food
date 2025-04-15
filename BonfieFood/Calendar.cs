@@ -16,6 +16,7 @@ namespace BonfieFood
         private DateTime currentDate;
         private List<Guna2GradientButton> btn = new List<Guna2GradientButton>();
         private Dictionary<DateTime, (string goalName, decimal targetValue, string description, bool isCompleted)> goalsData;
+        public event Action GoalsUpdated;
 
         public Calendar()
         {
@@ -178,12 +179,14 @@ namespace BonfieFood
                     UpdateCalendar(goalUser, date, targetValue, description, completed);
                 };
                 update.ShowDialog();
+                GoalsUpdated?.Invoke();
             }
             else
             {
                 CreateGoal createGoal = new CreateGoal(selectedDate);
                 createGoal.OnCreateGoalComplete += UpdateCalendar;
                 createGoal.ShowDialog();
+                GoalsUpdated?.Invoke();
             }
         }
         private void UpdateCalendar(string goalUser, DateTime goalDateUser, decimal targetValueUser, string description, bool isCompleted)

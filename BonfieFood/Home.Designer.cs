@@ -67,13 +67,13 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label_Goals = new System.Windows.Forms.Label();
-            this.label_GoalsDone = new System.Windows.Forms.Label();
+            this.label_GoalsCompleted = new System.Windows.Forms.Label();
             this.label_GoalsTotal = new System.Windows.Forms.Label();
-            this.guna2Button20 = new Guna.UI2.WinForms.Guna2Button();
+            this.competedGoalsLine = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button21 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button18 = new Guna.UI2.WinForms.Guna2Button();
+            this.totalGoalsLine = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button19 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnViewGoals = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label_longestRecipe = new System.Windows.Forms.Label();
             this.label_shortestRecipe = new System.Windows.Forms.Label();
@@ -101,6 +101,8 @@
             this.toolTip_Morning = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.toolTip_Lunch = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.toolTip_Dinner = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            this.toolTip_Competed = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            this.toolTip_TotalGoals = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.miniImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconOfPage)).BeginInit();
@@ -497,13 +499,13 @@
             this.guna2Panel1_home.Controls.Add(this.guna2Button1);
             this.guna2Panel1_home.Controls.Add(this.guna2PictureBox6);
             this.guna2Panel1_home.Controls.Add(this.label_Goals);
-            this.guna2Panel1_home.Controls.Add(this.label_GoalsDone);
+            this.guna2Panel1_home.Controls.Add(this.label_GoalsCompleted);
             this.guna2Panel1_home.Controls.Add(this.label_GoalsTotal);
-            this.guna2Panel1_home.Controls.Add(this.guna2Button20);
+            this.guna2Panel1_home.Controls.Add(this.competedGoalsLine);
             this.guna2Panel1_home.Controls.Add(this.guna2Button21);
-            this.guna2Panel1_home.Controls.Add(this.guna2Button18);
+            this.guna2Panel1_home.Controls.Add(this.totalGoalsLine);
             this.guna2Panel1_home.Controls.Add(this.guna2Button19);
-            this.guna2Panel1_home.Controls.Add(this.guna2Button4);
+            this.guna2Panel1_home.Controls.Add(this.btnViewGoals);
             this.guna2Panel1_home.Controls.Add(this.guna2PictureBox4);
             this.guna2Panel1_home.Controls.Add(this.label_longestRecipe);
             this.guna2Panel1_home.Controls.Add(this.label_shortestRecipe);
@@ -724,17 +726,17 @@
             this.label_Goals.Text = "Goals";
             this.label_Goals.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label_GoalsDone
+            // label_GoalsCompleted
             // 
-            this.label_GoalsDone.AutoSize = true;
-            this.label_GoalsDone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_GoalsDone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label_GoalsDone.Location = new System.Drawing.Point(180, 398);
-            this.label_GoalsDone.Name = "label_GoalsDone";
-            this.label_GoalsDone.Size = new System.Drawing.Size(38, 17);
-            this.label_GoalsDone.TabIndex = 98;
-            this.label_GoalsDone.Text = "done";
-            this.label_GoalsDone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_GoalsCompleted.AutoSize = true;
+            this.label_GoalsCompleted.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_GoalsCompleted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_GoalsCompleted.Location = new System.Drawing.Point(180, 398);
+            this.label_GoalsCompleted.Name = "label_GoalsCompleted";
+            this.label_GoalsCompleted.Size = new System.Drawing.Size(15, 17);
+            this.label_GoalsCompleted.TabIndex = 98;
+            this.label_GoalsCompleted.Text = "n";
+            this.label_GoalsCompleted.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_GoalsTotal
             // 
@@ -743,30 +745,30 @@
             this.label_GoalsTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
             this.label_GoalsTotal.Location = new System.Drawing.Point(180, 375);
             this.label_GoalsTotal.Name = "label_GoalsTotal";
-            this.label_GoalsTotal.Size = new System.Drawing.Size(34, 17);
+            this.label_GoalsTotal.Size = new System.Drawing.Size(18, 17);
             this.label_GoalsTotal.TabIndex = 96;
-            this.label_GoalsTotal.Text = "total";
+            this.label_GoalsTotal.Text = "N";
             this.label_GoalsTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2Button20
+            // competedGoalsLine
             // 
-            this.guna2Button20.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
-            this.guna2Button20.BorderRadius = 5;
-            this.guna2Button20.BorderThickness = 2;
-            this.guna2Button20.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button20.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button20.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button20.DisabledState.ForeColor = System.Drawing.Color.DarkGray;
-            this.guna2Button20.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
-            this.guna2Button20.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.guna2Button20.ForeColor = System.Drawing.Color.Gainsboro;
-            this.guna2Button20.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.guna2Button20.Location = new System.Drawing.Point(25, 401);
-            this.guna2Button20.Name = "guna2Button20";
-            this.guna2Button20.Size = new System.Drawing.Size(29, 12);
-            this.guna2Button20.TabIndex = 101;
-            this.guna2Button20.UseTransparentBackground = true;
+            this.competedGoalsLine.BackColor = System.Drawing.Color.Transparent;
+            this.competedGoalsLine.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
+            this.competedGoalsLine.BorderRadius = 5;
+            this.competedGoalsLine.BorderThickness = 2;
+            this.competedGoalsLine.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.competedGoalsLine.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.competedGoalsLine.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.competedGoalsLine.DisabledState.ForeColor = System.Drawing.Color.DarkGray;
+            this.competedGoalsLine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
+            this.competedGoalsLine.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.competedGoalsLine.ForeColor = System.Drawing.Color.Gainsboro;
+            this.competedGoalsLine.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.competedGoalsLine.Location = new System.Drawing.Point(25, 401);
+            this.competedGoalsLine.Name = "competedGoalsLine";
+            this.competedGoalsLine.Size = new System.Drawing.Size(15, 12);
+            this.competedGoalsLine.TabIndex = 101;
+            this.competedGoalsLine.UseTransparentBackground = true;
             // 
             // guna2Button21
             // 
@@ -788,25 +790,25 @@
             this.guna2Button21.TabIndex = 102;
             this.guna2Button21.UseTransparentBackground = true;
             // 
-            // guna2Button18
+            // totalGoalsLine
             // 
-            this.guna2Button18.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
-            this.guna2Button18.BorderRadius = 5;
-            this.guna2Button18.BorderThickness = 2;
-            this.guna2Button18.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button18.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button18.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button18.DisabledState.ForeColor = System.Drawing.Color.DarkGray;
-            this.guna2Button18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
-            this.guna2Button18.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.guna2Button18.ForeColor = System.Drawing.Color.Gainsboro;
-            this.guna2Button18.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.guna2Button18.Location = new System.Drawing.Point(25, 379);
-            this.guna2Button18.Name = "guna2Button18";
-            this.guna2Button18.Size = new System.Drawing.Size(49, 12);
-            this.guna2Button18.TabIndex = 99;
-            this.guna2Button18.UseTransparentBackground = true;
+            this.totalGoalsLine.BackColor = System.Drawing.Color.Transparent;
+            this.totalGoalsLine.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
+            this.totalGoalsLine.BorderRadius = 5;
+            this.totalGoalsLine.BorderThickness = 2;
+            this.totalGoalsLine.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.totalGoalsLine.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.totalGoalsLine.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.totalGoalsLine.DisabledState.ForeColor = System.Drawing.Color.DarkGray;
+            this.totalGoalsLine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
+            this.totalGoalsLine.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.totalGoalsLine.ForeColor = System.Drawing.Color.Gainsboro;
+            this.totalGoalsLine.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.totalGoalsLine.Location = new System.Drawing.Point(25, 379);
+            this.totalGoalsLine.Name = "totalGoalsLine";
+            this.totalGoalsLine.Size = new System.Drawing.Size(15, 12);
+            this.totalGoalsLine.TabIndex = 99;
+            this.totalGoalsLine.UseTransparentBackground = true;
             // 
             // guna2Button19
             // 
@@ -828,25 +830,26 @@
             this.guna2Button19.TabIndex = 100;
             this.guna2Button19.UseTransparentBackground = true;
             // 
-            // guna2Button4
+            // btnViewGoals
             // 
-            this.guna2Button4.Animated = true;
-            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.BorderRadius = 13;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(128)))), ((int)(((byte)(198)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.guna2Button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.guna2Button4.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button4.Location = new System.Drawing.Point(116, 435);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(117, 27);
-            this.guna2Button4.TabIndex = 94;
-            this.guna2Button4.Text = "View";
-            this.guna2Button4.UseTransparentBackground = true;
+            this.btnViewGoals.Animated = true;
+            this.btnViewGoals.BackColor = System.Drawing.Color.Transparent;
+            this.btnViewGoals.BorderRadius = 13;
+            this.btnViewGoals.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewGoals.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewGoals.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnViewGoals.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnViewGoals.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(128)))), ((int)(((byte)(198)))));
+            this.btnViewGoals.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnViewGoals.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnViewGoals.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnViewGoals.Location = new System.Drawing.Point(116, 435);
+            this.btnViewGoals.Name = "btnViewGoals";
+            this.btnViewGoals.Size = new System.Drawing.Size(117, 27);
+            this.btnViewGoals.TabIndex = 94;
+            this.btnViewGoals.Text = "View";
+            this.btnViewGoals.UseTransparentBackground = true;
+            this.btnViewGoals.Click += new System.EventHandler(this.btnViewGoals_Click);
             // 
             // guna2PictureBox4
             // 
@@ -1293,6 +1296,32 @@
             this.toolTip_Dinner.TitleFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.toolTip_Dinner.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(71)))), ((int)(((byte)(97)))));
             // 
+            // toolTip_Competed
+            // 
+            this.toolTip_Competed.AllowLinksHandling = true;
+            this.toolTip_Competed.AutoPopDelay = 5000;
+            this.toolTip_Competed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.toolTip_Competed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.toolTip_Competed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.toolTip_Competed.InitialDelay = 100;
+            this.toolTip_Competed.MaximumSize = new System.Drawing.Size(0, 0);
+            this.toolTip_Competed.ReshowDelay = 100;
+            this.toolTip_Competed.TitleFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.toolTip_Competed.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
+            // 
+            // toolTip_TotalGoals
+            // 
+            this.toolTip_TotalGoals.AllowLinksHandling = true;
+            this.toolTip_TotalGoals.AutoPopDelay = 5000;
+            this.toolTip_TotalGoals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.toolTip_TotalGoals.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.toolTip_TotalGoals.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.toolTip_TotalGoals.InitialDelay = 100;
+            this.toolTip_TotalGoals.MaximumSize = new System.Drawing.Size(0, 0);
+            this.toolTip_TotalGoals.ReshowDelay = 100;
+            this.toolTip_TotalGoals.TitleFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.toolTip_TotalGoals.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1371,11 +1400,11 @@
         private Guna.UI2.WinForms.Guna2Button backgroundLunchLine;
         private Guna.UI2.WinForms.Guna2Button btnAddNutrition;
         private System.Windows.Forms.Label label_Goals;
-        private System.Windows.Forms.Label label_GoalsDone;
+        private System.Windows.Forms.Label label_GoalsCompleted;
         private System.Windows.Forms.Label label_GoalsTotal;
-        private Guna.UI2.WinForms.Guna2Button guna2Button20;
+        private Guna.UI2.WinForms.Guna2Button competedGoalsLine;
         private Guna.UI2.WinForms.Guna2Button guna2Button21;
-        private Guna.UI2.WinForms.Guna2Button guna2Button18;
+        private Guna.UI2.WinForms.Guna2Button totalGoalsLine;
         private Guna.UI2.WinForms.Guna2Button guna2Button19;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI2.WinForms.Guna2Button guna2Button15;
@@ -1400,9 +1429,11 @@
         private FontAwesome.Sharp.IconButton scannerBtn;
         private FontAwesome.Sharp.IconButton chatbotBtn;
         private FontAwesome.Sharp.IconButton productsBtn;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button btnViewGoals;
         private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_Morning;
         private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_Lunch;
         private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_Dinner;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_Competed;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_TotalGoals;
     }
 }
