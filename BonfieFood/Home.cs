@@ -27,7 +27,7 @@ namespace BonfieFood
         private Dictionary<string, double> caloriesOfPeriodDay = new Dictionary<string, double>();
         private int maxLineWidth = 185;
         private int lineHeight = 12;
-        private int minWidth = 15;
+        private int minWidth = 13;
 
         public Home()
         {
@@ -51,6 +51,7 @@ namespace BonfieFood
 
             LoadDataNutrition();
             LoadDataGoals();
+            LoadDataSavedRecipes();
 
             TransparentLabels();
             ConfigureLogOut();
@@ -112,9 +113,9 @@ namespace BonfieFood
             label_SavedRecipes.BackColor = Color.Transparent;
             label_SavedRecipes.Location = new Point(12, 30);
 
-            label_favorite.Parent = guna2PictureBox6;
-            label_favorite.BackColor = Color.Transparent;
-            label_favorite.Location = new Point(173, 94);
+            label_TotalSaved.Parent = guna2PictureBox6;
+            label_TotalSaved.BackColor = Color.Transparent;
+            label_TotalSaved.Location = new Point(173, 94);
         }
         public void LoadUserImg()
         {
@@ -343,7 +344,33 @@ namespace BonfieFood
         }
         private void LoadDataSavedRecipes()
         {
+            int totalSaved = 0, lineTotal;
+            int maxWidth = 150;
+            int maxSavedRecipes = 50;
 
+            string query = @"SELECT COUNT(isSaved)
+                             FROM UserSavedRecipes
+                             WHERE id_User = @UserId AND isSaved = 1";
+            db.openConnection();
+            using (SqlCommand cmd = new SqlCommand(query, db.getConnection()))
+            {
+                cmd.Parameters.AddWithValue("@UserId", CurrentUser.UserId);
+                totalSaved = Convert.ToInt32(cmd.ExecuteScalar());
+                db.closeConnection();
+            }
+
+            lineTotal = Math.Min(Math.Max(totalSaved * (maxWidth / maxSavedRecipes) + minWidth, minWidth), maxWidth);
+
+            if (totalSaved > 0)
+            {
+                savedRecipesLine.Size = new Size(lineTotal, lineHeight);
+                label_TotalSaved.Text = totalSaved.ToString();
+            }
+            else
+            {
+                savedRecipesLine.Size = new Size(minWidth, lineHeight);
+                label_TotalSaved.Text = "0";
+            }
         }
         private string GetUserImgPath()
         {
@@ -429,8 +456,11 @@ namespace BonfieFood
         private void recipesBtn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, pinkBar);
-            CurrentPage(new Recipes());
             iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
+            
+            Recipes recipes = new Recipes();
+            recipes.RecipesUpdated += LoadDataSavedRecipes;
+            CurrentPage(recipes);           
         }
         private void productsBtn_Click(object sender, EventArgs e)
         {
@@ -452,6 +482,7 @@ namespace BonfieFood
         {
             ActivateButton(sender, pinkBar);
             CurrentPage(new Scanner());
+            nameOfPage.Text = "Food Analyzer";
             iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
         }
         private void calendarBtn_Click(object sender, EventArgs e)
@@ -513,6 +544,11 @@ namespace BonfieFood
             Calendar calendar = new Calendar();
             calendar.GoalsUpdated += LoadDataGoals;
             CurrentPage(calendar);
+        }
+        private void btnViewSavedRecipes_Click(object sender, EventArgs e)
+        {
+            SavedRecipes saved = new SavedRecipes();
+            saved.ShowDialog();
         }
         private bool CheckDailyRate()
         {

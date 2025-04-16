@@ -66,9 +66,6 @@ namespace BonfieFood
                 if (response.IsSuccessStatusCode)
                 {
                     string jResponse = await response.Content.ReadAsStringAsync();
-                    //string file1Path = "Recipes_Edamam_pizza.json";
-                    //File.WriteAllText(file1Path, jResponse);
-                    //MessageBoxSuccess.Show($"Відповідь від Edamam API збережена у файлі: {file1Path}");
                     dynamic recipeResponse = JsonConvert.DeserializeObject(jResponse);
 
                     if (recipeResponse?.hits == null || recipeResponse.hits.Count == 0)

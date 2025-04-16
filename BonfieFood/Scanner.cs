@@ -75,7 +75,7 @@ namespace BonfieFood
 
             try
             {
-                // аутентифікація Cloud Vision API
+                // перевіряємо чи на фото їжа
                 bool isFood = await cloudVision.IsFood(currentPhotoPath);
 
                 if (!isFood)
@@ -148,15 +148,15 @@ namespace BonfieFood
                         string query = productName.ToLower();
 
                         double score = 0;
-                        if (foodLabel == query)
+                        if (foodLabel == query) // якщо назви повністю збігаються
                         {
                             score = 1.0;
                         }
-                        else if (foodLabel.Contains(query))
+                        else if (foodLabel.Contains(query)) // (шукало "картопля", знайшло "картопля фрі")
                         {
                             score = 0.8;
                         }
-                        else if (query.Contains(foodLabel))
+                        else if (query.Contains(foodLabel)) // навпаки (шукало "картопля фрі", знайшло "картопля")
                         {
                             score = 0.6;
                         }
@@ -198,9 +198,6 @@ namespace BonfieFood
                             }
 
                             var nutrientsResponseBody = await nutrientsResponse.Content.ReadAsStringAsync();
-                            //string file_NA = "Scanner_InfoDish_NA.json";
-                            //File.WriteAllText(file_NA, nutrientsResponseBody);
-                            //MessageBoxError.Show($"Відповідь від Edamam API збережена у файлі: {file_NA}");
                             dynamic nutrientsJsonResponse = JsonConvert.DeserializeObject(nutrientsResponseBody);
                             if (nutrientsJsonResponse == null || nutrientsJsonResponse.totalNutrients == null)
                             {

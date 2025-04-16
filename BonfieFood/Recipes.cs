@@ -17,6 +17,7 @@ namespace BonfieFood
         private bool isBtnSearchClicked = false;
         private bool isEnterPressed = false;
         private bool isDataLoaded = false;
+        public event Action RecipesUpdated;
 
         // зберігаємо поточні продукти
         private List<Edamam_Recipe> currentRecipes = new List<Edamam_Recipe>();
@@ -29,7 +30,9 @@ namespace BonfieFood
         private void Recipes_Load(object sender, EventArgs e)
         {
             btnSearchRecipe.Image = Properties.Resources.search_recipes;
-           mainPanel.Controls.Clear();
+            mainPanel.Controls.Clear();
+            labelQuantity.Visible = false;
+            recipesQuantity.Visible = false;
 
             search.KeyDown += OnMessageFromUserKeyDown;
         }
@@ -69,7 +72,7 @@ namespace BonfieFood
                 MessageBoxError.Show($"Помилка: {ex.Message}");
             }
         }
-        private void ShowRecipes(List<Edamam_Recipe> products)
+        private void ShowRecipes(List<Edamam_Recipe> recipes)
         {
             if (!isDataLoaded)
             {
@@ -84,7 +87,7 @@ namespace BonfieFood
             int countResult = 2;
             Guna2Panel activePanel = null;
 
-            foreach (var prod in products)
+            foreach (var rec in recipes)
             {
                 Guna2Panel miniPanel = new Guna2Panel
                 {
@@ -92,14 +95,14 @@ namespace BonfieFood
                     BackColor = Color.Transparent,
                     Margin = new Padding(0),
                     Location = new Point(0, yOffset),
-                    Tag = prod.Name
+                    Tag = rec.Name
                 };
 
                 Guna2PictureBox photoRecipe = new Guna2PictureBox()
                 {
                     Size = new Size(100, 94),
                     Location = new Point(15, 9),
-                    ImageLocation = prod.Photo,
+                    ImageLocation = rec.Photo,
                     SizeMode = PictureBoxSizeMode.StretchImage,
                     BorderRadius = 30,
                     FillColor = Color.Gray,
@@ -125,7 +128,7 @@ namespace BonfieFood
                     AutomaticDelay = 500,
                     AutoPopDelay = 5000
                 };
-                bool isRecipeSaved = IsRecipeSavedByUser(prod.Name, prod.Calories);
+                bool isRecipeSaved = IsRecipeSavedByUser(rec.Name, rec.Calories);
                 saveRecipe.IconFont = isRecipeSaved ? IconFont.Solid : IconFont.Regular;
 
                 toolTip_save.SetToolTip(saveRecipe, isRecipeSaved ? "Рецепт збережено!" : "Зберегти рецепт");
@@ -149,23 +152,25 @@ namespace BonfieFood
                 {
                     if (!isRecipeSaved)
                     {
-                        await SaveRecipe(prod);
+                        await SaveRecipe(rec);
                         saveRecipe.IconFont = IconFont.Solid;
                         isRecipeSaved = true;
                         toolTip_save.SetToolTip(saveRecipe, "Рецепт збережено!");
+                        RecipesUpdated?.Invoke();
                     }
                     else
                     {
-                        await RemoveRecipe(prod.Name, prod.Calories);
+                        await RemoveRecipe(rec.Name, rec.Calories);
                         saveRecipe.IconFont = IconFont.Regular;
                         isRecipeSaved = false;
                         toolTip_save.SetToolTip(saveRecipe, "Зберегти рецепт");
+                        RecipesUpdated?.Invoke();
                     }
                 };
 
                 Label category = new Label()
                 {
-                    Text = prod.Category,
+                    Text = rec.Category,
                     Size = new Size(121, 48),
                     Location = new Point(5, 113),
                     Font = new Font("Arial Black", 10, FontStyle.Bold),
@@ -176,7 +181,7 @@ namespace BonfieFood
                 
                 Label nameOfRecipe = new Label()
                 {
-                    Text = prod.Name,
+                    Text = rec.Name,
                     Size = new Size(534, 29),
                     Location = new Point(137, 9),
                     Font = new Font("Constantia", 18, FontStyle.Bold),
@@ -196,7 +201,7 @@ namespace BonfieFood
                 };
                 Label valueCalories = new Label()
                 {
-                    Text = (prod.Calories / prod.Yield).ToString("0"),
+                    Text = (rec.Calories / rec.Yield).ToString("0"),
                     Size = new Size(90, 28),
                     Location = new Point(258, 51),
                     Font = new Font("Rockwell Extra Bold", 18),
@@ -206,7 +211,7 @@ namespace BonfieFood
                 
                 Label valueProtein = new Label()
                 {
-                    Text = prod.Protein.ToString("0.0") + "g",
+                    Text = rec.Protein.ToString("0.0") + "g",
                     Size = new Size(82, 29),
                     Location = new Point(387, 44),
                     Font = new Font("Segoe UI", 16),
@@ -229,7 +234,7 @@ namespace BonfieFood
 
                 Label valueFat = new Label()
                 {
-                    Text = prod.Fat.ToString("0.0") + "g",
+                    Text = rec.Fat.ToString("0.0") + "g",
                     Size = new Size(82, 29),
                     Location = new Point(483, 44),
                     Font = new Font("Segoe UI", 16),
@@ -252,7 +257,7 @@ namespace BonfieFood
 
                 Label valueCarbohydrates = new Label()
                 {
-                    Text = prod.Carbohydrates.ToString("0.0") + "g",
+                    Text = rec.Carbohydrates.ToString("0.0") + "g",
                     Size = new Size(82, 29),
                     Location = new Point(583, 44),
                     Font = new Font("Segoe UI", 16),
@@ -283,8 +288,8 @@ namespace BonfieFood
                 };
                 Label ingredients = new Label()
                 {
-                    Text = prod.IngredientCount.ToString() + " Ingredients: " +
-                           string.Join(", ", prod.Ingredients),
+                    Text = rec.IngredientCount.ToString() + " Ingredients: " +
+                           string.Join(", ", rec.Ingredients),
                     Location = new Point(0, 0),
                     Font = new Font("Segoe UI", 12),
                     ForeColor = SystemColors.ControlDark,
@@ -368,7 +373,11 @@ namespace BonfieFood
                 yOffset += 166;
             }
 
-            if (products.Count > countResult)
+            labelQuantity.Visible = true;
+            recipesQuantity.Visible = true;
+            recipesQuantity.Text = recipes.Count.ToString();
+
+            if (recipes.Count > countResult)
             {
                 mainPanel.Size = new Size(699, 355);
             }
@@ -441,7 +450,7 @@ namespace BonfieFood
                 }
             }
 
-            // якщо рецепт вже був збережений (але isSaved = 0), то оновлюємо на 1
+            // якщо рецепт був збережений (але isSaved = 0), то оновлюємо на 1
             if (isSaved)
             {
                 using (SqlCommand updCmd = new SqlCommand(updateQuery, db.getConnection()))

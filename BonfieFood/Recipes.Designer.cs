@@ -34,6 +34,7 @@
             this.infoPanel = new Guna.UI2.WinForms.Guna2PictureBox();
             this.mainPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.miniPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.saved_Recipe = new FontAwesome.Sharp.IconPictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.ingredients = new System.Windows.Forms.Label();
             this.protein = new System.Windows.Forms.Label();
@@ -47,14 +48,15 @@
             this.category = new System.Windows.Forms.Label();
             this.calories = new System.Windows.Forms.Label();
             this.nameRecipe = new System.Windows.Forms.Label();
-            this.saved_Recipe = new FontAwesome.Sharp.IconPictureBox();
+            this.labelQuantity = new System.Windows.Forms.Label();
+            this.recipesQuantity = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearchRecipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.infoPanel)).BeginInit();
             this.mainPanel.SuspendLayout();
             this.miniPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.saved_Recipe)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photoRecipe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saved_Recipe)).BeginInit();
             this.SuspendLayout();
             // 
             // search
@@ -158,6 +160,23 @@
             this.miniPanel.Name = "miniPanel";
             this.miniPanel.Size = new System.Drawing.Size(682, 166);
             this.miniPanel.TabIndex = 0;
+            // 
+            // saved_Recipe
+            // 
+            this.saved_Recipe.BackColor = System.Drawing.Color.Transparent;
+            this.saved_Recipe.Cursor = System.Windows.Forms.Cursors.Default;
+            this.saved_Recipe.ForeColor = System.Drawing.Color.AliceBlue;
+            this.saved_Recipe.IconChar = FontAwesome.Sharp.IconChar.Heart;
+            this.saved_Recipe.IconColor = System.Drawing.Color.AliceBlue;
+            this.saved_Recipe.IconFont = FontAwesome.Sharp.IconFont.Regular;
+            this.saved_Recipe.IconSize = 28;
+            this.saved_Recipe.Location = new System.Drawing.Point(10, 6);
+            this.saved_Recipe.Margin = new System.Windows.Forms.Padding(5, 3, 3, 5);
+            this.saved_Recipe.Name = "saved_Recipe";
+            this.saved_Recipe.Size = new System.Drawing.Size(28, 28);
+            this.saved_Recipe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.saved_Recipe.TabIndex = 194;
+            this.saved_Recipe.TabStop = false;
             // 
             // guna2Panel2
             // 
@@ -359,22 +378,31 @@
             this.nameRecipe.Text = "Soy, Seaweed, and Sesame Potato Salad, Ananas";
             this.nameRecipe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // saved_Recipe
+            // labelQuantity
             // 
-            this.saved_Recipe.BackColor = System.Drawing.Color.Transparent;
-            this.saved_Recipe.Cursor = System.Windows.Forms.Cursors.Default;
-            this.saved_Recipe.ForeColor = System.Drawing.Color.AliceBlue;
-            this.saved_Recipe.IconChar = FontAwesome.Sharp.IconChar.Heart;
-            this.saved_Recipe.IconColor = System.Drawing.Color.AliceBlue;
-            this.saved_Recipe.IconFont = FontAwesome.Sharp.IconFont.Regular;
-            this.saved_Recipe.IconSize = 28;
-            this.saved_Recipe.Location = new System.Drawing.Point(10, 6);
-            this.saved_Recipe.Margin = new System.Windows.Forms.Padding(5, 3, 3, 5);
-            this.saved_Recipe.Name = "saved_Recipe";
-            this.saved_Recipe.Size = new System.Drawing.Size(28, 28);
-            this.saved_Recipe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.saved_Recipe.TabIndex = 194;
-            this.saved_Recipe.TabStop = false;
+            this.labelQuantity.AutoSize = true;
+            this.labelQuantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(27)))));
+            this.labelQuantity.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(204)));
+            this.labelQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.labelQuantity.Location = new System.Drawing.Point(575, 459);
+            this.labelQuantity.Name = "labelQuantity";
+            this.labelQuantity.Size = new System.Drawing.Size(58, 18);
+            this.labelQuantity.TabIndex = 196;
+            this.labelQuantity.Text = "Results:";
+            this.labelQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // recipesQuantity
+            // 
+            this.recipesQuantity.AutoSize = true;
+            this.recipesQuantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(27)))));
+            this.recipesQuantity.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.recipesQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(163)))), ((int)(((byte)(0)))));
+            this.recipesQuantity.Location = new System.Drawing.Point(630, 457);
+            this.recipesQuantity.Name = "recipesQuantity";
+            this.recipesQuantity.Size = new System.Drawing.Size(30, 21);
+            this.recipesQuantity.TabIndex = 195;
+            this.recipesQuantity.Text = "50";
+            this.recipesQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Recipes
             // 
@@ -382,6 +410,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(32)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(720, 500);
+            this.Controls.Add(this.labelQuantity);
+            this.Controls.Add(this.recipesQuantity);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.infoPanel);
             this.Controls.Add(this.btnSearchRecipe);
@@ -397,11 +427,12 @@
             this.mainPanel.ResumeLayout(false);
             this.miniPanel.ResumeLayout(false);
             this.miniPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.saved_Recipe)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photoRecipe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.saved_Recipe)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -425,5 +456,7 @@
         private System.Windows.Forms.Label fat;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private FontAwesome.Sharp.IconPictureBox saved_Recipe;
+        private System.Windows.Forms.Label labelQuantity;
+        private System.Windows.Forms.Label recipesQuantity;
     }
 }

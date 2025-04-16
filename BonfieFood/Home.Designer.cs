@@ -59,12 +59,11 @@
             this.label_time = new System.Windows.Forms.Label();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Button15 = new Guna.UI2.WinForms.Guna2Button();
-            this.label_favorite = new System.Windows.Forms.Label();
+            this.savedRecipesLine = new Guna.UI2.WinForms.Guna2Button();
+            this.label_TotalSaved = new System.Windows.Forms.Label();
             this.label_SavedRecipes = new System.Windows.Forms.Label();
             this.guna2Button16 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnViewSavedRecipes = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label_Goals = new System.Windows.Forms.Label();
             this.label_GoalsCompleted = new System.Windows.Forms.Label();
@@ -80,8 +79,7 @@
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button13 = new Guna.UI2.WinForms.Guna2Button();
             this.label_Recipe = new System.Windows.Forms.Label();
-            this.guna2Button17 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button12 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSearchRecipes = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button14 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -349,7 +347,7 @@
             this.scannerBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.scannerBtn.Size = new System.Drawing.Size(180, 50);
             this.scannerBtn.TabIndex = 26;
-            this.scannerBtn.Text = "Scanner";
+            this.scannerBtn.Text = "Food Analyzer";
             this.scannerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.scannerBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.scannerBtn.UseVisualStyleBackColor = true;
@@ -491,12 +489,11 @@
             this.guna2Panel1_home.Controls.Add(this.label_time);
             this.guna2Panel1_home.Controls.Add(this.guna2PictureBox5);
             this.guna2Panel1_home.Controls.Add(this.guna2PictureBox2);
-            this.guna2Panel1_home.Controls.Add(this.guna2Button15);
-            this.guna2Panel1_home.Controls.Add(this.label_favorite);
+            this.guna2Panel1_home.Controls.Add(this.savedRecipesLine);
+            this.guna2Panel1_home.Controls.Add(this.label_TotalSaved);
             this.guna2Panel1_home.Controls.Add(this.label_SavedRecipes);
             this.guna2Panel1_home.Controls.Add(this.guna2Button16);
-            this.guna2Panel1_home.Controls.Add(this.guna2Button6);
-            this.guna2Panel1_home.Controls.Add(this.guna2Button1);
+            this.guna2Panel1_home.Controls.Add(this.btnViewSavedRecipes);
             this.guna2Panel1_home.Controls.Add(this.guna2PictureBox6);
             this.guna2Panel1_home.Controls.Add(this.label_Goals);
             this.guna2Panel1_home.Controls.Add(this.label_GoalsCompleted);
@@ -512,8 +509,7 @@
             this.guna2Panel1_home.Controls.Add(this.guna2Button8);
             this.guna2Panel1_home.Controls.Add(this.guna2Button13);
             this.guna2Panel1_home.Controls.Add(this.label_Recipe);
-            this.guna2Panel1_home.Controls.Add(this.guna2Button17);
-            this.guna2Panel1_home.Controls.Add(this.guna2Button12);
+            this.guna2Panel1_home.Controls.Add(this.btnSearchRecipes);
             this.guna2Panel1_home.Controls.Add(this.guna2Button11);
             this.guna2Panel1_home.Controls.Add(this.guna2Button14);
             this.guna2Panel1_home.Controls.Add(this.guna2PictureBox3);
@@ -596,37 +592,37 @@
             this.guna2PictureBox2.UseTransparentBackground = true;
             this.guna2PictureBox2.WaitOnLoad = true;
             // 
-            // guna2Button15
+            // savedRecipesLine
             // 
-            this.guna2Button15.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
-            this.guna2Button15.BorderRadius = 5;
-            this.guna2Button15.BorderThickness = 2;
-            this.guna2Button15.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button15.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button15.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button15.DisabledState.ForeColor = System.Drawing.Color.DarkGray;
-            this.guna2Button15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
-            this.guna2Button15.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.guna2Button15.ForeColor = System.Drawing.Color.Gainsboro;
-            this.guna2Button15.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.guna2Button15.Location = new System.Drawing.Point(469, 401);
-            this.guna2Button15.Name = "guna2Button15";
-            this.guna2Button15.Size = new System.Drawing.Size(63, 12);
-            this.guna2Button15.TabIndex = 104;
-            this.guna2Button15.UseTransparentBackground = true;
+            this.savedRecipesLine.BackColor = System.Drawing.Color.Transparent;
+            this.savedRecipesLine.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
+            this.savedRecipesLine.BorderRadius = 5;
+            this.savedRecipesLine.BorderThickness = 2;
+            this.savedRecipesLine.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.savedRecipesLine.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.savedRecipesLine.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.savedRecipesLine.DisabledState.ForeColor = System.Drawing.Color.DarkGray;
+            this.savedRecipesLine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
+            this.savedRecipesLine.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.savedRecipesLine.ForeColor = System.Drawing.Color.Gainsboro;
+            this.savedRecipesLine.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.savedRecipesLine.Location = new System.Drawing.Point(469, 401);
+            this.savedRecipesLine.Name = "savedRecipesLine";
+            this.savedRecipesLine.Size = new System.Drawing.Size(13, 12);
+            this.savedRecipesLine.TabIndex = 104;
+            this.savedRecipesLine.UseTransparentBackground = true;
             // 
-            // label_favorite
+            // label_TotalSaved
             // 
-            this.label_favorite.AutoSize = true;
-            this.label_favorite.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_favorite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label_favorite.Location = new System.Drawing.Point(624, 397);
-            this.label_favorite.Name = "label_favorite";
-            this.label_favorite.Size = new System.Drawing.Size(22, 17);
-            this.label_favorite.TabIndex = 108;
-            this.label_favorite.Text = "50";
-            this.label_favorite.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_TotalSaved.AutoSize = true;
+            this.label_TotalSaved.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_TotalSaved.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_TotalSaved.Location = new System.Drawing.Point(624, 397);
+            this.label_TotalSaved.Name = "label_TotalSaved";
+            this.label_TotalSaved.Size = new System.Drawing.Size(18, 17);
+            this.label_TotalSaved.TabIndex = 108;
+            this.label_TotalSaved.Text = "N";
+            this.label_TotalSaved.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_SavedRecipes
             // 
@@ -656,49 +652,30 @@
             this.guna2Button16.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.guna2Button16.Location = new System.Drawing.Point(469, 401);
             this.guna2Button16.Name = "guna2Button16";
-            this.guna2Button16.Size = new System.Drawing.Size(149, 12);
+            this.guna2Button16.Size = new System.Drawing.Size(150, 12);
             this.guna2Button16.TabIndex = 105;
             this.guna2Button16.UseTransparentBackground = true;
             // 
-            // guna2Button6
+            // btnViewSavedRecipes
             // 
-            this.guna2Button6.Animated = true;
-            this.guna2Button6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.BorderRadius = 13;
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(15)))), ((int)(((byte)(205)))));
-            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.guna2Button6.ForeColor = System.Drawing.Color.AliceBlue;
-            this.guna2Button6.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button6.Location = new System.Drawing.Point(469, 435);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(85, 27);
-            this.guna2Button6.TabIndex = 106;
-            this.guna2Button6.Text = "Add";
-            this.guna2Button6.UseTransparentBackground = true;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 13;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(239)))), ((int)(((byte)(251)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.guna2Button1.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.Location = new System.Drawing.Point(560, 435);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(117, 27);
-            this.guna2Button1.TabIndex = 107;
-            this.guna2Button1.Text = "View";
-            this.guna2Button1.UseTransparentBackground = true;
+            this.btnViewSavedRecipes.Animated = true;
+            this.btnViewSavedRecipes.BackColor = System.Drawing.Color.Transparent;
+            this.btnViewSavedRecipes.BorderRadius = 13;
+            this.btnViewSavedRecipes.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewSavedRecipes.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewSavedRecipes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnViewSavedRecipes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnViewSavedRecipes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(239)))), ((int)(((byte)(251)))));
+            this.btnViewSavedRecipes.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnViewSavedRecipes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnViewSavedRecipes.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnViewSavedRecipes.Location = new System.Drawing.Point(560, 435);
+            this.btnViewSavedRecipes.Name = "btnViewSavedRecipes";
+            this.btnViewSavedRecipes.Size = new System.Drawing.Size(117, 27);
+            this.btnViewSavedRecipes.TabIndex = 107;
+            this.btnViewSavedRecipes.Text = "View";
+            this.btnViewSavedRecipes.UseTransparentBackground = true;
+            this.btnViewSavedRecipes.Click += new System.EventHandler(this.btnViewSavedRecipes_Click);
             // 
             // guna2PictureBox6
             // 
@@ -766,7 +743,7 @@
             this.competedGoalsLine.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.competedGoalsLine.Location = new System.Drawing.Point(25, 401);
             this.competedGoalsLine.Name = "competedGoalsLine";
-            this.competedGoalsLine.Size = new System.Drawing.Size(15, 12);
+            this.competedGoalsLine.Size = new System.Drawing.Size(13, 12);
             this.competedGoalsLine.TabIndex = 101;
             this.competedGoalsLine.UseTransparentBackground = true;
             // 
@@ -806,7 +783,7 @@
             this.totalGoalsLine.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.totalGoalsLine.Location = new System.Drawing.Point(25, 379);
             this.totalGoalsLine.Name = "totalGoalsLine";
-            this.totalGoalsLine.Size = new System.Drawing.Size(15, 12);
+            this.totalGoalsLine.Size = new System.Drawing.Size(13, 12);
             this.totalGoalsLine.TabIndex = 99;
             this.totalGoalsLine.UseTransparentBackground = true;
             // 
@@ -906,7 +883,7 @@
             this.guna2Button8.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.guna2Button8.Location = new System.Drawing.Point(469, 171);
             this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(15, 12);
+            this.guna2Button8.Size = new System.Drawing.Size(13, 12);
             this.guna2Button8.TabIndex = 91;
             this.guna2Button8.UseTransparentBackground = true;
             // 
@@ -937,50 +914,30 @@
             this.label_Recipe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
             this.label_Recipe.Location = new System.Drawing.Point(465, 90);
             this.label_Recipe.Name = "label_Recipe";
-            this.label_Recipe.Size = new System.Drawing.Size(61, 21);
+            this.label_Recipe.Size = new System.Drawing.Size(68, 21);
             this.label_Recipe.TabIndex = 88;
-            this.label_Recipe.Text = "Recipe";
+            this.label_Recipe.Text = "Recipes";
             this.label_Recipe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2Button17
+            // btnSearchRecipes
             // 
-            this.guna2Button17.Animated = true;
-            this.guna2Button17.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button17.BorderRadius = 13;
-            this.guna2Button17.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button17.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button17.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button17.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button17.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(15)))), ((int)(((byte)(205)))));
-            this.guna2Button17.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2Button17.ForeColor = System.Drawing.Color.AliceBlue;
-            this.guna2Button17.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2Button17.Location = new System.Drawing.Point(469, 205);
-            this.guna2Button17.Name = "guna2Button17";
-            this.guna2Button17.Size = new System.Drawing.Size(85, 27);
-            this.guna2Button17.TabIndex = 85;
-            this.guna2Button17.Text = "Add";
-            this.guna2Button17.UseTransparentBackground = true;
-            // 
-            // guna2Button12
-            // 
-            this.guna2Button12.Animated = true;
-            this.guna2Button12.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button12.BorderRadius = 13;
-            this.guna2Button12.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button12.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button12.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(45)))), ((int)(((byte)(211)))));
-            this.guna2Button12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2Button12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.guna2Button12.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2Button12.Location = new System.Drawing.Point(560, 205);
-            this.guna2Button12.Name = "guna2Button12";
-            this.guna2Button12.Size = new System.Drawing.Size(117, 27);
-            this.guna2Button12.TabIndex = 84;
-            this.guna2Button12.Text = "Search";
-            this.guna2Button12.UseTransparentBackground = true;
+            this.btnSearchRecipes.Animated = true;
+            this.btnSearchRecipes.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearchRecipes.BorderRadius = 13;
+            this.btnSearchRecipes.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearchRecipes.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearchRecipes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearchRecipes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearchRecipes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(45)))), ((int)(((byte)(211)))));
+            this.btnSearchRecipes.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSearchRecipes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSearchRecipes.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSearchRecipes.Location = new System.Drawing.Point(560, 205);
+            this.btnSearchRecipes.Name = "btnSearchRecipes";
+            this.btnSearchRecipes.Size = new System.Drawing.Size(117, 27);
+            this.btnSearchRecipes.TabIndex = 84;
+            this.btnSearchRecipes.Text = "Search";
+            this.btnSearchRecipes.UseTransparentBackground = true;
             // 
             // guna2Button11
             // 
@@ -999,7 +956,7 @@
             this.guna2Button11.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.guna2Button11.Location = new System.Drawing.Point(469, 149);
             this.guna2Button11.Name = "guna2Button11";
-            this.guna2Button11.Size = new System.Drawing.Size(15, 12);
+            this.guna2Button11.Size = new System.Drawing.Size(13, 12);
             this.guna2Button11.TabIndex = 89;
             this.guna2Button11.UseTransparentBackground = true;
             // 
@@ -1053,7 +1010,7 @@
             this.morningLine.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.morningLine.Location = new System.Drawing.Point(25, 128);
             this.morningLine.Name = "morningLine";
-            this.morningLine.Size = new System.Drawing.Size(15, 12);
+            this.morningLine.Size = new System.Drawing.Size(13, 12);
             this.morningLine.TabIndex = 82;
             this.morningLine.UseTransparentBackground = true;
             // 
@@ -1106,7 +1063,7 @@
             this.dinnerLine.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.dinnerLine.Location = new System.Drawing.Point(25, 171);
             this.dinnerLine.Name = "dinnerLine";
-            this.dinnerLine.Size = new System.Drawing.Size(15, 12);
+            this.dinnerLine.Size = new System.Drawing.Size(13, 12);
             this.dinnerLine.TabIndex = 80;
             this.dinnerLine.UseTransparentBackground = true;
             // 
@@ -1126,7 +1083,7 @@
             this.lunchLine.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.lunchLine.Location = new System.Drawing.Point(25, 149);
             this.lunchLine.Name = "lunchLine";
-            this.lunchLine.Size = new System.Drawing.Size(15, 12);
+            this.lunchLine.Size = new System.Drawing.Size(13, 12);
             this.lunchLine.TabIndex = 79;
             this.lunchLine.UseTransparentBackground = true;
             // 
@@ -1306,7 +1263,7 @@
             this.toolTip_Competed.InitialDelay = 100;
             this.toolTip_Competed.MaximumSize = new System.Drawing.Size(0, 0);
             this.toolTip_Competed.ReshowDelay = 100;
-            this.toolTip_Competed.TitleFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.toolTip_Competed.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.toolTip_Competed.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
             // 
             // toolTip_TotalGoals
@@ -1319,7 +1276,7 @@
             this.toolTip_TotalGoals.InitialDelay = 100;
             this.toolTip_TotalGoals.MaximumSize = new System.Drawing.Size(0, 0);
             this.toolTip_TotalGoals.ReshowDelay = 100;
-            this.toolTip_TotalGoals.TitleFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.toolTip_TotalGoals.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.toolTip_TotalGoals.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
             // 
             // Home
@@ -1386,8 +1343,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button guna2Button13;
         private System.Windows.Forms.Label label_Recipe;
-        private Guna.UI2.WinForms.Guna2Button guna2Button17;
-        private Guna.UI2.WinForms.Guna2Button guna2Button12;
+        private Guna.UI2.WinForms.Guna2Button btnSearchRecipes;
         private Guna.UI2.WinForms.Guna2Button guna2Button11;
         private Guna.UI2.WinForms.Guna2Button guna2Button14;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
@@ -1407,12 +1363,10 @@
         private Guna.UI2.WinForms.Guna2Button totalGoalsLine;
         private Guna.UI2.WinForms.Guna2Button guna2Button19;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button15;
-        private System.Windows.Forms.Label label_favorite;
+        private Guna.UI2.WinForms.Guna2Button savedRecipesLine;
+        private System.Windows.Forms.Label label_TotalSaved;
         private System.Windows.Forms.Label label_SavedRecipes;
         private Guna.UI2.WinForms.Guna2Button guna2Button16;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
@@ -1435,5 +1389,6 @@
         private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_Dinner;
         private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_Competed;
         private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_TotalGoals;
+        private Guna.UI2.WinForms.Guna2Button btnViewSavedRecipes;
     }
 }

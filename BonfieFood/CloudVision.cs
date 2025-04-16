@@ -16,8 +16,6 @@ namespace BonfieFood
         {
             if (File.Exists(CLOUDVISION_API))
             {
-
-
                 using (var stream = new FileStream(CLOUDVISION_API, FileMode.Open, FileAccess.Read))
                 {
                     var credential = GoogleCredential.FromStream(stream)
@@ -46,7 +44,6 @@ namespace BonfieFood
             var labels = await client.DetectLabelsAsync(image);
 
             return labels.Any(label => label.Description.ToLower().Contains("food"));
-
         }
     }
 }

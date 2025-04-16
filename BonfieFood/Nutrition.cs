@@ -49,6 +49,7 @@ namespace BonfieFood
                 if (string.IsNullOrWhiteSpace(productsList))
                 {
                     MessageBoxError.Show("Введіть список продуктів для підрахунку калорій!");
+                    nutritionUser.Text = "";
                     return;
                 }
                 if (string.IsNullOrEmpty(selectedMealPeriod))

@@ -68,9 +68,6 @@ namespace BonfieFood
                 if (response.IsSuccessStatusCode)
                 {
                     string jResponse = await response.Content.ReadAsStringAsync();
-                    //string fil = "Products_Edamam_Nutriton.json";
-                    //File.WriteAllText(fil, jResponse);
-                    //MessageBoxSuccess.Show($"Відповідь від Nutrition Analysis API збережена у файлі: {fil}");
                     dynamic nutrition = JsonConvert.DeserializeObject(jResponse);
                     
                     foreach (var ingredient in nutrition.ingredients)
