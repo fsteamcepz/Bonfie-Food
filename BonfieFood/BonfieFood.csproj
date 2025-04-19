@@ -753,6 +753,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
+    <None Include="Resources\recipes-background.png" />
     <None Include="Resources\nutrition-background.png" />
     <None Include="Resources\added-nutrition.png" />
     <None Include="Resources\search-recipes-hover.png" />

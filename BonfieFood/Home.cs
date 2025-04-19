@@ -74,22 +74,27 @@ namespace BonfieFood
             label_dayWeekName.BackColor = Color.Transparent;
             label_dayWeekName.Location = new Point(0, 50);
 
-            // Дата (September 22, 2024")
+            // Дата (September 22, 2024)
             label_date.Parent = guna2PictureBox2;
             label_date.BackColor = Color.Transparent;
             label_date.Location = new Point(-7, 75);
 
-            // Рецепт
+            // БД рецепти та продукти
             label_Recipe.Parent = guna2PictureBox3;
             label_Recipe.BackColor = Color.Transparent;
             label_Recipe.Location = new Point(12, 15);
 
             label_shortestRecipe.Parent = guna2PictureBox3;
             label_shortestRecipe.BackColor = Color.Transparent;
-            label_shortestRecipe.Location = new Point(147, 71);
+            label_shortestRecipe.Location = new Point(118, 71);
             label_longestRecipe.Parent = guna2PictureBox3;
             label_longestRecipe.BackColor = Color.Transparent;
-            label_longestRecipe.Location = new Point(147, 93);
+            label_longestRecipe.Location = new Point(118, 93);
+
+            toolTip_DBProduct.ToolTipTitle = "База даних продуктів";
+            toolTip_DBProduct.SetToolTip(DBProductsLine, "Обирайте свідомо – отримуйте нутрієнтні дані про майже 900 000 продуктів!");
+            toolTip_DBRecipe.ToolTipTitle = "База даних рецептів";
+            toolTip_DBRecipe.SetToolTip(DBRecipeLine, "Понад 2.3 мільйона рецептів – знайдіть саме те, що смакує вам!");
 
             // Цілі
             label_Goals.Parent = guna2PictureBox4;
@@ -550,6 +555,21 @@ namespace BonfieFood
             SavedRecipes saved = new SavedRecipes();
             saved.ShowDialog();
         }
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+            ActivateButton(productsBtn, pinkBar);
+            CurrentPage(new Products());
+            iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
+        }
+        private void btnRecipes_Click(object sender, EventArgs e)
+        {
+            ActivateButton(recipesBtn, pinkBar);
+            iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
+
+            Recipes recipes = new Recipes();
+            recipes.RecipesUpdated += LoadDataSavedRecipes;
+            CurrentPage(recipes);
+        }
         private bool CheckDailyRate()
         {
             string query = @"SELECT
@@ -598,7 +618,6 @@ namespace BonfieFood
 
             btnAddNutrition.Text = "Edit";
         }
-
         private void SetupButtonColorEffects(IconButton btn)
         {
             Color defaultBackColor = btn.BackColor;

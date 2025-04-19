@@ -54,6 +54,7 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.mainPagePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1_home = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnProducts = new Guna.UI2.WinForms.Guna2Button();
             this.label_dayWeekName = new System.Windows.Forms.Label();
             this.label_date = new System.Windows.Forms.Label();
             this.label_time = new System.Windows.Forms.Label();
@@ -77,11 +78,11 @@
             this.label_longestRecipe = new System.Windows.Forms.Label();
             this.label_shortestRecipe = new System.Windows.Forms.Label();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button13 = new Guna.UI2.WinForms.Guna2Button();
+            this.DBRecipeLine = new Guna.UI2.WinForms.Guna2Button();
             this.label_Recipe = new System.Windows.Forms.Label();
-            this.btnSearchRecipes = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRecipes = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button14 = new Guna.UI2.WinForms.Guna2Button();
+            this.DBProductsLine = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.morningLine = new Guna.UI2.WinForms.Guna2Button();
             this.backgroundMorningLine = new Guna.UI2.WinForms.Guna2Button();
@@ -101,6 +102,8 @@
             this.toolTip_Dinner = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.toolTip_Competed = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.toolTip_TotalGoals = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            this.toolTip_DBProduct = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            this.toolTip_DBRecipe = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.miniImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconOfPage)).BeginInit();
@@ -484,6 +487,7 @@
             // 
             this.guna2Panel1_home.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Panel1_home.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1_home.Controls.Add(this.btnProducts);
             this.guna2Panel1_home.Controls.Add(this.label_dayWeekName);
             this.guna2Panel1_home.Controls.Add(this.label_date);
             this.guna2Panel1_home.Controls.Add(this.label_time);
@@ -507,11 +511,11 @@
             this.guna2Panel1_home.Controls.Add(this.label_longestRecipe);
             this.guna2Panel1_home.Controls.Add(this.label_shortestRecipe);
             this.guna2Panel1_home.Controls.Add(this.guna2Button8);
-            this.guna2Panel1_home.Controls.Add(this.guna2Button13);
+            this.guna2Panel1_home.Controls.Add(this.DBRecipeLine);
             this.guna2Panel1_home.Controls.Add(this.label_Recipe);
-            this.guna2Panel1_home.Controls.Add(this.btnSearchRecipes);
+            this.guna2Panel1_home.Controls.Add(this.btnRecipes);
             this.guna2Panel1_home.Controls.Add(this.guna2Button11);
-            this.guna2Panel1_home.Controls.Add(this.guna2Button14);
+            this.guna2Panel1_home.Controls.Add(this.DBProductsLine);
             this.guna2Panel1_home.Controls.Add(this.guna2PictureBox3);
             this.guna2Panel1_home.Controls.Add(this.morningLine);
             this.guna2Panel1_home.Controls.Add(this.backgroundMorningLine);
@@ -529,6 +533,27 @@
             this.guna2Panel1_home.Name = "guna2Panel1_home";
             this.guna2Panel1_home.Size = new System.Drawing.Size(702, 482);
             this.guna2Panel1_home.TabIndex = 64;
+            // 
+            // btnProducts
+            // 
+            this.btnProducts.Animated = true;
+            this.btnProducts.BackColor = System.Drawing.Color.Transparent;
+            this.btnProducts.BorderRadius = 13;
+            this.btnProducts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnProducts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnProducts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnProducts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnProducts.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(41)))), ((int)(((byte)(236)))));
+            this.btnProducts.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnProducts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.btnProducts.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnProducts.Location = new System.Drawing.Point(469, 205);
+            this.btnProducts.Name = "btnProducts";
+            this.btnProducts.Size = new System.Drawing.Size(99, 27);
+            this.btnProducts.TabIndex = 117;
+            this.btnProducts.Text = "Products";
+            this.btnProducts.UseTransparentBackground = true;
+            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
             // 
             // label_dayWeekName
             // 
@@ -847,11 +872,11 @@
             this.label_longestRecipe.AutoSize = true;
             this.label_longestRecipe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_longestRecipe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label_longestRecipe.Location = new System.Drawing.Point(602, 167);
+            this.label_longestRecipe.Location = new System.Drawing.Point(571, 167);
             this.label_longestRecipe.Name = "label_longestRecipe";
-            this.label_longestRecipe.Size = new System.Drawing.Size(47, 17);
+            this.label_longestRecipe.Size = new System.Drawing.Size(95, 17);
             this.label_longestRecipe.TabIndex = 92;
-            this.label_longestRecipe.Text = "22 min";
+            this.label_longestRecipe.Text = "2.3M+ Recipes";
             this.label_longestRecipe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_shortestRecipe
@@ -859,11 +884,11 @@
             this.label_shortestRecipe.AutoSize = true;
             this.label_shortestRecipe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_shortestRecipe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label_shortestRecipe.Location = new System.Drawing.Point(602, 145);
+            this.label_shortestRecipe.Location = new System.Drawing.Point(571, 145);
             this.label_shortestRecipe.Name = "label_shortestRecipe";
-            this.label_shortestRecipe.Size = new System.Drawing.Size(47, 17);
+            this.label_shortestRecipe.Size = new System.Drawing.Size(108, 17);
             this.label_shortestRecipe.TabIndex = 86;
-            this.label_shortestRecipe.Text = "18 min";
+            this.label_shortestRecipe.Text = "900,000 Products";
             this.label_shortestRecipe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Button8
@@ -887,57 +912,56 @@
             this.guna2Button8.TabIndex = 91;
             this.guna2Button8.UseTransparentBackground = true;
             // 
-            // guna2Button13
+            // DBRecipeLine
             // 
-            this.guna2Button13.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(24)))), ((int)(((byte)(123)))));
-            this.guna2Button13.BorderRadius = 5;
-            this.guna2Button13.BorderThickness = 1;
-            this.guna2Button13.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button13.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button13.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button13.DisabledState.ForeColor = System.Drawing.Color.DarkGray;
-            this.guna2Button13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(10)))), ((int)(((byte)(85)))));
-            this.guna2Button13.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2Button13.ForeColor = System.Drawing.Color.Gainsboro;
-            this.guna2Button13.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.guna2Button13.Location = new System.Drawing.Point(493, 171);
-            this.guna2Button13.Name = "guna2Button13";
-            this.guna2Button13.Size = new System.Drawing.Size(98, 12);
-            this.guna2Button13.TabIndex = 90;
-            this.guna2Button13.UseTransparentBackground = true;
+            this.DBRecipeLine.BackColor = System.Drawing.Color.Transparent;
+            this.DBRecipeLine.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(24)))), ((int)(((byte)(123)))));
+            this.DBRecipeLine.BorderRadius = 5;
+            this.DBRecipeLine.BorderThickness = 1;
+            this.DBRecipeLine.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.DBRecipeLine.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.DBRecipeLine.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.DBRecipeLine.DisabledState.ForeColor = System.Drawing.Color.DarkGray;
+            this.DBRecipeLine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(10)))), ((int)(((byte)(85)))));
+            this.DBRecipeLine.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DBRecipeLine.ForeColor = System.Drawing.Color.Gainsboro;
+            this.DBRecipeLine.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.DBRecipeLine.Location = new System.Drawing.Point(493, 171);
+            this.DBRecipeLine.Name = "DBRecipeLine";
+            this.DBRecipeLine.Size = new System.Drawing.Size(73, 12);
+            this.DBRecipeLine.TabIndex = 90;
+            this.DBRecipeLine.UseTransparentBackground = true;
             // 
             // label_Recipe
             // 
-            this.label_Recipe.AutoSize = true;
             this.label_Recipe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_Recipe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
             this.label_Recipe.Location = new System.Drawing.Point(465, 90);
             this.label_Recipe.Name = "label_Recipe";
-            this.label_Recipe.Size = new System.Drawing.Size(68, 21);
+            this.label_Recipe.Size = new System.Drawing.Size(213, 50);
             this.label_Recipe.TabIndex = 88;
-            this.label_Recipe.Text = "Recipes";
-            this.label_Recipe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Recipe.Text = "Integrated Product and Recipe Database";
             // 
-            // btnSearchRecipes
+            // btnRecipes
             // 
-            this.btnSearchRecipes.Animated = true;
-            this.btnSearchRecipes.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearchRecipes.BorderRadius = 13;
-            this.btnSearchRecipes.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearchRecipes.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearchRecipes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearchRecipes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearchRecipes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(45)))), ((int)(((byte)(211)))));
-            this.btnSearchRecipes.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSearchRecipes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnSearchRecipes.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSearchRecipes.Location = new System.Drawing.Point(560, 205);
-            this.btnSearchRecipes.Name = "btnSearchRecipes";
-            this.btnSearchRecipes.Size = new System.Drawing.Size(117, 27);
-            this.btnSearchRecipes.TabIndex = 84;
-            this.btnSearchRecipes.Text = "Search";
-            this.btnSearchRecipes.UseTransparentBackground = true;
+            this.btnRecipes.Animated = true;
+            this.btnRecipes.BackColor = System.Drawing.Color.Transparent;
+            this.btnRecipes.BorderRadius = 13;
+            this.btnRecipes.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRecipes.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRecipes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRecipes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRecipes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(45)))), ((int)(((byte)(211)))));
+            this.btnRecipes.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRecipes.ForeColor = System.Drawing.Color.Indigo;
+            this.btnRecipes.HoverState.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRecipes.Location = new System.Drawing.Point(574, 205);
+            this.btnRecipes.Name = "btnRecipes";
+            this.btnRecipes.Size = new System.Drawing.Size(103, 27);
+            this.btnRecipes.TabIndex = 84;
+            this.btnRecipes.Text = "Recipes";
+            this.btnRecipes.UseTransparentBackground = true;
+            this.btnRecipes.Click += new System.EventHandler(this.btnRecipes_Click);
             // 
             // guna2Button11
             // 
@@ -960,25 +984,25 @@
             this.guna2Button11.TabIndex = 89;
             this.guna2Button11.UseTransparentBackground = true;
             // 
-            // guna2Button14
+            // DBProductsLine
             // 
-            this.guna2Button14.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(24)))), ((int)(((byte)(123)))));
-            this.guna2Button14.BorderRadius = 5;
-            this.guna2Button14.BorderThickness = 1;
-            this.guna2Button14.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button14.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button14.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button14.DisabledState.ForeColor = System.Drawing.Color.DarkGray;
-            this.guna2Button14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(10)))), ((int)(((byte)(85)))));
-            this.guna2Button14.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2Button14.ForeColor = System.Drawing.Color.Gainsboro;
-            this.guna2Button14.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.guna2Button14.Location = new System.Drawing.Point(493, 149);
-            this.guna2Button14.Name = "guna2Button14";
-            this.guna2Button14.Size = new System.Drawing.Size(98, 12);
-            this.guna2Button14.TabIndex = 87;
-            this.guna2Button14.UseTransparentBackground = true;
+            this.DBProductsLine.BackColor = System.Drawing.Color.Transparent;
+            this.DBProductsLine.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(24)))), ((int)(((byte)(123)))));
+            this.DBProductsLine.BorderRadius = 5;
+            this.DBProductsLine.BorderThickness = 1;
+            this.DBProductsLine.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.DBProductsLine.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.DBProductsLine.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.DBProductsLine.DisabledState.ForeColor = System.Drawing.Color.DarkGray;
+            this.DBProductsLine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(10)))), ((int)(((byte)(85)))));
+            this.DBProductsLine.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DBProductsLine.ForeColor = System.Drawing.Color.Gainsboro;
+            this.DBProductsLine.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.DBProductsLine.Location = new System.Drawing.Point(493, 149);
+            this.DBProductsLine.Name = "DBProductsLine";
+            this.DBProductsLine.Size = new System.Drawing.Size(73, 12);
+            this.DBProductsLine.TabIndex = 87;
+            this.DBProductsLine.UseTransparentBackground = true;
             // 
             // guna2PictureBox3
             // 
@@ -1279,6 +1303,32 @@
             this.toolTip_TotalGoals.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.toolTip_TotalGoals.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
             // 
+            // toolTip_DBProduct
+            // 
+            this.toolTip_DBProduct.AllowLinksHandling = true;
+            this.toolTip_DBProduct.AutoPopDelay = 5000;
+            this.toolTip_DBProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.toolTip_DBProduct.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.toolTip_DBProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.toolTip_DBProduct.InitialDelay = 100;
+            this.toolTip_DBProduct.MaximumSize = new System.Drawing.Size(0, 0);
+            this.toolTip_DBProduct.ReshowDelay = 100;
+            this.toolTip_DBProduct.TitleFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.toolTip_DBProduct.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(120)))), ((int)(((byte)(249)))));
+            // 
+            // toolTip_DBRecipe
+            // 
+            this.toolTip_DBRecipe.AllowLinksHandling = true;
+            this.toolTip_DBRecipe.AutoPopDelay = 5000;
+            this.toolTip_DBRecipe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.toolTip_DBRecipe.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.toolTip_DBRecipe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.toolTip_DBRecipe.InitialDelay = 100;
+            this.toolTip_DBRecipe.MaximumSize = new System.Drawing.Size(0, 0);
+            this.toolTip_DBRecipe.ReshowDelay = 100;
+            this.toolTip_DBRecipe.TitleFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.toolTip_DBRecipe.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(163)))), ((int)(((byte)(0)))));
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1341,11 +1391,11 @@
         private System.Windows.Forms.Label label_longestRecipe;
         private System.Windows.Forms.Label label_shortestRecipe;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
-        private Guna.UI2.WinForms.Guna2Button guna2Button13;
+        private Guna.UI2.WinForms.Guna2Button DBRecipeLine;
         private System.Windows.Forms.Label label_Recipe;
-        private Guna.UI2.WinForms.Guna2Button btnSearchRecipes;
+        private Guna.UI2.WinForms.Guna2Button btnRecipes;
         private Guna.UI2.WinForms.Guna2Button guna2Button11;
-        private Guna.UI2.WinForms.Guna2Button guna2Button14;
+        private Guna.UI2.WinForms.Guna2Button DBProductsLine;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2Button morningLine;
         private Guna.UI2.WinForms.Guna2Button backgroundMorningLine;
@@ -1390,5 +1440,8 @@
         private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_Competed;
         private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_TotalGoals;
         private Guna.UI2.WinForms.Guna2Button btnViewSavedRecipes;
+        private Guna.UI2.WinForms.Guna2Button btnProducts;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_DBProduct;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_DBRecipe;
     }
 }
