@@ -37,16 +37,16 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.close = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel_Norms = new Guna.UI2.WinForms.Guna2Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label_GoalDescription = new System.Windows.Forms.Label();
             this.descriptionOfGoal = new System.Windows.Forms.RichTextBox();
             this.goalDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_TargetValue = new System.Windows.Forms.Label();
+            this.label_Date = new System.Windows.Forms.Label();
+            this.label_Goal = new System.Windows.Forms.Label();
             this.targetValue = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.goal = new Guna.UI2.WinForms.Guna2ComboBox();
             this.saveGoal = new Guna.UI2.WinForms.Guna2Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_CreateGoal_h1 = new System.Windows.Forms.Label();
             this.guna2DragControl4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -139,16 +139,16 @@
             // 
             this.guna2Panel_Norms.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel_Norms.BorderRadius = 15;
-            this.guna2Panel_Norms.Controls.Add(this.label5);
+            this.guna2Panel_Norms.Controls.Add(this.label_GoalDescription);
             this.guna2Panel_Norms.Controls.Add(this.descriptionOfGoal);
             this.guna2Panel_Norms.Controls.Add(this.goalDate);
-            this.guna2Panel_Norms.Controls.Add(this.label4);
-            this.guna2Panel_Norms.Controls.Add(this.label3);
-            this.guna2Panel_Norms.Controls.Add(this.label1);
+            this.guna2Panel_Norms.Controls.Add(this.label_TargetValue);
+            this.guna2Panel_Norms.Controls.Add(this.label_Date);
+            this.guna2Panel_Norms.Controls.Add(this.label_Goal);
             this.guna2Panel_Norms.Controls.Add(this.targetValue);
             this.guna2Panel_Norms.Controls.Add(this.goal);
             this.guna2Panel_Norms.Controls.Add(this.saveGoal);
-            this.guna2Panel_Norms.Controls.Add(this.label2);
+            this.guna2Panel_Norms.Controls.Add(this.label_CreateGoal_h1);
             this.guna2Panel_Norms.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel_Norms.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(20)))), ((int)(((byte)(85)))));
             this.guna2Panel_Norms.Location = new System.Drawing.Point(17, 46);
@@ -156,18 +156,18 @@
             this.guna2Panel_Norms.Size = new System.Drawing.Size(360, 510);
             this.guna2Panel_Norms.TabIndex = 62;
             // 
-            // label5
+            // label_GoalDescription
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F);
-            this.label5.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.label5.Location = new System.Drawing.Point(70, 318);
-            this.label5.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 21);
-            this.label5.TabIndex = 86;
-            this.label5.Text = "Опис";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_GoalDescription.AutoSize = true;
+            this.label_GoalDescription.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F);
+            this.label_GoalDescription.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.label_GoalDescription.Location = new System.Drawing.Point(70, 318);
+            this.label_GoalDescription.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.label_GoalDescription.Name = "label_GoalDescription";
+            this.label_GoalDescription.Size = new System.Drawing.Size(46, 21);
+            this.label_GoalDescription.TabIndex = 86;
+            this.label_GoalDescription.Text = "Опис";
+            this.label_GoalDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // descriptionOfGoal
             // 
@@ -200,44 +200,44 @@
             this.goalDate.UseTransparentBackground = true;
             this.goalDate.Value = new System.DateTime(2025, 2, 26, 18, 37, 26, 0);
             // 
-            // label4
+            // label_TargetValue
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F);
-            this.label4.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label4.Location = new System.Drawing.Point(70, 236);
-            this.label4.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 21);
-            this.label4.TabIndex = 83;
-            this.label4.Text = "Очікуваний результат";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_TargetValue.AutoSize = true;
+            this.label_TargetValue.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F);
+            this.label_TargetValue.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label_TargetValue.Location = new System.Drawing.Point(70, 236);
+            this.label_TargetValue.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.label_TargetValue.Name = "label_TargetValue";
+            this.label_TargetValue.Size = new System.Drawing.Size(164, 21);
+            this.label_TargetValue.TabIndex = 83;
+            this.label_TargetValue.Text = "Очікуваний результат";
+            this.label_TargetValue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // label_Date
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F);
-            this.label3.ForeColor = System.Drawing.Color.Plum;
-            this.label3.Location = new System.Drawing.Point(70, 154);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 21);
-            this.label3.TabIndex = 82;
-            this.label3.Text = "Дата завершення";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Date.AutoSize = true;
+            this.label_Date.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F);
+            this.label_Date.ForeColor = System.Drawing.Color.Plum;
+            this.label_Date.Location = new System.Drawing.Point(70, 154);
+            this.label_Date.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.label_Date.Name = "label_Date";
+            this.label_Date.Size = new System.Drawing.Size(134, 21);
+            this.label_Date.TabIndex = 82;
+            this.label_Date.Text = "Дата завершення";
+            this.label_Date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // label_Goal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(151)))), ((int)(((byte)(254)))));
-            this.label1.Location = new System.Drawing.Point(70, 69);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 21);
-            this.label1.TabIndex = 81;
-            this.label1.Text = "Ціль";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Goal.AutoSize = true;
+            this.label_Goal.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Goal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(151)))), ((int)(((byte)(254)))));
+            this.label_Goal.Location = new System.Drawing.Point(70, 69);
+            this.label_Goal.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.label_Goal.Name = "label_Goal";
+            this.label_Goal.Size = new System.Drawing.Size(41, 21);
+            this.label_Goal.TabIndex = 81;
+            this.label_Goal.Text = "Ціль";
+            this.label_Goal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // targetValue
             // 
@@ -322,17 +322,17 @@
             this.saveGoal.UseTransparentBackground = true;
             this.saveGoal.Click += new System.EventHandler(this.saveGoal_Click);
             // 
-            // label2
+            // label_CreateGoal_h1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label2.Location = new System.Drawing.Point(97, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 32);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "Create a goal";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_CreateGoal_h1.AutoSize = true;
+            this.label_CreateGoal_h1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_CreateGoal_h1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_CreateGoal_h1.Location = new System.Drawing.Point(101, 13);
+            this.label_CreateGoal_h1.Name = "label_CreateGoal_h1";
+            this.label_CreateGoal_h1.Size = new System.Drawing.Size(144, 32);
+            this.label_CreateGoal_h1.TabIndex = 56;
+            this.label_CreateGoal_h1.Text = "Create goal";
+            this.label_CreateGoal_h1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2DragControl4
             // 
@@ -391,15 +391,15 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2ControlBox close;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel_Norms;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_CreateGoal_h1;
         private Guna.UI2.WinForms.Guna2DateTimePicker goalDate;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_TargetValue;
+        private System.Windows.Forms.Label label_Date;
+        private System.Windows.Forms.Label label_Goal;
         private Guna.UI2.WinForms.Guna2NumericUpDown targetValue;
         private Guna.UI2.WinForms.Guna2ComboBox goal;
         private Guna.UI2.WinForms.Guna2Button saveGoal;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label_GoalDescription;
         private System.Windows.Forms.RichTextBox descriptionOfGoal;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl4;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl3;

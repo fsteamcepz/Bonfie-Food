@@ -29,6 +29,12 @@ namespace BonfieFood
             UpdateBtns();
 
             HidePhotoAnalysisResults();
+            UpdateTexts();
+            Language.OnLanguageChanged += ChangeLanguage;
+        }
+        private void ChangeLanguage(string cultureCode)
+        {
+            UpdateTexts();
         }
         private void uploadPhotoHover_Click(object sender, EventArgs e)
         {
@@ -368,8 +374,8 @@ namespace BonfieFood
 
         private void ConfigurateLabels()
         {
-            label_h1.Parent = homePageImg;
-            label_h1.BackColor = Color.Transparent;
+            label_Clarifai.Parent = homePageImg;
+            label_Clarifai.BackColor = Color.Transparent;
         }
         private void UpdateBtns()
         {
@@ -377,8 +383,6 @@ namespace BonfieFood
             uploadedUserPoto.Image = null;
             uploadedUserPoto.Visible = false;
             uploadPhotoHover.Visible = true;
-
-            toolTip_uploadPhoto.SetToolTip(uploadPhotoHover, "Завантажити фото");
         }
         private void deletePhoto_MouseEnter(object sender, EventArgs e)
         {
@@ -472,6 +476,13 @@ namespace BonfieFood
                                                    "розрахований на основі даних про типовий розмір порції.<br>" +
                                                    "Якщо ви споживаєте інший обсяг, врахуйте, що значення<br>" +
                                                    "будуть пропорційно змінюватися.");
+        }
+
+        private void UpdateTexts()
+        {
+            label_Clarifai.Text = Properties.Resources.label_Clarifai;
+            btn_ScanPhoto.Text = Properties.Resources.btn_ScanPhoto;
+            toolTip_uploadPhoto.SetToolTip(uploadPhotoHover, Properties.Resources.toolTip_uploadPhoto);
         }
     }
 }

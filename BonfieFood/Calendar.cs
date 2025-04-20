@@ -29,6 +29,13 @@ namespace BonfieFood
             LoadCalendar();
             ConfigureBtns();
             flowLayoutPanel_numbers.Visible = true;
+
+            UpdateTexts();
+            Language.OnLanguageChanged += ChangeLanguage;
+        }
+        private void ChangeLanguage(string cultureCode)
+        {
+            UpdateTexts();
         }
         private void CreateButtons()
         {
@@ -66,7 +73,17 @@ namespace BonfieFood
         }
         private void LoadCalendar()
         {
-            string monthName = CultureInfo.GetCultureInfo("en-US").DateTimeFormat.GetMonthName(currentDate.Month);
+            CultureInfo culture = System.Threading.Thread.CurrentThread.CurrentCulture;
+            string monthName;
+
+            if (culture.ToString() == "en")
+            {
+                monthName = CultureInfo.GetCultureInfo("en").DateTimeFormat.GetMonthName(currentDate.Month);
+            }
+            else
+            {
+                monthName = CultureInfo.GetCultureInfo("uk").DateTimeFormat.GetMonthName(currentDate.Month);
+            }
             int daysInMonth = DateTime.DaysInMonth(currentDate.Year, currentDate.Month);
 
             nameOfMonth.Text = char.ToUpper(monthName[0]) + monthName.Substring(1);
@@ -158,8 +175,8 @@ namespace BonfieFood
                     btn[i].Visible = false;
                 }
             }
-            goals.Text = $"Goals: {count}";
-            toolTip_Goals.SetToolTip(goals, $"Кількість цілей в поточному місяці");
+            goals.Text = $"{Properties.Resources.label_Goals_h1}: {count}";
+            toolTip_Goals.SetToolTip(goals, Properties.Resources.toolTip_Goals);
         }
         private void DayButton_Click(object sender, EventArgs e)
         {
@@ -341,8 +358,8 @@ namespace BonfieFood
                 }
             };
 
-            toolTip_previousMonth.SetToolTip(previousMonth, "Попередній місяць");
-            toolTip_nextMonth.SetToolTip(nextMonth, "Наступний місяць");
+            toolTip_previousMonth.SetToolTip(previousMonth, Properties.Resources.toolTip_previousMonth);
+            toolTip_nextMonth.SetToolTip(nextMonth, Properties.Resources.toolTip_nextMonth);
         }
         private void GoalProgressActive(Guna2GradientButton btnA)
         {
@@ -379,6 +396,17 @@ namespace BonfieFood
             btnIn.HoverState.FillColor = Color.Transparent;
             btnIn.HoverState.FillColor2 = Color.Transparent;
             btnIn.HoverState.BorderColor = Color.WhiteSmoke;
+        }
+
+        private void UpdateTexts()
+        {
+            label_Mon.Text = Properties.Resources.label_Mon;
+            label_Tue.Text = Properties.Resources.label_Tue;
+            label_Wed.Text = Properties.Resources.label_Wed;
+            label_Thu.Text = Properties.Resources.label_Thu;
+            label_Fri.Text = Properties.Resources.label_Fri;
+            label_Sat.Text = Properties.Resources.label_Sat;
+            label_Sun.Text = Properties.Resources.label_Sun;
         }
     }
 }

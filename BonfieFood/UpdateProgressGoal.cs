@@ -1,15 +1,6 @@
-﻿using Guna.UI2.WinForms.Suite;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.Remoting.Metadata.W3cXsd2001;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace BonfieFood
@@ -29,6 +20,13 @@ namespace BonfieFood
         {
             LoadUserData();
             selectedDate.Text = date.ToString("dd.MM");
+
+            UpdateTexts();
+            Language.OnLanguageChanged += ChangeLanguage;
+        }
+        private void ChangeLanguage(string cultureCode)
+        {
+            UpdateTexts();
         }
         private void updateProgress_Click(object sender, EventArgs e)
         {
@@ -255,6 +253,16 @@ namespace BonfieFood
             updateGoal.DisabledState.BorderColor = Color.FromArgb(76, 151, 254);
             updateGoal.DisabledState.ForeColor = Color.Gray;
             updateGoal.Cursor = Cursors.Default;
+        }
+
+        private void UpdateTexts()
+        {
+            label_UpdateProgress.Text = Properties.Resources.label_UpdateProgress;
+            label_Goal.Text = Properties.Resources.label_Goal;
+            label_CurrentResult.Text = Properties.Resources.label_CurrentResult;
+            label_Notes.Text = Properties.Resources.label_Notes;
+            updateProgress.Text = Properties.Resources.updateProgress;
+            complete.Text = Properties.Resources.completeGoal;
         }
     }
 }

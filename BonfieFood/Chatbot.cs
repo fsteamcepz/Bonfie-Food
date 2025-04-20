@@ -56,7 +56,6 @@ namespace BonfieFood
             ConfigureSidebarBtn();
                         
             UpdateTexts();
-
             Language.OnLanguageChanged += ChangeLanguage;
         }
         private void ChangeLanguage(string cultureCode)

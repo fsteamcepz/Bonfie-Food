@@ -328,4 +328,91 @@
   <data name="textSession" xml:space="preserve">
     <value>Сесія</value>
   </data>
+  <data name="label_Clarifai" xml:space="preserve">
+    <value>ШІ-модель Clarifai розпізнає страви та продукти на фото, надаючи детальну інформацію про їхній склад та вміст КБЖВ. Контролюйте свій раціон легко та зручно!</value>
+  </data>
+  <data name="btn_ScanPhoto" xml:space="preserve">
+    <value>Аналіз фото</value>
+  </data>
+  <data name="toolTip_uploadPhoto" xml:space="preserve">
+    <value>Завантажити фото</value>
+  </data>
+  <data name="toolTip_Goals" xml:space="preserve">
+    <value>Кількість цілей в поточному місяці</value>
+  </data>
+  <data name="label_Mon" xml:space="preserve">
+    <value>Пон</value>
+  </data>
+  <data name="label_Tue" xml:space="preserve">
+    <value>Вів</value>
+  </data>
+  <data name="label_Wed" xml:space="preserve">
+    <value>Сер</value>
+  </data>
+  <data name="label_Thu" xml:space="preserve">
+    <value>Чет</value>
+  </data>
+  <data name="label_Fri" xml:space="preserve">
+    <value>Пят</value>
+  </data>
+  <data name="label_Sat" xml:space="preserve">
+    <value>Суб</value>
+  </data>
+  <data name="label_Sun" xml:space="preserve">
+    <value>Нед</value>
+  </data>
+  <data name="toolTip_nextMonth" xml:space="preserve">
+    <value>Наступний місяць</value>
+  </data>
+  <data name="toolTip_previousMonth" xml:space="preserve">
+    <value>Попередній місяць</value>
+  </data>
+  <data name="label_Goal" xml:space="preserve">
+    <value>Ціль</value>
+  </data>
+  <data name="label_CreateGoal_h1" xml:space="preserve">
+    <value>Створення цілі</value>
+  </data>
+  <data name="label_DateCompletion" xml:space="preserve">
+    <value>Дата Завершення</value>
+  </data>
+  <data name="label_TargetValue" xml:space="preserve">
+    <value>Очікуваний результат</value>
+  </data>
+  <data name="label_GoalDescription" xml:space="preserve">
+    <value>Опис</value>
+  </data>
+  <data name="saveGoal" xml:space="preserve">
+    <value>Зберегти ціль</value>
+  </data>
+  <data name="label_UpdateProgress" xml:space="preserve">
+    <value>Оновити прогрес</value>
+  </data>
+  <data name="label_CurrentResult" xml:space="preserve">
+    <value>Поточний результат</value>
+  </data>
+  <data name="label_Notes" xml:space="preserve">
+    <value>Нотатки</value>
+  </data>
+  <data name="updateProgress" xml:space="preserve">
+    <value>Оновити</value>
+  </data>
+  <data name="completeGoal" xml:space="preserve">
+    <value>Завершити</value>
+  </data>
+  <data name="toolTip_GoalNutrition" xml:space="preserve">
+    <value>Ціль харчування на день</value>
+  </data>
+  <data name="label_MyNutrition" xml:space="preserve">
+    <value>Моє Харчування</value>
+  </data>
+  <data name="morning" xml:space="preserve">
+    <value>Сніданок</value>
+  </data>
+  <data name="lunch" xml:space="preserve">
+    <value>Обід</value>
+  </data>
+  <data name="dinner" xml:space="preserve">
+    <value>Вечеря</value>
+  </data>
 </root>

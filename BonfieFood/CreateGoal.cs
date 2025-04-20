@@ -27,7 +27,12 @@ namespace BonfieFood
         }
         private void CreateGoal_Load(object sender, EventArgs e)
         {
-
+            UpdateTexts();
+            Language.OnLanguageChanged += ChangeLanguage;
+        }
+        private void ChangeLanguage(string cultureCode)
+        {
+            UpdateTexts();
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -117,6 +122,16 @@ namespace BonfieFood
 
                 return result != null ? (int)result : 0;
             }
+        }
+
+        private void UpdateTexts()
+        {
+            label_CreateGoal_h1.Text = Properties.Resources.label_CreateGoal_h1;
+            label_Goal.Text = Properties.Resources.label_Goal;
+            label_Date.Text = Properties.Resources.label_DateCompletion;
+            label_TargetValue.Text = Properties.Resources.label_TargetValue;
+            label_GoalDescription.Text = Properties.Resources.label_GoalDescription;
+            saveGoal.Text = Properties.Resources.saveGoal;
         }
     }
 }

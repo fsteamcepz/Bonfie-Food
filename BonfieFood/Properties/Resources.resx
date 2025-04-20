@@ -433,4 +433,91 @@
   <data name="textSession" xml:space="preserve">
     <value>Session</value>
   </data>
+  <data name="label_Clarifai" xml:space="preserve">
+    <value>Clarifai AI model will recognize the dishes and products in the photo, providing detailed information about their composition and TDEE. Control your diet easily and conveniently!</value>
+  </data>
+  <data name="btn_ScanPhoto" xml:space="preserve">
+    <value>Analyse photo</value>
+  </data>
+  <data name="toolTip_uploadPhoto" xml:space="preserve">
+    <value>Upload photo</value>
+  </data>
+  <data name="toolTip_Goals" xml:space="preserve">
+    <value>Number of goals this month</value>
+  </data>
+  <data name="label_Mon" xml:space="preserve">
+    <value>Mon</value>
+  </data>
+  <data name="label_Tue" xml:space="preserve">
+    <value>Tue</value>
+  </data>
+  <data name="label_Wed" xml:space="preserve">
+    <value>Wed</value>
+  </data>
+  <data name="label_Thu" xml:space="preserve">
+    <value>Thu</value>
+  </data>
+  <data name="label_Fri" xml:space="preserve">
+    <value>Fri</value>
+  </data>
+  <data name="label_Sat" xml:space="preserve">
+    <value>Sat</value>
+  </data>
+  <data name="label_Sun" xml:space="preserve">
+    <value>Sun</value>
+  </data>
+  <data name="toolTip_nextMonth" xml:space="preserve">
+    <value>Next month</value>
+  </data>
+  <data name="toolTip_previousMonth" xml:space="preserve">
+    <value>Previous month</value>
+  </data>
+  <data name="label_Goal" xml:space="preserve">
+    <value>Goal</value>
+  </data>
+  <data name="label_CreateGoal_h1" xml:space="preserve">
+    <value>Create goal</value>
+  </data>
+  <data name="label_DateCompletion" xml:space="preserve">
+    <value>Completion Date</value>
+  </data>
+  <data name="label_TargetValue" xml:space="preserve">
+    <value>Expected Result</value>
+  </data>
+  <data name="label_GoalDescription" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="saveGoal" xml:space="preserve">
+    <value>Save goal</value>
+  </data>
+  <data name="label_UpdateProgress" xml:space="preserve">
+    <value>Update progress</value>
+  </data>
+  <data name="label_CurrentResult" xml:space="preserve">
+    <value>Current Result</value>
+  </data>
+  <data name="label_Notes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="updateProgress" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="completeGoal" xml:space="preserve">
+    <value>Complete</value>
+  </data>
+  <data name="toolTip_GoalNutrition" xml:space="preserve">
+    <value>Nutrition goal for the day</value>
+  </data>
+  <data name="label_MyNutrition" xml:space="preserve">
+    <value>My Nutrition</value>
+  </data>
+  <data name="morning" xml:space="preserve">
+    <value>Morning</value>
+  </data>
+  <data name="lunch" xml:space="preserve">
+    <value>Lunch</value>
+  </data>
+  <data name="dinner" xml:space="preserve">
+    <value>Dinner</value>
+  </data>
 </root>

@@ -32,11 +32,10 @@
             this.homePageImg = new Guna.UI2.WinForms.Guna2PictureBox();
             this.uploadPhotoHover = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btn_ScanPhoto = new Guna.UI2.WinForms.Guna2Button();
-            this.label_h1 = new System.Windows.Forms.Label();
+            this.label_Clarifai = new System.Windows.Forms.Label();
             this.deletePhoto = new Guna.UI2.WinForms.Guna2PictureBox();
             this.uploadedUserPoto = new Guna.UI2.WinForms.Guna2PictureBox();
             this.res_totalCalories = new System.Windows.Forms.Label();
-            this.closeResults = new Guna.UI2.WinForms.Guna2Button();
             this.res_iron = new System.Windows.Forms.Label();
             this.res_iron_value = new System.Windows.Forms.Label();
             this.res_calcium = new System.Windows.Forms.Label();
@@ -57,8 +56,9 @@
             this.toolTip_uploadPhoto = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.info_dish = new FontAwesome.Sharp.IconPictureBox();
             this.toolTip_infoDish = new Guna.UI2.WinForms.Guna2HtmlToolTip();
-            this.resultsAnalysis = new Guna.UI2.WinForms.Guna2PictureBox();
             this.toolTip_Products = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            this.closeResults = new Guna.UI2.WinForms.Guna2Button();
+            this.resultsAnalysis = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.homePageImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uploadPhotoHover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deletePhoto)).BeginInit();
@@ -123,25 +123,25 @@
             this.btn_ScanPhoto.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(22);
             this.btn_ScanPhoto.Size = new System.Drawing.Size(145, 40);
             this.btn_ScanPhoto.TabIndex = 85;
-            this.btn_ScanPhoto.Text = "Scan a photo";
+            this.btn_ScanPhoto.Text = "Scan photo";
             this.btn_ScanPhoto.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
             this.btn_ScanPhoto.UseTransparentBackground = true;
             this.btn_ScanPhoto.Click += new System.EventHandler(this.btn_ScanPhoto_Click);
             // 
-            // label_h1
+            // label_Clarifai
             // 
-            this.label_h1.BackColor = System.Drawing.Color.Transparent;
-            this.label_h1.Font = new System.Drawing.Font("Leelawadee UI", 12F);
-            this.label_h1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label_h1.Location = new System.Drawing.Point(128, 315);
-            this.label_h1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
-            this.label_h1.Name = "label_h1";
-            this.label_h1.Size = new System.Drawing.Size(457, 75);
-            this.label_h1.TabIndex = 86;
-            this.label_h1.Text = "Clarifai AI model will recognize the dishes and products in the photo, providing " +
+            this.label_Clarifai.BackColor = System.Drawing.Color.Transparent;
+            this.label_Clarifai.Font = new System.Drawing.Font("Leelawadee UI", 12F);
+            this.label_Clarifai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_Clarifai.Location = new System.Drawing.Point(128, 315);
+            this.label_Clarifai.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
+            this.label_Clarifai.Name = "label_Clarifai";
+            this.label_Clarifai.Size = new System.Drawing.Size(457, 75);
+            this.label_Clarifai.TabIndex = 86;
+            this.label_Clarifai.Text = "Clarifai AI model will recognize the dishes and products in the photo, providing " +
     "detailed information about their composition and CPFC. Control your diet easily " +
     "and conveniently!";
-            this.label_h1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Clarifai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // deletePhoto
             // 
@@ -192,36 +192,6 @@
             this.res_totalCalories.Size = new System.Drawing.Size(105, 32);
             this.res_totalCalories.TabIndex = 192;
             this.res_totalCalories.Text = "Calories";
-            // 
-            // closeResults
-            // 
-            this.closeResults.BackColor = System.Drawing.Color.Transparent;
-            this.closeResults.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(13)))), ((int)(((byte)(18)))));
-            this.closeResults.BorderRadius = 17;
-            this.closeResults.Cursor = System.Windows.Forms.Cursors.Default;
-            this.closeResults.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.closeResults.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.closeResults.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.closeResults.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.closeResults.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(13)))), ((int)(((byte)(18)))));
-            this.closeResults.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold);
-            this.closeResults.ForeColor = System.Drawing.Color.White;
-            this.closeResults.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
-            this.closeResults.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
-            this.closeResults.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
-            this.closeResults.Location = new System.Drawing.Point(307, 423);
-            this.closeResults.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.closeResults.Name = "closeResults";
-            this.closeResults.ShadowDecoration.BorderRadius = 18;
-            this.closeResults.ShadowDecoration.Color = System.Drawing.Color.Empty;
-            this.closeResults.ShadowDecoration.Depth = 99;
-            this.closeResults.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(22);
-            this.closeResults.Size = new System.Drawing.Size(101, 40);
-            this.closeResults.TabIndex = 191;
-            this.closeResults.Text = "Close";
-            this.closeResults.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
-            this.closeResults.UseTransparentBackground = true;
-            this.closeResults.Click += new System.EventHandler(this.closeResults_Click);
             // 
             // res_iron
             // 
@@ -481,6 +451,47 @@
             this.toolTip_infoDish.MaximumSize = new System.Drawing.Size(0, 0);
             this.toolTip_infoDish.ReshowDelay = 100;
             // 
+            // toolTip_Products
+            // 
+            this.toolTip_Products.AllowLinksHandling = true;
+            this.toolTip_Products.AutoPopDelay = 5000;
+            this.toolTip_Products.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.toolTip_Products.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.toolTip_Products.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.toolTip_Products.InitialDelay = 100;
+            this.toolTip_Products.MaximumSize = new System.Drawing.Size(0, 0);
+            this.toolTip_Products.ReshowDelay = 100;
+            // 
+            // closeResults
+            // 
+            this.closeResults.BackColor = System.Drawing.Color.Transparent;
+            this.closeResults.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(13)))), ((int)(((byte)(18)))));
+            this.closeResults.BorderRadius = 17;
+            this.closeResults.Cursor = System.Windows.Forms.Cursors.Default;
+            this.closeResults.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.closeResults.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.closeResults.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.closeResults.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.closeResults.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(13)))), ((int)(((byte)(18)))));
+            this.closeResults.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold);
+            this.closeResults.ForeColor = System.Drawing.Color.White;
+            this.closeResults.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.closeResults.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.closeResults.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(33)))), ((int)(((byte)(38)))));
+            this.closeResults.Location = new System.Drawing.Point(307, 423);
+            this.closeResults.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.closeResults.Name = "closeResults";
+            this.closeResults.ShadowDecoration.BorderRadius = 18;
+            this.closeResults.ShadowDecoration.Color = System.Drawing.Color.Empty;
+            this.closeResults.ShadowDecoration.Depth = 99;
+            this.closeResults.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(22);
+            this.closeResults.Size = new System.Drawing.Size(101, 40);
+            this.closeResults.TabIndex = 191;
+            this.closeResults.Text = "Close";
+            this.closeResults.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
+            this.closeResults.UseTransparentBackground = true;
+            this.closeResults.Click += new System.EventHandler(this.closeResults_Click);
+            // 
             // resultsAnalysis
             // 
             this.resultsAnalysis.BackColor = System.Drawing.Color.Transparent;
@@ -497,17 +508,6 @@
             this.resultsAnalysis.TabIndex = 171;
             this.resultsAnalysis.TabStop = false;
             this.resultsAnalysis.UseTransparentBackground = true;
-            // 
-            // toolTip_Products
-            // 
-            this.toolTip_Products.AllowLinksHandling = true;
-            this.toolTip_Products.AutoPopDelay = 5000;
-            this.toolTip_Products.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
-            this.toolTip_Products.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
-            this.toolTip_Products.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.toolTip_Products.InitialDelay = 100;
-            this.toolTip_Products.MaximumSize = new System.Drawing.Size(0, 0);
-            this.toolTip_Products.ReshowDelay = 100;
             // 
             // Scanner
             // 
@@ -538,7 +538,7 @@
             this.Controls.Add(this.resultsAnalysis);
             this.Controls.Add(this.deletePhoto);
             this.Controls.Add(this.uploadedUserPoto);
-            this.Controls.Add(this.label_h1);
+            this.Controls.Add(this.label_Clarifai);
             this.Controls.Add(this.btn_ScanPhoto);
             this.Controls.Add(this.uploadPhotoHover);
             this.Controls.Add(this.homePageImg);
@@ -565,11 +565,10 @@
         private Guna.UI2.WinForms.Guna2PictureBox homePageImg;
         private Guna.UI2.WinForms.Guna2PictureBox uploadPhotoHover;
         private Guna.UI2.WinForms.Guna2Button btn_ScanPhoto;
-        private System.Windows.Forms.Label label_h1;
+        private System.Windows.Forms.Label label_Clarifai;
         private Guna.UI2.WinForms.Guna2PictureBox deletePhoto;
         private Guna.UI2.WinForms.Guna2PictureBox uploadedUserPoto;
         private System.Windows.Forms.Label res_totalCalories;
-        private Guna.UI2.WinForms.Guna2Button closeResults;
         private System.Windows.Forms.Label res_iron;
         private System.Windows.Forms.Label res_iron_value;
         private System.Windows.Forms.Label res_calcium;
@@ -590,7 +589,8 @@
         private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_uploadPhoto;
         private FontAwesome.Sharp.IconPictureBox info_dish;
         private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_infoDish;
-        private Guna.UI2.WinForms.Guna2PictureBox resultsAnalysis;
         private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_Products;
+        private Guna.UI2.WinForms.Guna2Button closeResults;
+        private Guna.UI2.WinForms.Guna2PictureBox resultsAnalysis;
     }
 }

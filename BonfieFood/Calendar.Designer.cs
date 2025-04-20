@@ -61,13 +61,13 @@
             this.guna2GradientButton29 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton30 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton31 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label_Mon = new System.Windows.Forms.Label();
+            this.label_Wed = new System.Windows.Forms.Label();
+            this.label_Sat = new System.Windows.Forms.Label();
+            this.label_Tue = new System.Windows.Forms.Label();
+            this.label_Thu = new System.Windows.Forms.Label();
+            this.label_Fri = new System.Windows.Forms.Label();
+            this.label_Sun = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.nameOfMonth = new System.Windows.Forms.Label();
             this.previousMonth = new FontAwesome.Sharp.IconPictureBox();
@@ -954,100 +954,100 @@
             this.guna2GradientButton31.Text = "31";
             this.guna2GradientButton31.UseTransparentBackground = true;
             // 
-            // label7
+            // label_Mon
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 29);
-            this.label7.TabIndex = 65;
-            this.label7.Text = "Mon";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Mon.AutoSize = true;
+            this.label_Mon.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_Mon.ForeColor = System.Drawing.Color.Black;
+            this.label_Mon.Location = new System.Drawing.Point(2, 0);
+            this.label_Mon.Name = "label_Mon";
+            this.label_Mon.Size = new System.Drawing.Size(64, 29);
+            this.label_Mon.TabIndex = 65;
+            this.label_Mon.Text = "Mon";
+            this.label_Mon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // label_Wed
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(191, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 29);
-            this.label1.TabIndex = 66;
-            this.label1.Text = "Wed";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Wed.AutoSize = true;
+            this.label_Wed.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_Wed.ForeColor = System.Drawing.Color.Black;
+            this.label_Wed.Location = new System.Drawing.Point(191, 0);
+            this.label_Wed.Name = "label_Wed";
+            this.label_Wed.Size = new System.Drawing.Size(64, 29);
+            this.label_Wed.TabIndex = 66;
+            this.label_Wed.Text = "Wed";
+            this.label_Wed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // label_Sat
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(478, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 29);
-            this.label2.TabIndex = 67;
-            this.label2.Text = "Sat";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Sat.AutoSize = true;
+            this.label_Sat.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_Sat.ForeColor = System.Drawing.Color.Black;
+            this.label_Sat.Location = new System.Drawing.Point(478, 0);
+            this.label_Sat.Name = "label_Sat";
+            this.label_Sat.Size = new System.Drawing.Size(50, 29);
+            this.label_Sat.TabIndex = 67;
+            this.label_Sat.Text = "Sat";
+            this.label_Sat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // label_Tue
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(102, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 29);
-            this.label3.TabIndex = 68;
-            this.label3.Text = "Tue";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Tue.AutoSize = true;
+            this.label_Tue.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_Tue.ForeColor = System.Drawing.Color.Black;
+            this.label_Tue.Location = new System.Drawing.Point(102, 0);
+            this.label_Tue.Name = "label_Tue";
+            this.label_Tue.Size = new System.Drawing.Size(54, 29);
+            this.label_Tue.TabIndex = 68;
+            this.label_Tue.Text = "Tue";
+            this.label_Tue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // label_Thu
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(286, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 29);
-            this.label4.TabIndex = 69;
-            this.label4.Text = "Thu";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Thu.AutoSize = true;
+            this.label_Thu.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_Thu.ForeColor = System.Drawing.Color.Black;
+            this.label_Thu.Location = new System.Drawing.Point(286, 0);
+            this.label_Thu.Name = "label_Thu";
+            this.label_Thu.Size = new System.Drawing.Size(58, 29);
+            this.label_Thu.TabIndex = 69;
+            this.label_Thu.Text = "Thu";
+            this.label_Thu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // label_Fri
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(388, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 29);
-            this.label5.TabIndex = 68;
-            this.label5.Text = "Fri";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Fri.AutoSize = true;
+            this.label_Fri.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_Fri.ForeColor = System.Drawing.Color.Black;
+            this.label_Fri.Location = new System.Drawing.Point(388, 0);
+            this.label_Fri.Name = "label_Fri";
+            this.label_Fri.Size = new System.Drawing.Size(44, 29);
+            this.label_Fri.TabIndex = 68;
+            this.label_Fri.Text = "Fri";
+            this.label_Fri.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // label_Sun
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(568, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 29);
-            this.label6.TabIndex = 68;
-            this.label6.Text = "Sun";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Sun.AutoSize = true;
+            this.label_Sun.Font = new System.Drawing.Font("Harrington", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_Sun.ForeColor = System.Drawing.Color.Black;
+            this.label_Sun.Location = new System.Drawing.Point(568, 0);
+            this.label_Sun.Name = "label_Sun";
+            this.label_Sun.Size = new System.Drawing.Size(59, 29);
+            this.label_Sun.TabIndex = 68;
+            this.label_Sun.Text = "Sun";
+            this.label_Sun.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Controls.Add(this.label7);
-            this.guna2Panel1.Controls.Add(this.label6);
-            this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Controls.Add(this.label5);
-            this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.label4);
+            this.guna2Panel1.Controls.Add(this.label_Mon);
+            this.guna2Panel1.Controls.Add(this.label_Sun);
+            this.guna2Panel1.Controls.Add(this.label_Wed);
+            this.guna2Panel1.Controls.Add(this.label_Fri);
+            this.guna2Panel1.Controls.Add(this.label_Tue);
+            this.guna2Panel1.Controls.Add(this.label_Sat);
+            this.guna2Panel1.Controls.Add(this.label_Thu);
             this.guna2Panel1.Location = new System.Drawing.Point(43, 66);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 6);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -1211,13 +1211,13 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_numbers;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label_Sun;
+        private System.Windows.Forms.Label label_Sat;
+        private System.Windows.Forms.Label label_Mon;
+        private System.Windows.Forms.Label label_Wed;
+        private System.Windows.Forms.Label label_Tue;
+        private System.Windows.Forms.Label label_Thu;
+        private System.Windows.Forms.Label label_Fri;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton6;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton7;

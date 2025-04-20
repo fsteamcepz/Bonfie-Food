@@ -51,11 +51,11 @@
             this.morning = new Guna.UI2.WinForms.Guna2Button();
             this.nutritionGoal = new System.Windows.Forms.Label();
             this.lunch = new Guna.UI2.WinForms.Guna2Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label_MyNutrition = new System.Windows.Forms.Label();
             this.nutritionUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.dinner = new Guna.UI2.WinForms.Guna2Button();
             this.toolTip_NutritionTip = new Guna.UI2.WinForms.Guna2HtmlToolTip();
-            this.toolTip_GoaNutrition = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            this.toolTip_GoalNutrition = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.guna2Panel_drag.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -209,7 +209,7 @@
             this.guna2Panel1.Controls.Add(this.nutritionGoal);
             this.guna2Panel1.Controls.Add(this.lunch);
             this.guna2Panel1.Controls.Add(this.guna2Panel_drag);
-            this.guna2Panel1.Controls.Add(this.label7);
+            this.guna2Panel1.Controls.Add(this.label_MyNutrition);
             this.guna2Panel1.Controls.Add(this.nutritionUser);
             this.guna2Panel1.Controls.Add(this.dinner);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
@@ -367,19 +367,19 @@
             this.lunch.UseTransparentBackground = true;
             this.lunch.Click += new System.EventHandler(this.lunch_Click);
             // 
-            // label7
+            // label_MyNutrition
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Leelawadee UI", 24F);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label7.Location = new System.Drawing.Point(133, 40);
-            this.label7.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(195, 45);
-            this.label7.TabIndex = 207;
-            this.label7.Text = "My nutrition";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_MyNutrition.AutoSize = true;
+            this.label_MyNutrition.BackColor = System.Drawing.Color.Transparent;
+            this.label_MyNutrition.Font = new System.Drawing.Font("Leelawadee UI", 24F);
+            this.label_MyNutrition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_MyNutrition.Location = new System.Drawing.Point(133, 40);
+            this.label_MyNutrition.Margin = new System.Windows.Forms.Padding(3, 7, 3, 0);
+            this.label_MyNutrition.Name = "label_MyNutrition";
+            this.label_MyNutrition.Size = new System.Drawing.Size(195, 45);
+            this.label_MyNutrition.TabIndex = 207;
+            this.label_MyNutrition.Text = "My nutrition";
+            this.label_MyNutrition.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // nutritionUser
             // 
@@ -448,18 +448,18 @@
             this.toolTip_NutritionTip.ReshowDelay = 1;
             this.toolTip_NutritionTip.TitleFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             // 
-            // toolTip_GoaNutrition
+            // toolTip_GoalNutrition
             // 
-            this.toolTip_GoaNutrition.AllowLinksHandling = true;
-            this.toolTip_GoaNutrition.AutoPopDelay = 5000;
-            this.toolTip_GoaNutrition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
-            this.toolTip_GoaNutrition.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
-            this.toolTip_GoaNutrition.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.toolTip_GoaNutrition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.toolTip_GoaNutrition.InitialDelay = 500;
-            this.toolTip_GoaNutrition.MaximumSize = new System.Drawing.Size(0, 0);
-            this.toolTip_GoaNutrition.ReshowDelay = 1;
-            this.toolTip_GoaNutrition.TitleFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolTip_GoalNutrition.AllowLinksHandling = true;
+            this.toolTip_GoalNutrition.AutoPopDelay = 5000;
+            this.toolTip_GoalNutrition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.toolTip_GoalNutrition.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.toolTip_GoalNutrition.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.toolTip_GoalNutrition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.toolTip_GoalNutrition.InitialDelay = 500;
+            this.toolTip_GoalNutrition.MaximumSize = new System.Drawing.Size(0, 0);
+            this.toolTip_GoalNutrition.ReshowDelay = 1;
+            this.toolTip_GoalNutrition.TitleFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             // 
             // Nutrition
             // 
@@ -513,10 +513,10 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2ControlBox close;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label_MyNutrition;
         private Guna.UI2.WinForms.Guna2Button dinner;
         private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_NutritionTip;
-        private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_GoaNutrition;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_GoalNutrition;
         private Guna.UI2.WinForms.Guna2TextBox nutritionUser;
     }
 }

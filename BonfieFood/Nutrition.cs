@@ -35,6 +35,13 @@ namespace BonfieFood
             nutritionGoal.Text = "0 / " + dailyRate;
             LoadUserData();
             LoadToolTips();
+
+            UpdateTexts();
+            Language.OnLanguageChanged += ChangeLanguage;
+        }
+        private void ChangeLanguage(string cultureCode)
+        {
+            UpdateTexts();
         }
         protected override void OnClick(EventArgs e)
         {
@@ -77,7 +84,7 @@ namespace BonfieFood
                 SaveProductsForPeriod(selectedMealPeriod);
 
                 nutritionUser.Text = "";
-                btnSave.Text = "Save";
+                btnSave.Text = Properties.Resources.btnSavePerInfo;
 
                 OnUpdateCalories?.Invoke(dailyRate, morningCalories, lunchCalories, dinnerCalories);
             }
@@ -381,7 +388,7 @@ namespace BonfieFood
             if (productsOfPeriodDay.ContainsKey(period) && productsOfPeriodDay[period].Count > 0)
             {
                 nutritionUser.Text = string.Join(Environment.NewLine, productsOfPeriodDay[period]);
-                btnSave.Text = "Update";
+                btnSave.Text = Properties.Resources.updateProgress;
 
                 if (period == "Сніданок") added_morning.Visible = true;
                 if (period == "Обід") added_lunch.Visible = true;
@@ -390,7 +397,7 @@ namespace BonfieFood
             else
             {
                 nutritionUser.Text = "";
-                btnSave.Text = "Save";
+                btnSave.Text = Properties.Resources.btnSavePerInfo;
             }
         }
 
@@ -431,7 +438,7 @@ namespace BonfieFood
 
         private void LoadToolTips()
         {
-            toolTip_GoaNutrition.SetToolTip(nutritionGoal, "Ціль харчування на день");
+            toolTip_GoalNutrition.SetToolTip(nutritionGoal, Properties.Resources.toolTip_GoalNutrition);
 
             toolTip_NutritionTip.ToolTipTitle = "Додавання харчування";
             toolTip_NutritionTip.SetToolTip(nutrition_tip, "Щоб додати харчування, введіть список продуктів англійською мовою у форматі:<br>" +
@@ -442,6 +449,15 @@ namespace BonfieFood
                                                            "Обов'язково вкажіть період дня (сніданок, обід, вечеря) перед збереженням.<br>" +
                                                            "Система автоматично розрахує калорійність продуктів та оновить лічильник.<br>" +
                                                            "Якщо продукт не розпізнається, перевірте правильність написання.");
+        }
+
+        private void UpdateTexts()
+        {
+            label_MyNutrition.Text = Properties.Resources.label_MyNutrition;
+            morning.Text = Properties.Resources.morning;
+            lunch.Text = Properties.Resources.lunch;
+            dinner.Text = Properties.Resources.dinner;
+            btnSave.Text = Properties.Resources.btnSavePerInfo;
         }
     }
 }

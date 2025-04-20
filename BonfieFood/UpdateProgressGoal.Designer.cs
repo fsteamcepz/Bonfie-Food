@@ -37,20 +37,20 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.close = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel_Norms = new Guna.UI2.WinForms.Guna2Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.complete = new Guna.UI2.WinForms.Guna2Button();
+            this.selectedDate = new System.Windows.Forms.Label();
+            this.label_Notes = new System.Windows.Forms.Label();
             this.notes = new System.Windows.Forms.RichTextBox();
-            this.lbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_CurrentResult = new System.Windows.Forms.Label();
+            this.label_Goal = new System.Windows.Forms.Label();
             this.progressValue = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.updateGoal = new Guna.UI2.WinForms.Guna2ComboBox();
             this.updateProgress = new Guna.UI2.WinForms.Guna2Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_UpdateProgress = new System.Windows.Forms.Label();
             this.guna2DragControl4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.selectedDate = new System.Windows.Forms.Label();
-            this.compete = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel_main.SuspendLayout();
             this.guna2Panel_drag.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -139,16 +139,16 @@
             // 
             this.guna2Panel_Norms.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel_Norms.BorderRadius = 15;
-            this.guna2Panel_Norms.Controls.Add(this.compete);
+            this.guna2Panel_Norms.Controls.Add(this.complete);
             this.guna2Panel_Norms.Controls.Add(this.selectedDate);
-            this.guna2Panel_Norms.Controls.Add(this.label5);
+            this.guna2Panel_Norms.Controls.Add(this.label_Notes);
             this.guna2Panel_Norms.Controls.Add(this.notes);
-            this.guna2Panel_Norms.Controls.Add(this.lbl);
-            this.guna2Panel_Norms.Controls.Add(this.label1);
+            this.guna2Panel_Norms.Controls.Add(this.label_CurrentResult);
+            this.guna2Panel_Norms.Controls.Add(this.label_Goal);
             this.guna2Panel_Norms.Controls.Add(this.progressValue);
             this.guna2Panel_Norms.Controls.Add(this.updateGoal);
             this.guna2Panel_Norms.Controls.Add(this.updateProgress);
-            this.guna2Panel_Norms.Controls.Add(this.label2);
+            this.guna2Panel_Norms.Controls.Add(this.label_UpdateProgress);
             this.guna2Panel_Norms.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel_Norms.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(20)))), ((int)(((byte)(85)))));
             this.guna2Panel_Norms.Location = new System.Drawing.Point(17, 46);
@@ -156,18 +156,54 @@
             this.guna2Panel_Norms.Size = new System.Drawing.Size(360, 443);
             this.guna2Panel_Norms.TabIndex = 62;
             // 
-            // label5
+            // complete
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F);
-            this.label5.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.label5.Location = new System.Drawing.Point(70, 238);
-            this.label5.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 21);
-            this.label5.TabIndex = 86;
-            this.label5.Text = "Нотатки";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.complete.Animated = true;
+            this.complete.BackColor = System.Drawing.Color.Transparent;
+            this.complete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.complete.BorderRadius = 16;
+            this.complete.BorderThickness = 2;
+            this.complete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.complete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.complete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.complete.DisabledState.ForeColor = System.Drawing.Color.DarkGray;
+            this.complete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(20)))), ((int)(((byte)(85)))));
+            this.complete.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.complete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.complete.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.complete.Location = new System.Drawing.Point(184, 383);
+            this.complete.Name = "complete";
+            this.complete.Size = new System.Drawing.Size(100, 35);
+            this.complete.TabIndex = 89;
+            this.complete.Text = "Compete";
+            this.complete.UseTransparentBackground = true;
+            this.complete.Click += new System.EventHandler(this.compete_Click);
+            // 
+            // selectedDate
+            // 
+            this.selectedDate.AutoSize = true;
+            this.selectedDate.Font = new System.Drawing.Font("Segoe Fluent Icons", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectedDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.selectedDate.Location = new System.Drawing.Point(311, 11);
+            this.selectedDate.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.selectedDate.Name = "selectedDate";
+            this.selectedDate.Size = new System.Drawing.Size(35, 16);
+            this.selectedDate.TabIndex = 88;
+            this.selectedDate.Text = "date";
+            this.selectedDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_Notes
+            // 
+            this.label_Notes.AutoSize = true;
+            this.label_Notes.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F);
+            this.label_Notes.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.label_Notes.Location = new System.Drawing.Point(70, 238);
+            this.label_Notes.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.label_Notes.Name = "label_Notes";
+            this.label_Notes.Size = new System.Drawing.Size(68, 21);
+            this.label_Notes.TabIndex = 86;
+            this.label_Notes.Text = "Нотатки";
+            this.label_Notes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // notes
             // 
@@ -180,31 +216,31 @@
             this.notes.TabIndex = 85;
             this.notes.Text = "";
             // 
-            // lbl
+            // label_CurrentResult
             // 
-            this.lbl.AutoSize = true;
-            this.lbl.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F);
-            this.lbl.ForeColor = System.Drawing.Color.Gold;
-            this.lbl.Location = new System.Drawing.Point(70, 155);
-            this.lbl.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(154, 21);
-            this.lbl.TabIndex = 83;
-            this.lbl.Text = "Поточний результат";
-            this.lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_CurrentResult.AutoSize = true;
+            this.label_CurrentResult.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F);
+            this.label_CurrentResult.ForeColor = System.Drawing.Color.Gold;
+            this.label_CurrentResult.Location = new System.Drawing.Point(70, 155);
+            this.label_CurrentResult.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.label_CurrentResult.Name = "label_CurrentResult";
+            this.label_CurrentResult.Size = new System.Drawing.Size(154, 21);
+            this.label_CurrentResult.TabIndex = 83;
+            this.label_CurrentResult.Text = "Поточний результат";
+            this.label_CurrentResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // label_Goal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(151)))), ((int)(((byte)(254)))));
-            this.label1.Location = new System.Drawing.Point(70, 69);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 21);
-            this.label1.TabIndex = 81;
-            this.label1.Text = "Ціль";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Goal.AutoSize = true;
+            this.label_Goal.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Goal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(151)))), ((int)(((byte)(254)))));
+            this.label_Goal.Location = new System.Drawing.Point(70, 69);
+            this.label_Goal.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.label_Goal.Name = "label_Goal";
+            this.label_Goal.Size = new System.Drawing.Size(41, 21);
+            this.label_Goal.TabIndex = 81;
+            this.label_Goal.Text = "Ціль";
+            this.label_Goal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // progressValue
             // 
@@ -288,17 +324,16 @@
             this.updateProgress.UseTransparentBackground = true;
             this.updateProgress.Click += new System.EventHandler(this.updateProgress_Click);
             // 
-            // label2
+            // label_UpdateProgress
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label2.Location = new System.Drawing.Point(78, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 32);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "Update progress";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_UpdateProgress.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_UpdateProgress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_UpdateProgress.Location = new System.Drawing.Point(59, 15);
+            this.label_UpdateProgress.Name = "label_UpdateProgress";
+            this.label_UpdateProgress.Size = new System.Drawing.Size(235, 32);
+            this.label_UpdateProgress.TabIndex = 56;
+            this.label_UpdateProgress.Text = "Update progress";
+            this.label_UpdateProgress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2DragControl4
             // 
@@ -323,42 +358,6 @@
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.guna2Panel_drag;
             this.guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // selectedDate
-            // 
-            this.selectedDate.AutoSize = true;
-            this.selectedDate.Font = new System.Drawing.Font("Segoe Fluent Icons", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectedDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.selectedDate.Location = new System.Drawing.Point(311, 11);
-            this.selectedDate.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.selectedDate.Name = "selectedDate";
-            this.selectedDate.Size = new System.Drawing.Size(35, 16);
-            this.selectedDate.TabIndex = 88;
-            this.selectedDate.Text = "date";
-            this.selectedDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // compete
-            // 
-            this.compete.Animated = true;
-            this.compete.BackColor = System.Drawing.Color.Transparent;
-            this.compete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.compete.BorderRadius = 16;
-            this.compete.BorderThickness = 2;
-            this.compete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.compete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.compete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.compete.DisabledState.ForeColor = System.Drawing.Color.DarkGray;
-            this.compete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(20)))), ((int)(((byte)(85)))));
-            this.compete.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.compete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.compete.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.compete.Location = new System.Drawing.Point(184, 383);
-            this.compete.Name = "compete";
-            this.compete.Size = new System.Drawing.Size(100, 35);
-            this.compete.TabIndex = 89;
-            this.compete.Text = "Compete";
-            this.compete.UseTransparentBackground = true;
-            this.compete.Click += new System.EventHandler(this.compete_Click);
             // 
             // UpdateProgressGoal
             // 
@@ -394,19 +393,19 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2ControlBox close;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel_Norms;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label_Notes;
         private System.Windows.Forms.RichTextBox notes;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_Goal;
         private Guna.UI2.WinForms.Guna2ComboBox updateGoal;
         private Guna.UI2.WinForms.Guna2Button updateProgress;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.Label label_UpdateProgress;
+        private System.Windows.Forms.Label label_CurrentResult;
         private Guna.UI2.WinForms.Guna2NumericUpDown progressValue;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl4;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl3;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private System.Windows.Forms.Label selectedDate;
-        private Guna.UI2.WinForms.Guna2Button compete;
+        private Guna.UI2.WinForms.Guna2Button complete;
     }
 }

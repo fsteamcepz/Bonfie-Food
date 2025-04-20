@@ -350,7 +350,7 @@
             this.scannerBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.scannerBtn.Size = new System.Drawing.Size(180, 50);
             this.scannerBtn.TabIndex = 26;
-            this.scannerBtn.Text = "Food Analyzer";
+            this.scannerBtn.Text = "Food Analyser";
             this.scannerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.scannerBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.scannerBtn.UseVisualStyleBackColor = true;
