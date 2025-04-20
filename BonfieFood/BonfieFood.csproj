@@ -363,6 +363,7 @@
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Huggingface.cs" />
+    <Compile Include="Language.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -425,6 +426,11 @@
     </Compile>
     <Compile Include="Chatbot.Designer.cs">
       <DependentUpon>Chatbot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Recipes.cs">
       <SubType>Form</SubType>
@@ -524,17 +530,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Chatbot.resx">
       <DependentUpon>Chatbot.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.uk.resx" />
     <EmbeddedResource Include="Recipes.resx">
       <DependentUpon>Recipes.cs</DependentUpon>
     </EmbeddedResource>
@@ -678,24 +680,6 @@
     <None Include="Resources\food.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1-one.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\3-three.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4-four.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2-two.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\5-five.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\6-six.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\logo-2-Remove.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -753,6 +737,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
+    <None Include="Resources\_6-six.png" />
+    <None Include="Resources\_5-five.png" />
+    <None Include="Resources\_3-three.png" />
+    <None Include="Resources\_2-two.png" />
+    <None Include="Resources\_1-one.png" />
+    <None Include="Resources\_4-four.png" />
     <None Include="Resources\recipes-background.png" />
     <None Include="Resources\nutrition-background.png" />
     <None Include="Resources\added-nutrition.png" />

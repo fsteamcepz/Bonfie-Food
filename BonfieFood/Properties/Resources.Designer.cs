@@ -161,12 +161,129 @@ namespace BonfieFood.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        internal static string btnAddNutrition {
+            get {
+                return ResourceManager.GetString("btnAddNutrition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Products.
+        /// </summary>
+        internal static string btnProducts {
+            get {
+                return ResourceManager.GetString("btnProducts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recipes.
+        /// </summary>
+        internal static string btnRecipes {
+            get {
+                return ResourceManager.GetString("btnRecipes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        internal static string btnSavePerInfo {
+            get {
+                return ResourceManager.GetString("btnSavePerInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View.
+        /// </summary>
+        internal static string btnViewGoals {
+            get {
+                return ResourceManager.GetString("btnViewGoals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View.
+        /// </summary>
+        internal static string btnViewSavedRecipes {
+            get {
+                return ResourceManager.GetString("btnViewSavedRecipes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calculate TDEE.
+        /// </summary>
+        internal static string calculateTheTDEE {
+            get {
+                return ResourceManager.GetString("calculateTheTDEE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Calculation.
+        /// </summary>
+        internal static string calculation {
+            get {
+                return ResourceManager.GetString("calculation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap calendar_background {
             get {
                 object obj = ResourceManager.GetObject("calendar_background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Make informed choices - get nutritional data on almost 900,000 products!.
+        /// </summary>
+        internal static string DBProduct_SetToolTip {
+            get {
+                return ResourceManager.GetString("DBProduct_SetToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product database.
+        /// </summary>
+        internal static string DBProduct_Title {
+            get {
+                return ResourceManager.GetString("DBProduct_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Over 2.3 million recipes - find exactly what you like!.
+        /// </summary>
+        internal static string DBRecipe_SetToolTip {
+            get {
+                return ResourceManager.GetString("DBRecipe_SetToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recipe database.
+        /// </summary>
+        internal static string DBRecipe_Title {
+            get {
+                return ResourceManager.GetString("DBRecipe_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email ＆ Password.
+        /// </summary>
+        internal static string EmailAndPass {
+            get {
+                return ResourceManager.GetString("EmailAndPass", resourceCulture);
             }
         }
         
@@ -201,6 +318,303 @@ namespace BonfieFood.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Calculate TDEE.
+        /// </summary>
+        internal static string label_CalculateTDEE {
+            get {
+                return ResourceManager.GetString("label_CalculateTDEE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City.
+        /// </summary>
+        internal static string label_City {
+            get {
+                return ResourceManager.GetString("label_City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm Password.
+        /// </summary>
+        internal static string label_ConfirmPassword {
+            get {
+                return ResourceManager.GetString("label_ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Country.
+        /// </summary>
+        internal static string label_Country {
+            get {
+                return ResourceManager.GetString("label_Country", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current Password.
+        /// </summary>
+        internal static string label_CurrentPassword {
+            get {
+                return ResourceManager.GetString("label_CurrentPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date Of Birth.
+        /// </summary>
+        internal static string label_DateOfBirth {
+            get {
+                return ResourceManager.GetString("label_DateOfBirth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        internal static string label_Email {
+            get {
+                return ResourceManager.GetString("label_Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email ＆ Password.
+        /// </summary>
+        internal static string label_EmailPassword {
+            get {
+                return ResourceManager.GetString("label_EmailPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Favorite Dish.
+        /// </summary>
+        internal static string label_FavoriteDish {
+            get {
+                return ResourceManager.GetString("label_FavoriteDish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Female.
+        /// </summary>
+        internal static string label_Female {
+            get {
+                return ResourceManager.GetString("label_Female", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to First Name.
+        /// </summary>
+        internal static string label_FirstName {
+            get {
+                return ResourceManager.GetString("label_FirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to General Information.
+        /// </summary>
+        internal static string label_GeneralInfo {
+            get {
+                return ResourceManager.GetString("label_GeneralInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Goal Progress.
+        /// </summary>
+        internal static string label_GoalProgress_h2 {
+            get {
+                return ResourceManager.GetString("label_GoalProgress_h2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Goals.
+        /// </summary>
+        internal static string label_Goals_h1 {
+            get {
+                return ResourceManager.GetString("label_Goals_h1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Health must always come first.
+        /// </summary>
+        internal static string label_HealthMessage_h2 {
+            get {
+                return ResourceManager.GetString("label_HealthMessage_h2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height.
+        /// </summary>
+        internal static string label_Height {
+            get {
+                return ResourceManager.GetString("label_Height", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to History.
+        /// </summary>
+        internal static string label_History {
+            get {
+                return ResourceManager.GetString("label_History", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Integrated Product and Recipe Database.
+        /// </summary>
+        internal static string label_IntegratedDB_h2 {
+            get {
+                return ResourceManager.GetString("label_IntegratedDB_h2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Name.
+        /// </summary>
+        internal static string label_LastName {
+            get {
+                return ResourceManager.GetString("label_LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Male.
+        /// </summary>
+        internal static string label_Male {
+            get {
+                return ResourceManager.GetString("label_Male", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have the option to update your email address and password as needed..
+        /// </summary>
+        internal static string label_Message_h2 {
+            get {
+                return ResourceManager.GetString("label_Message_h2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Email.
+        /// </summary>
+        internal static string label_NewEmail {
+            get {
+                return ResourceManager.GetString("label_NewEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Password.
+        /// </summary>
+        internal static string label_NewPassword {
+            get {
+                return ResourceManager.GetString("label_NewPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to History not found.
+        /// </summary>
+        internal static string label_NotFound {
+            get {
+                return ResourceManager.GetString("label_NotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nutrition .
+        /// </summary>
+        internal static string label_Nutrition_h2 {
+            get {
+                return ResourceManager.GetString("label_Nutrition_h2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Personal Information.
+        /// </summary>
+        internal static string label_PersonalInformation {
+            get {
+                return ResourceManager.GetString("label_PersonalInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Physical Activity.
+        /// </summary>
+        internal static string label_PhsActivity {
+            get {
+                return ResourceManager.GetString("label_PhsActivity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 900,000 Products.
+        /// </summary>
+        internal static string label_Products_h3 {
+            get {
+                return ResourceManager.GetString("label_Products_h3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quick Actions.
+        /// </summary>
+        internal static string label_QuickAction_h1 {
+            get {
+                return ResourceManager.GetString("label_QuickAction_h1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2.3M+ Recipes.
+        /// </summary>
+        internal static string label_Recipes_h3 {
+            get {
+                return ResourceManager.GetString("label_Recipes_h3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saved Recipes.
+        /// </summary>
+        internal static string label_SavedRecipes_h2 {
+            get {
+                return ResourceManager.GetString("label_SavedRecipes_h2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Daily Energy.
+        /// </summary>
+        internal static string label_TDEE {
+            get {
+                return ResourceManager.GetString("label_TDEE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weight.
+        /// </summary>
+        internal static string label_Weight {
+            get {
+                return ResourceManager.GetString("label_Weight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon logo_2_Remove {
@@ -227,6 +641,24 @@ namespace BonfieFood.Properties {
             get {
                 object obj = ResourceManager.GetObject("logout", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Write a message....
+        /// </summary>
+        internal static string messageFromUser {
+            get {
+                return ResourceManager.GetString("messageFromUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to My profile.
+        /// </summary>
+        internal static string myProfile {
+            get {
+                return ResourceManager.GetString("myProfile", resourceCulture);
             }
         }
         
@@ -301,6 +733,15 @@ namespace BonfieFood.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Personal Information.
+        /// </summary>
+        internal static string personalInfo {
+            get {
+                return ResourceManager.GetString("personalInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Pikachu_ChatBot {
@@ -357,6 +798,15 @@ namespace BonfieFood.Properties {
             get {
                 object obj = ResourceManager.GetObject("remove_scanner_hover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        internal static string saveEmPass {
+            get {
+                return ResourceManager.GetString("saveEmPass", resourceCulture);
             }
         }
         
@@ -441,12 +891,147 @@ namespace BonfieFood.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Session.
+        /// </summary>
+        internal static string textSession {
+            get {
+                return ResourceManager.GetString("textSession", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Close sidebar.
+        /// </summary>
+        internal static string toolTip_closeSidebar {
+            get {
+                return ResourceManager.GetString("toolTip_closeSidebar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Completed goals.
+        /// </summary>
+        internal static string toolTip_Competed_Title {
+            get {
+                return ResourceManager.GetString("toolTip_Competed_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete photo.
+        /// </summary>
+        internal static string toolTip_delete {
+            get {
+                return ResourceManager.GetString("toolTip_delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  .
+        /// </summary>
+        internal static string toolTip_Goals_SetToolTip {
+            get {
+                return ResourceManager.GetString("toolTip_Goals_SetToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to English.
+        /// </summary>
+        internal static string toolTip_languageEN {
+            get {
+                return ResourceManager.GetString("toolTip_languageEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ukrainian.
+        /// </summary>
+        internal static string toolTip_languageUK {
+            get {
+                return ResourceManager.GetString("toolTip_languageUK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logout.
+        /// </summary>
+        internal static string toolTip_logout {
+            get {
+                return ResourceManager.GetString("toolTip_logout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New chat.
+        /// </summary>
+        internal static string toolTip_newChat {
+            get {
+                return ResourceManager.GetString("toolTip_newChat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open sidebar.
+        /// </summary>
+        internal static string toolTip_openSidebar {
+            get {
+                return ResourceManager.GetString("toolTip_openSidebar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bot response time.
+        /// </summary>
+        internal static string toolTip_timer {
+            get {
+                return ResourceManager.GetString("toolTip_timer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total goals.
+        /// </summary>
+        internal static string toolTip_TotalGoals_Title {
+            get {
+                return ResourceManager.GetString("toolTip_TotalGoals_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version.
+        /// </summary>
+        internal static string toolTip_Version {
+            get {
+                return ResourceManager.GetString("toolTip_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update TDEE.
+        /// </summary>
+        internal static string updateTheTDEE {
+            get {
+                return ResourceManager.GetString("updateTheTDEE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap upload_image {
             get {
                 object obj = ResourceManager.GetObject("upload_image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download.
+        /// </summary>
+        internal static string upload_img {
+            get {
+                return ResourceManager.GetString("upload_img", resourceCulture);
             }
         }
         

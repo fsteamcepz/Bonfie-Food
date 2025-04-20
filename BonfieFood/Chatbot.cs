@@ -54,12 +54,15 @@ namespace BonfieFood
             LoadSessionHistory();
             messageFromUser.Refresh();
             ConfigureSidebarBtn();
+                        
+            UpdateTexts();
 
-            toolTip_closeSidebar.SetToolTip(sidebarBtn, "Закрити бічну панель");
-            toolTip_newChat.SetToolTip(newChat_btn, "Новий чат");
-            toolTip_timer.SetToolTip(timer_answerBot, "Час відповіді бота");
+            Language.OnLanguageChanged += ChangeLanguage;
         }
-
+        private void ChangeLanguage(string cultureCode)
+        {
+            UpdateTexts();
+        }
         private void ConfigureUI()
         {
             panel_fill.HorizontalScroll.Enabled = false;
@@ -194,12 +197,12 @@ namespace BonfieFood
                 {
                     sidebarExpand = false;
                     sidebarTransitions.Stop();
-                    toolTip_closeSidebar.SetToolTip(sidebarBtn, "Відкрити бічну панель");
+                    toolTip_closeSidebar.SetToolTip(sidebarBtn, Properties.Resources.toolTip_openSidebar);
                 }
 
-                label_history.Hide();
+                label_History.Hide();
                 guna2Panel_between.Hide();
-                label_notfound.Hide();
+                label_NotFound.Hide();
                 sidebarBtn.IconChar = FontAwesome.Sharp.IconChar.ChevronRight;
 
                 foreach (var control in guna2Panel_left.Controls)
@@ -226,20 +229,20 @@ namespace BonfieFood
                 if (guna2Panel_left.Width >= 142)
                 {
                     sidebarExpand = true;
-                    toolTip_closeSidebar.SetToolTip(sidebarBtn, "Закрити бічну панель");
+                    toolTip_closeSidebar.SetToolTip(sidebarBtn, Properties.Resources.toolTip_closeSidebar);
 
-                    label_history.TextAlign = ContentAlignment.BottomLeft;
-                    label_history.Padding = new Padding(10, 0, 0, 0);
-                    label_history.Show();
+                    label_History.TextAlign = ContentAlignment.BottomLeft;
+                    label_History.Padding = new Padding(10, 0, 0, 0);
+                    label_History.Show();
 
                     bool hasButton = guna2Panel_left.Controls.OfType<Guna2Button>().Any();
                     if (!hasButton)
                     {
-                        label_notfound.Show();
+                        label_NotFound.Show();
                     }
                     else
                     {
-                        label_notfound.Hide();
+                        label_NotFound.Hide();
                     }
 
                     guna2Panel_between.Show();
@@ -502,11 +505,11 @@ namespace BonfieFood
 
             if (sessionDates.Count < 1)
             {
-                label_notfound.Visible = true;
+                label_NotFound.Visible = true;
             }
             else
             {
-                label_notfound.Visible = false;
+                label_NotFound.Visible = false;
             }
 
             int marginTop = 10;
@@ -522,15 +525,15 @@ namespace BonfieFood
                 string buttonText;
                 if (sessionNumber > 99)
                 {
-                    buttonText = $"Сесія {sessionNumber} {sessionDate:dd.MM}";
+                    buttonText = $"{Properties.Resources.textSession} {sessionNumber} {sessionDate:dd.MM}";
                 }
                 else if (sessionNumber > 9)
                 {
-                    buttonText = $"Сесія {sessionNumber}   {sessionDate:dd.MM}";
+                    buttonText = $"{Properties.Resources.textSession} {sessionNumber}   {sessionDate:dd.MM}";
                 }
                 else
                 {
-                    buttonText = $"Сесія {sessionNumber}     {sessionDate:dd.MM}";
+                    buttonText = $"{Properties.Resources.textSession} {sessionNumber}     {sessionDate:dd.MM}";
                 }
                 Guna2Button sessionButton = new Guna2Button
                 {
@@ -927,6 +930,15 @@ namespace BonfieFood
                 newChat_btn.Enabled = false;
                 newChat_btn.Cursor = Cursors.Default;
             }
+        }
+
+        private void UpdateTexts()
+        {
+            label_History.Text = Properties.Resources.label_History;
+            toolTip_closeSidebar.SetToolTip(sidebarBtn, Properties.Resources.toolTip_closeSidebar);
+            toolTip_newChat.SetToolTip(newChat_btn, Properties.Resources.toolTip_newChat);
+            toolTip_timer.SetToolTip(timer_answerBot, Properties.Resources.toolTip_timer);
+            messageFromUser.PlaceholderText = Properties.Resources.messageFromUser;
         }
     }
 }

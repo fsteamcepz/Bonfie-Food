@@ -25,6 +25,13 @@ namespace BonfieFood
             LoadUserData();
             label_username.Text = CurrentUser.UserName;
             ConfigureInfoCPFC();
+
+            UpdateTexts();
+            Language.OnLanguageChanged += ChangeLanguage;
+        }
+        private void ChangeLanguage(string cultureCode)
+        {
+            UpdateTexts();
         }
         private void LoadUserData()
         {
@@ -72,8 +79,8 @@ namespace BonfieFood
 
                         db.closeConnection();
 
-                        label_CPFC.Text = "Total Daily Energy";
-                        calculateTheCPFC.Text = "Update TDEE";
+                        label_TDEE.Text = Properties.Resources.label_TDEE;
+                        calculateTheTDEE.Text = Properties.Resources.updateTheTDEE;
 
                         if (bmr == 0)
                         {
@@ -112,8 +119,8 @@ namespace BonfieFood
                         myFat.Text = "0" + "\nfat";
                         myCarbs.Text = "0" + "\ncarbs";
 
-                        label_CPFC.Text = "Total Daily Energy";
-                        calculateTheCPFC.Text = "Calculate TDEE";
+                        label_TDEE.Text = Properties.Resources.label_TDEE;
+                        calculateTheTDEE.Text = Properties.Resources.calculateTheTDEE;
                     }
                 }
             }
@@ -172,8 +179,8 @@ namespace BonfieFood
             // Добова норма КБЖВ
             UpdateDailyCalories(dailyCalories);
 
-            label_CPFC.Text = "Total Daily Energy";
-            calculateTheCPFC.Text = "Update TDEE";
+            label_TDEE.Text = Properties.Resources.label_TDEE;
+            calculateTheTDEE.Text = Properties.Resources.updateTheTDEE;
         }
         private void UpdateAge(int currentAge)
         {
@@ -351,6 +358,13 @@ namespace BonfieFood
             {
                 info_dish.IconColor = Color.AliceBlue;
             };
+        }
+
+        private void UpdateTexts()
+        {
+            label_GeneralInfo.Text = Properties.Resources.label_GeneralInfo;
+            label_TDEE.Text = Properties.Resources.label_TDEE;
+            label_History.Text = Properties.Resources.label_History;
         }
     }
 }

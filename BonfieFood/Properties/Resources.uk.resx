@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnAddNutrition" xml:space="preserve">
+    <value>Додати</value>
+  </data>
+  <data name="label_HealthMessage_h2" xml:space="preserve">
+    <value>Здоров'я завжди повинно бути на першому місці</value>
+  </data>
+  <data name="label_IntegratedDB_h2" xml:space="preserve">
+    <value>Інтегрована база даних Продуктів і Рецептів</value>
+  </data>
+  <data name="label_Nutrition_h2" xml:space="preserve">
+    <value>Харчування</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="name_bf_2" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Pikachu_ChatBot" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Success_1" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="label_Products_h3" xml:space="preserve">
+    <value>900,000 Продуктів</value>
+  </data>
+  <data name="label_QuickAction_h1" xml:space="preserve">
+    <value>Швидкі Дії</value>
+  </data>
+  <data name="label_Recipes_h3" xml:space="preserve">
+    <value>2.3M+ Рецептів</value>
+  </data>
+  <data name="label_Goals_h1" xml:space="preserve">
+    <value>Цілі</value>
+  </data>
+  <data name="btnViewGoals" xml:space="preserve">
+    <value>Переглянути</value>
+  </data>
+  <data name="label_SavedRecipes_h2" xml:space="preserve">
+    <value>Збережені Рецепти</value>
+  </data>
+  <data name="btnViewSavedRecipes" xml:space="preserve">
+    <value>Переглянути</value>
+  </data>
+  <data name="toolTip_logout" xml:space="preserve">
+    <value>Вийти з програми</value>
+  </data>
+  <data name="btnRecipes" xml:space="preserve">
+    <value>Рецепти</value>
+  </data>
+  <data name="btnProducts" xml:space="preserve">
+    <value>Продукти</value>
+  </data>
+  <data name="label_GoalProgress_h2" xml:space="preserve">
+    <value>Прогрес Цілей</value>
+  </data>
+  <data name="toolTip_languageUK" xml:space="preserve">
+    <value>Українська</value>
+  </data>
+  <data name="toolTip_languageEN" xml:space="preserve">
+    <value>Англійська</value>
+  </data>
+  <data name="label_Male" xml:space="preserve">
+    <value>Чоловік</value>
+  </data>
+  <data name="label_Female" xml:space="preserve">
+    <value>Жінка</value>
+  </data>
+  <data name="label_FirstName" xml:space="preserve">
+    <value>Ім'я</value>
+  </data>
+  <data name="label_LastName" xml:space="preserve">
+    <value>Прізвище</value>
+  </data>
+  <data name="label_Country" xml:space="preserve">
+    <value>Країна</value>
+  </data>
+  <data name="label_City" xml:space="preserve">
+    <value>Місто</value>
+  </data>
+  <data name="label_DateOfBirth" xml:space="preserve">
+    <value>Дата Народження</value>
+  </data>
+  <data name="label_FavoriteDish" xml:space="preserve">
+    <value>Улюблена Страва</value>
+  </data>
+  <data name="btnSavePerInfo" xml:space="preserve">
+    <value>Зберегти</value>
+  </data>
+  <data name="label_PersonalInformation" xml:space="preserve">
+    <value>Особиста Інформація</value>
+  </data>
+  <data name="myProfile" xml:space="preserve">
+    <value>Мій профіль</value>
+  </data>
+  <data name="DBProduct_Title" xml:space="preserve">
+    <value>База даних продуктів</value>
+  </data>
+  <data name="DBRecipe_Title" xml:space="preserve">
+    <value>База даних рецептів</value>
+  </data>
+  <data name="DBProduct_SetToolTip" xml:space="preserve">
+    <value>Обирайте свідомо – отримуйте нутрієнтні дані про майже 900 000 продуктів!</value>
+  </data>
+  <data name="DBRecipe_SetToolTip" xml:space="preserve">
+    <value>Понад 2.3 мільйона рецептів – знайдіть саме те, що смакує вам!</value>
+  </data>
+  <data name="toolTip_TotalGoals_Title" xml:space="preserve">
+    <value>Всього цілей</value>
+  </data>
+  <data name="toolTip_Goals_SetToolTip" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="toolTip_Competed_Title" xml:space="preserve">
+    <value>Виконаних цілей</value>
+  </data>
+  <data name="_5_five" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="_6_six" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="EmailAndPass" xml:space="preserve">
+    <value>Пошта ＆ Пароль</value>
+  </data>
+  <data name="personalInfo" xml:space="preserve">
+    <value>Особиста Інформація</value>
+  </data>
+  <data name="toolTip_delete" xml:space="preserve">
+    <value>Видалити фото</value>
+  </data>
+  <data name="toolTip_Version" xml:space="preserve">
+    <value>Версія застосунку</value>
+  </data>
+  <data name="upload_img" xml:space="preserve">
+    <value>Завантажити</value>
+  </data>
+  <data name="label_EmailPassword" xml:space="preserve">
+    <value>Пошта ＆ Пароль</value>
+  </data>
+  <data name="label_Message_h2" xml:space="preserve">
+    <value>Ви маєте можливість оновити свою електронну пошту та пароль.</value>
+  </data>
+  <data name="label_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="label_NewEmail" xml:space="preserve">
+    <value>Новий Email</value>
+  </data>
+  <data name="label_ConfirmPassword" xml:space="preserve">
+    <value>Підтвердження Пароля</value>
+  </data>
+  <data name="label_CurrentPassword" xml:space="preserve">
+    <value>Поточний Пароль</value>
+  </data>
+  <data name="label_NewPassword" xml:space="preserve">
+    <value>Новий Пароль</value>
+  </data>
+  <data name="saveEmPass" xml:space="preserve">
+    <value>Зберегти</value>
+  </data>
+  <data name="label_GeneralInfo" xml:space="preserve">
+    <value>Загальна Інформація</value>
+  </data>
+  <data name="label_TDEE" xml:space="preserve">
+    <value>Добова Норма Калорій</value>
+  </data>
+  <data name="label_History" xml:space="preserve">
+    <value>Історія</value>
+  </data>
+  <data name="calculateTheTDEE" xml:space="preserve">
+    <value>Розрахувати КБЖВ</value>
+  </data>
+  <data name="updateTheTDEE" xml:space="preserve">
+    <value>Оновити КБЖВ</value>
+  </data>
+  <data name="label_CalculateTDEE" xml:space="preserve">
+    <value>Розрахувати КБЖВ</value>
+  </data>
+  <data name="calculation" xml:space="preserve">
+    <value>Розрахувати</value>
+  </data>
+  <data name="label_Height" xml:space="preserve">
+    <value>Зріст</value>
+  </data>
+  <data name="label_Weight" xml:space="preserve">
+    <value>Вага</value>
+  </data>
+  <data name="label_PhsActivity" xml:space="preserve">
+    <value>Фізична Активність</value>
+  </data>
+  <data name="toolTip_closeSidebar" xml:space="preserve">
+    <value>Закрити бічну панель</value>
+  </data>
+  <data name="label_NotFound" xml:space="preserve">
+    <value>Історію не знайдено</value>
+  </data>
+  <data name="toolTip_openSidebar" xml:space="preserve">
+    <value>Відкрити бічну панель</value>
+  </data>
+  <data name="toolTip_newChat" xml:space="preserve">
+    <value>Новий чат</value>
+  </data>
+  <data name="toolTip_timer" xml:space="preserve">
+    <value>Час відповіді бота</value>
+  </data>
+  <data name="messageFromUser" xml:space="preserve">
+    <value>Написати повідомлення...</value>
+  </data>
+  <data name="textSession" xml:space="preserve">
+    <value>Сесія</value>
+  </data>
+</root>

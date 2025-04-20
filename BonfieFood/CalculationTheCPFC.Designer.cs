@@ -39,17 +39,17 @@
             this.guna2Panel_main = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel_Norms = new Guna.UI2.WinForms.Guna2Panel();
             this.age = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_PhsActivity = new System.Windows.Forms.Label();
+            this.label_Weight = new System.Windows.Forms.Label();
+            this.label_Height = new System.Windows.Forms.Label();
+            this.label_DateOfBirth = new System.Windows.Forms.Label();
             this.weight = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.height = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.female = new Guna.UI2.WinForms.Guna2RadioButton();
             this.physicalActivity = new Guna.UI2.WinForms.Guna2ComboBox();
             this.male = new Guna.UI2.WinForms.Guna2RadioButton();
             this.calculation = new Guna.UI2.WinForms.Guna2Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_CalculateTDEE = new System.Windows.Forms.Label();
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -136,7 +136,6 @@
             // guna2Panel_main
             // 
             this.guna2Panel_main.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel_main.BackgroundImage = global::BonfieFood.Properties.Resources._2_two;
             this.guna2Panel_main.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2Panel_main.Controls.Add(this.guna2Panel_drag);
             this.guna2Panel_main.Controls.Add(this.guna2Panel_Norms);
@@ -150,17 +149,17 @@
             this.guna2Panel_Norms.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel_Norms.BorderRadius = 15;
             this.guna2Panel_Norms.Controls.Add(this.age);
-            this.guna2Panel_Norms.Controls.Add(this.label5);
-            this.guna2Panel_Norms.Controls.Add(this.label4);
-            this.guna2Panel_Norms.Controls.Add(this.label3);
-            this.guna2Panel_Norms.Controls.Add(this.label1);
+            this.guna2Panel_Norms.Controls.Add(this.label_PhsActivity);
+            this.guna2Panel_Norms.Controls.Add(this.label_Weight);
+            this.guna2Panel_Norms.Controls.Add(this.label_Height);
+            this.guna2Panel_Norms.Controls.Add(this.label_DateOfBirth);
             this.guna2Panel_Norms.Controls.Add(this.weight);
             this.guna2Panel_Norms.Controls.Add(this.height);
             this.guna2Panel_Norms.Controls.Add(this.female);
             this.guna2Panel_Norms.Controls.Add(this.physicalActivity);
             this.guna2Panel_Norms.Controls.Add(this.male);
             this.guna2Panel_Norms.Controls.Add(this.calculation);
-            this.guna2Panel_Norms.Controls.Add(this.label2);
+            this.guna2Panel_Norms.Controls.Add(this.label_CalculateTDEE);
             this.guna2Panel_Norms.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel_Norms.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(20)))), ((int)(((byte)(85)))));
             this.guna2Panel_Norms.Location = new System.Drawing.Point(17, 46);
@@ -188,57 +187,57 @@
             this.age.UseTransparentBackground = true;
             this.age.Value = new System.DateTime(2024, 12, 17, 11, 56, 2, 44);
             // 
-            // label5
+            // label_PhsActivity
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(151)))), ((int)(((byte)(254)))));
-            this.label5.Location = new System.Drawing.Point(70, 357);
-            this.label5.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 21);
-            this.label5.TabIndex = 75;
-            this.label5.Text = "Фізична активність";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_PhsActivity.AutoSize = true;
+            this.label_PhsActivity.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F);
+            this.label_PhsActivity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(151)))), ((int)(((byte)(254)))));
+            this.label_PhsActivity.Location = new System.Drawing.Point(70, 357);
+            this.label_PhsActivity.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.label_PhsActivity.Name = "label_PhsActivity";
+            this.label_PhsActivity.Size = new System.Drawing.Size(145, 21);
+            this.label_PhsActivity.TabIndex = 75;
+            this.label_PhsActivity.Text = "Фізична активність";
+            this.label_PhsActivity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // label_Weight
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F);
-            this.label4.ForeColor = System.Drawing.Color.Crimson;
-            this.label4.Location = new System.Drawing.Point(70, 232);
-            this.label4.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 21);
-            this.label4.TabIndex = 74;
-            this.label4.Text = "Вага";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Weight.AutoSize = true;
+            this.label_Weight.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F);
+            this.label_Weight.ForeColor = System.Drawing.Color.Crimson;
+            this.label_Weight.Location = new System.Drawing.Point(70, 232);
+            this.label_Weight.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.label_Weight.Name = "label_Weight";
+            this.label_Weight.Size = new System.Drawing.Size(42, 21);
+            this.label_Weight.TabIndex = 74;
+            this.label_Weight.Text = "Вага";
+            this.label_Weight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // label_Height
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F);
-            this.label3.ForeColor = System.Drawing.Color.Gold;
-            this.label3.Location = new System.Drawing.Point(70, 152);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 21);
-            this.label3.TabIndex = 73;
-            this.label3.Text = "Зріст";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Height.AutoSize = true;
+            this.label_Height.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F);
+            this.label_Height.ForeColor = System.Drawing.Color.Gold;
+            this.label_Height.Location = new System.Drawing.Point(70, 152);
+            this.label_Height.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.label_Height.Name = "label_Height";
+            this.label_Height.Size = new System.Drawing.Size(46, 21);
+            this.label_Height.TabIndex = 73;
+            this.label_Height.Text = "Зріст";
+            this.label_Height.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // label_DateOfBirth
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label1.Location = new System.Drawing.Point(70, 72);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 21);
-            this.label1.TabIndex = 72;
-            this.label1.Text = "Дата народження";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_DateOfBirth.AutoSize = true;
+            this.label_DateOfBirth.Font = new System.Drawing.Font("Segoe Fluent Icons", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_DateOfBirth.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label_DateOfBirth.Location = new System.Drawing.Point(70, 72);
+            this.label_DateOfBirth.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.label_DateOfBirth.Name = "label_DateOfBirth";
+            this.label_DateOfBirth.Size = new System.Drawing.Size(136, 21);
+            this.label_DateOfBirth.TabIndex = 72;
+            this.label_DateOfBirth.Text = "Дата народження";
+            this.label_DateOfBirth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // weight
             // 
@@ -383,17 +382,16 @@
             this.calculation.UseTransparentBackground = true;
             this.calculation.Click += new System.EventHandler(this.calculation_Click);
             // 
-            // label2
+            // label_CalculateTDEE
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label2.Location = new System.Drawing.Point(85, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(183, 32);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "Calculate TDEE";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_CalculateTDEE.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_CalculateTDEE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_CalculateTDEE.Location = new System.Drawing.Point(49, 13);
+            this.label_CalculateTDEE.Name = "label_CalculateTDEE";
+            this.label_CalculateTDEE.Size = new System.Drawing.Size(245, 32);
+            this.label_CalculateTDEE.TabIndex = 56;
+            this.label_CalculateTDEE.Text = "Calculate TDEE";
+            this.label_CalculateTDEE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2DragControl2
             // 
@@ -445,7 +443,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox close;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel_Norms;
         private Guna.UI2.WinForms.Guna2Button calculation;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_CalculateTDEE;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
@@ -457,10 +455,10 @@
         private Guna.UI2.WinForms.Guna2RadioButton male;
         private Guna.UI2.WinForms.Guna2NumericUpDown height;
         private Guna.UI2.WinForms.Guna2NumericUpDown weight;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label_Weight;
+        private System.Windows.Forms.Label label_Height;
+        private System.Windows.Forms.Label label_DateOfBirth;
+        private System.Windows.Forms.Label label_PhsActivity;
         private Guna.UI2.WinForms.Guna2DateTimePicker age;
     }
 }

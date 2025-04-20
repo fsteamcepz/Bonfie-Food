@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings_UsernamePass));
             this.guna2Panel_personalInfo = new Guna.UI2.WinForms.Guna2Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label_ConfirmPassword = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.iconConfirmPass = new Guna.UI2.WinForms.Guna2PictureBox();
             this.confirmPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.iconNewPass = new Guna.UI2.WinForms.Guna2PictureBox();
             this.newPass = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label_Message_h2 = new System.Windows.Forms.Label();
+            this.label_NewEmail = new System.Windows.Forms.Label();
             this.newEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label_Email = new System.Windows.Forms.Label();
             this.currentEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.saveEmPass = new Guna.UI2.WinForms.Guna2Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label_EmailPassword = new System.Windows.Forms.Label();
+            this.label_NewPassword = new System.Windows.Forms.Label();
+            this.label_CurrentPassword = new System.Windows.Forms.Label();
             this.currentPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel_personalInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconConfirmPass)).BeginInit();
@@ -55,21 +55,21 @@
             // 
             this.guna2Panel_personalInfo.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel_personalInfo.BorderRadius = 10;
-            this.guna2Panel_personalInfo.Controls.Add(this.label8);
+            this.guna2Panel_personalInfo.Controls.Add(this.label_ConfirmPassword);
             this.guna2Panel_personalInfo.Controls.Add(this.guna2Panel1);
             this.guna2Panel_personalInfo.Controls.Add(this.iconConfirmPass);
             this.guna2Panel_personalInfo.Controls.Add(this.confirmPass);
             this.guna2Panel_personalInfo.Controls.Add(this.iconNewPass);
             this.guna2Panel_personalInfo.Controls.Add(this.newPass);
-            this.guna2Panel_personalInfo.Controls.Add(this.label2);
-            this.guna2Panel_personalInfo.Controls.Add(this.label6);
+            this.guna2Panel_personalInfo.Controls.Add(this.label_Message_h2);
+            this.guna2Panel_personalInfo.Controls.Add(this.label_NewEmail);
             this.guna2Panel_personalInfo.Controls.Add(this.newEmail);
-            this.guna2Panel_personalInfo.Controls.Add(this.label7);
+            this.guna2Panel_personalInfo.Controls.Add(this.label_Email);
             this.guna2Panel_personalInfo.Controls.Add(this.currentEmail);
             this.guna2Panel_personalInfo.Controls.Add(this.saveEmPass);
-            this.guna2Panel_personalInfo.Controls.Add(this.label5);
-            this.guna2Panel_personalInfo.Controls.Add(this.label4);
-            this.guna2Panel_personalInfo.Controls.Add(this.label3);
+            this.guna2Panel_personalInfo.Controls.Add(this.label_EmailPassword);
+            this.guna2Panel_personalInfo.Controls.Add(this.label_NewPassword);
+            this.guna2Panel_personalInfo.Controls.Add(this.label_CurrentPassword);
             this.guna2Panel_personalInfo.Controls.Add(this.currentPass);
             this.guna2Panel_personalInfo.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2Panel_personalInfo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -79,16 +79,16 @@
             this.guna2Panel_personalInfo.Size = new System.Drawing.Size(486, 470);
             this.guna2Panel_personalInfo.TabIndex = 60;
             // 
-            // label8
+            // label_ConfirmPassword
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label8.Location = new System.Drawing.Point(263, 313);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 17);
-            this.label8.TabIndex = 96;
-            this.label8.Text = "Confirm password";
+            this.label_ConfirmPassword.AutoSize = true;
+            this.label_ConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_ConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_ConfirmPassword.Location = new System.Drawing.Point(263, 313);
+            this.label_ConfirmPassword.Name = "label_ConfirmPassword";
+            this.label_ConfirmPassword.Size = new System.Drawing.Size(114, 17);
+            this.label_ConfirmPassword.TabIndex = 96;
+            this.label_ConfirmPassword.Text = "Confirm Password";
             // 
             // guna2Panel1
             // 
@@ -192,26 +192,26 @@
             this.newPass.TabIndex = 87;
             this.newPass.TextOffset = new System.Drawing.Point(7, 0);
             // 
-            // label2
+            // label_Message_h2
             // 
-            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(16, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(441, 58);
-            this.label2.TabIndex = 84;
-            this.label2.Text = "You have the option to update your email address and password as needed.";
+            this.label_Message_h2.Font = new System.Drawing.Font("Segoe UI Variable Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_Message_h2.ForeColor = System.Drawing.Color.Silver;
+            this.label_Message_h2.Location = new System.Drawing.Point(16, 63);
+            this.label_Message_h2.Name = "label_Message_h2";
+            this.label_Message_h2.Size = new System.Drawing.Size(441, 58);
+            this.label_Message_h2.TabIndex = 84;
+            this.label_Message_h2.Text = "You have the option to update your email address and password as needed.";
             // 
-            // label6
+            // label_NewEmail
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label6.Location = new System.Drawing.Point(23, 230);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 17);
-            this.label6.TabIndex = 83;
-            this.label6.Text = "New Email";
+            this.label_NewEmail.AutoSize = true;
+            this.label_NewEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_NewEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_NewEmail.Location = new System.Drawing.Point(23, 230);
+            this.label_NewEmail.Name = "label_NewEmail";
+            this.label_NewEmail.Size = new System.Drawing.Size(69, 17);
+            this.label_NewEmail.TabIndex = 83;
+            this.label_NewEmail.Text = "New Email";
             // 
             // newEmail
             // 
@@ -233,7 +233,6 @@
             this.newEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.newEmail.Location = new System.Drawing.Point(21, 254);
             this.newEmail.Name = "newEmail";
-            this.newEmail.PasswordChar = '\0';
             this.newEmail.PlaceholderForeColor = System.Drawing.Color.AliceBlue;
             this.newEmail.PlaceholderText = "None";
             this.newEmail.SelectedText = "";
@@ -242,16 +241,16 @@
             this.newEmail.TabIndex = 82;
             this.newEmail.TextOffset = new System.Drawing.Point(7, 0);
             // 
-            // label7
+            // label_Email
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label7.Location = new System.Drawing.Point(23, 142);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 17);
-            this.label7.TabIndex = 81;
-            this.label7.Text = "Email";
+            this.label_Email.AutoSize = true;
+            this.label_Email.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_Email.Location = new System.Drawing.Point(23, 142);
+            this.label_Email.Name = "label_Email";
+            this.label_Email.Size = new System.Drawing.Size(39, 17);
+            this.label_Email.TabIndex = 81;
+            this.label_Email.Text = "Email";
             // 
             // currentEmail
             // 
@@ -273,7 +272,6 @@
             this.currentEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.currentEmail.Location = new System.Drawing.Point(21, 166);
             this.currentEmail.Name = "currentEmail";
-            this.currentEmail.PasswordChar = '\0';
             this.currentEmail.PlaceholderForeColor = System.Drawing.Color.AliceBlue;
             this.currentEmail.PlaceholderText = "None";
             this.currentEmail.SelectedText = "";
@@ -305,38 +303,38 @@
             this.saveEmPass.UseTransparentBackground = true;
             this.saveEmPass.Click += new System.EventHandler(this.saveEmPass_Click);
             // 
-            // label5
+            // label_EmailPassword
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Constantia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label5.Location = new System.Drawing.Point(15, 14);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(250, 33);
-            this.label5.TabIndex = 56;
-            this.label5.Text = "Email ＆ Password";
+            this.label_EmailPassword.AutoSize = true;
+            this.label_EmailPassword.Font = new System.Drawing.Font("Constantia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_EmailPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_EmailPassword.Location = new System.Drawing.Point(15, 14);
+            this.label_EmailPassword.Name = "label_EmailPassword";
+            this.label_EmailPassword.Size = new System.Drawing.Size(250, 33);
+            this.label_EmailPassword.TabIndex = 56;
+            this.label_EmailPassword.Text = "Email ＆ Password";
             // 
-            // label4
+            // label_NewPassword
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label4.Location = new System.Drawing.Point(263, 230);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 17);
-            this.label4.TabIndex = 58;
-            this.label4.Text = "New password";
+            this.label_NewPassword.AutoSize = true;
+            this.label_NewPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_NewPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_NewPassword.Location = new System.Drawing.Point(263, 230);
+            this.label_NewPassword.Name = "label_NewPassword";
+            this.label_NewPassword.Size = new System.Drawing.Size(94, 17);
+            this.label_NewPassword.TabIndex = 58;
+            this.label_NewPassword.Text = "New Password";
             // 
-            // label3
+            // label_CurrentPassword
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label3.Location = new System.Drawing.Point(263, 142);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 17);
-            this.label3.TabIndex = 56;
-            this.label3.Text = "Current password";
+            this.label_CurrentPassword.AutoSize = true;
+            this.label_CurrentPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_CurrentPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_CurrentPassword.Location = new System.Drawing.Point(263, 142);
+            this.label_CurrentPassword.Name = "label_CurrentPassword";
+            this.label_CurrentPassword.Size = new System.Drawing.Size(111, 17);
+            this.label_CurrentPassword.TabIndex = 56;
+            this.label_CurrentPassword.Text = "Current Password";
             // 
             // currentPass
             // 
@@ -358,7 +356,6 @@
             this.currentPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.currentPass.Location = new System.Drawing.Point(261, 166);
             this.currentPass.Name = "currentPass";
-            this.currentPass.PasswordChar = '\0';
             this.currentPass.PlaceholderForeColor = System.Drawing.Color.AliceBlue;
             this.currentPass.PlaceholderText = "None";
             this.currentPass.SelectedText = "";
@@ -391,21 +388,21 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel_personalInfo;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label_EmailPassword;
+        private System.Windows.Forms.Label label_NewPassword;
+        private System.Windows.Forms.Label label_CurrentPassword;
         private Guna.UI2.WinForms.Guna2Button saveEmPass;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label_NewEmail;
         private Guna.UI2.WinForms.Guna2TextBox newEmail;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label_Email;
         private Guna.UI2.WinForms.Guna2TextBox currentEmail;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_Message_h2;
         private Guna.UI2.WinForms.Guna2PictureBox iconNewPass;
         private Guna.UI2.WinForms.Guna2TextBox newPass;
         private Guna.UI2.WinForms.Guna2TextBox currentPass;
         private Guna.UI2.WinForms.Guna2PictureBox iconConfirmPass;
         private Guna.UI2.WinForms.Guna2TextBox confirmPass;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label_ConfirmPassword;
     }
 }

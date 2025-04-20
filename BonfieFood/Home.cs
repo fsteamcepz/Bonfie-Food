@@ -6,9 +6,7 @@ using FontAwesome.Sharp;
 using System.IO;
 using System.Globalization;
 using System.Drawing.Imaging;
-using System.Reflection;
 using System.Collections.Generic;
-using System.Windows.Documents;
 
 namespace BonfieFood
 {
@@ -56,6 +54,41 @@ namespace BonfieFood
             TransparentLabels();
             ConfigureLogOut();
             ConfigureProfileImg();
+            UpdateTexts();
+
+            Language.OnLanguageChanged += ChangeLanguage;
+        }
+        private void UpdateTexts()
+        {
+            label_QuickAction_h1.Text = Properties.Resources.label_QuickAction_h1;
+            label_HealthMessage_h2.Text = Properties.Resources.label_HealthMessage_h2;
+            label_Nutrition_h2.Text = Properties.Resources.label_Nutrition_h2;
+            btnAddNutrition.Text = Properties.Resources.btnAddNutrition;
+            label_IntegratedDB_h2.Text = Properties.Resources.label_IntegratedDB_h2;
+            label_Products_h3.Text = Properties.Resources.label_Products_h3;
+            label_Recipes_h3.Text = Properties.Resources.label_Recipes_h3;
+            btnProducts.Text = Properties.Resources.btnProducts;
+            btnRecipes.Text = Properties.Resources.btnRecipes;
+            label_Goals_h1.Text = Properties.Resources.label_Goals_h1;
+            label_GoalProgress_h2.Text = Properties.Resources.label_GoalProgress_h2;
+            btnViewGoals.Text = Properties.Resources.btnViewGoals;
+            label_SavedRecipes_h2.Text = Properties.Resources.label_SavedRecipes_h2;
+            btnViewSavedRecipes.Text = Properties.Resources.btnViewSavedRecipes;
+            myProfile.Text = Properties.Resources.myProfile;
+
+            toolTip_logout.SetToolTip(logout_acc, Properties.Resources.toolTip_logout);
+            toolTip_DBProduct.ToolTipTitle = Properties.Resources.DBProduct_Title;
+            toolTip_DBProduct.SetToolTip(DBProductsLine, Properties.Resources.DBProduct_SetToolTip);
+            toolTip_DBRecipe.ToolTipTitle = Properties.Resources.DBRecipe_Title;
+            toolTip_DBRecipe.SetToolTip(DBRecipeLine, Properties.Resources.DBRecipe_SetToolTip);
+            toolTip_TotalGoals.ToolTipTitle = Properties.Resources.toolTip_TotalGoals_Title;
+            toolTip_TotalGoals.SetToolTip(totalGoalsLine, Properties.Resources.toolTip_Goals_SetToolTip);
+            toolTip_Competed.ToolTipTitle = Properties.Resources.toolTip_Competed_Title;
+            toolTip_Competed.SetToolTip(competedGoalsLine, Properties.Resources.toolTip_Goals_SetToolTip);
+        }
+        private void ChangeLanguage(string cultureCode)
+        {
+            UpdateTexts();
         }
         private void SettingsForm_PhotoUpdated(object sender, EventArgs e)
         {
@@ -65,9 +98,9 @@ namespace BonfieFood
         private void TransparentLabels()
         {
             // Харчування
-            label_Nutrition.Parent = guna2PictureBox1;
-            label_Nutrition.BackColor = Color.Transparent;
-            label_Nutrition.Location = new Point(12, 15);
+            label_Nutrition_h2.Parent = guna2PictureBox1;
+            label_Nutrition_h2.BackColor = Color.Transparent;
+            label_Nutrition_h2.Location = new Point(12, 15);
 
             // Назва тижня
             label_dayWeekName.Parent = guna2PictureBox2;
@@ -80,26 +113,21 @@ namespace BonfieFood
             label_date.Location = new Point(-7, 75);
 
             // БД рецепти та продукти
-            label_Recipe.Parent = guna2PictureBox3;
-            label_Recipe.BackColor = Color.Transparent;
-            label_Recipe.Location = new Point(12, 15);
+            label_IntegratedDB_h2.Parent = guna2PictureBox3;
+            label_IntegratedDB_h2.BackColor = Color.Transparent;
+            label_IntegratedDB_h2.Location = new Point(12, 15);
 
-            label_shortestRecipe.Parent = guna2PictureBox3;
-            label_shortestRecipe.BackColor = Color.Transparent;
-            label_shortestRecipe.Location = new Point(118, 71);
-            label_longestRecipe.Parent = guna2PictureBox3;
-            label_longestRecipe.BackColor = Color.Transparent;
-            label_longestRecipe.Location = new Point(118, 93);
-
-            toolTip_DBProduct.ToolTipTitle = "База даних продуктів";
-            toolTip_DBProduct.SetToolTip(DBProductsLine, "Обирайте свідомо – отримуйте нутрієнтні дані про майже 900 000 продуктів!");
-            toolTip_DBRecipe.ToolTipTitle = "База даних рецептів";
-            toolTip_DBRecipe.SetToolTip(DBRecipeLine, "Понад 2.3 мільйона рецептів – знайдіть саме те, що смакує вам!");
+            label_Products_h3.Parent = guna2PictureBox3;
+            label_Products_h3.BackColor = Color.Transparent;
+            label_Products_h3.Location = new Point(118, 71);
+            label_Recipes_h3.Parent = guna2PictureBox3;
+            label_Recipes_h3.BackColor = Color.Transparent;
+            label_Recipes_h3.Location = new Point(118, 93);
 
             // Цілі
-            label_Goals.Parent = guna2PictureBox4;
-            label_Goals.BackColor = Color.Transparent;
-            label_Goals.Location = new Point(12, 30);
+            label_GoalProgress_h2.Parent = guna2PictureBox4;
+            label_GoalProgress_h2.BackColor = Color.Transparent;
+            label_GoalProgress_h2.Location = new Point(12, 30);
 
             label_GoalsTotal.Parent = guna2PictureBox4;
             label_GoalsTotal.BackColor = Color.Transparent;
@@ -114,9 +142,9 @@ namespace BonfieFood
             label_time.Location = new Point(0, 55);
 
             // Збережені рецепти
-            label_SavedRecipes.Parent = guna2PictureBox6;
-            label_SavedRecipes.BackColor = Color.Transparent;
-            label_SavedRecipes.Location = new Point(12, 30);
+            label_SavedRecipes_h2.Parent = guna2PictureBox6;
+            label_SavedRecipes_h2.BackColor = Color.Transparent;
+            label_SavedRecipes_h2.Location = new Point(12, 30);
 
             label_TotalSaved.Parent = guna2PictureBox6;
             label_TotalSaved.BackColor = Color.Transparent;
@@ -320,9 +348,7 @@ namespace BonfieFood
             
             lineTotal = Math.Min(Math.Max(totalGoals + minWidth, minWidth), maxWidth);
             lineCompleted = Math.Min(Math.Max(completedGoals + minWidth, minWidth), maxWidth);            
-
-            toolTip_TotalGoals.ToolTipTitle = "Всього цілей";
-            toolTip_TotalGoals.SetToolTip(totalGoalsLine, " ");
+                        
             if (totalGoals > 0)
             {
                 totalGoalsLine.Size = new Size(lineTotal, lineHeight);
@@ -333,9 +359,7 @@ namespace BonfieFood
                 totalGoalsLine.Size = new Size(minWidth, lineHeight);
                 label_GoalsTotal.Text = "0";
             }
-
-            toolTip_Competed.ToolTipTitle = "Виконаних цілей";
-            toolTip_Competed.SetToolTip(competedGoalsLine, " ");
+            
             if (completedGoals > 0)
             {
                 competedGoalsLine.Size = new Size(lineCompleted, lineHeight);
@@ -679,6 +703,9 @@ namespace BonfieFood
             {
                 Properties.Settings.Default.Username = string.Empty;
                 Properties.Settings.Default.Password = string.Empty;
+                string defaultLanguage = Properties.Settings.Default.Language = "en";
+                System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo(defaultLanguage);
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo(defaultLanguage);
                 Properties.Settings.Default.Save();
 
                 this.Hide();
@@ -697,9 +724,13 @@ namespace BonfieFood
         }
         private void Timer_Tick(object sender, EventArgs e)
         {
-            CultureInfo culture = new CultureInfo("en-US");
-            label_dayWeekName.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.ToString("dddd", culture));
-            label_date.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.ToString("MMMM d, yyyy", culture));
+            CultureInfo culture = System.Threading.Thread.CurrentThread.CurrentCulture;
+            if (culture.ToString() == "en")
+                label_date.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.ToString("MMMM d, yyyy", culture));
+            else
+                label_date.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.ToString("d MMMM, yyyy", culture));
+            
+            label_dayWeekName.Text = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(DateTime.Now.ToString("dddd", culture));            
             label_time.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 

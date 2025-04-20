@@ -25,7 +25,13 @@ namespace BonfieFood
         {
             GetUserEmail();
             ReadOnlyCurrentEmail();
+            UpdateTexts();
 
+            Language.OnLanguageChanged += ChangeLanguage;
+        }
+        private void ChangeLanguage(string cultureCode)
+        {
+            UpdateTexts();
         }
         private void ReadOnlyCurrentEmail()
         {
@@ -42,12 +48,14 @@ namespace BonfieFood
         }
         private void GetUserEmail()
         {
-            string query = "SELECT emailUser FROM Users WHERE idUser = @userId";
+            string query = @"SELECT emailUser
+                             FROM Users
+                             WHERE idUser = @userId";
             string email;
 
             using (SqlCommand command = new SqlCommand(query, db.getConnection()))
             {
-                command.Parameters.Add("@userId", SqlDbType.Int).Value = CurrentUser.UserId;
+                command.Parameters.AddWithValue("@userId", CurrentUser.UserId);
 
                 db.openConnection();
                 email = command.ExecuteScalar()?.ToString();
@@ -106,8 +114,8 @@ namespace BonfieFood
 
                 using (SqlCommand command = new SqlCommand(queryUpdateEmail, db.getConnection()))
                 {
-                    command.Parameters.Add("@newEmail", SqlDbType.VarChar).Value = new_Email;
-                    command.Parameters.Add("@userId", SqlDbType.Int).Value = CurrentUser.UserId;
+                    command.Parameters.AddWithValue("@newEmail", new_Email);
+                    command.Parameters.AddWithValue("@userId", CurrentUser.UserId);
 
                     db.openConnection();
                     command.ExecuteNonQuery();
@@ -142,8 +150,8 @@ namespace BonfieFood
 
                 using (SqlCommand command = new SqlCommand(queryUpdatePassword, db.getConnection()))
                 {
-                    command.Parameters.Add("@newPassword", SqlDbType.VarChar).Value = hashedPassword;
-                    command.Parameters.Add("@userId", SqlDbType.Int).Value = CurrentUser.UserId;
+                    command.Parameters.AddWithValue("@newPassword", hashedPassword);
+                    command.Parameters.AddWithValue("@userId", SqlDbType.Int).Value = CurrentUser.UserId;
 
                     db.openConnection();
                     command.ExecuteNonQuery();
@@ -177,8 +185,8 @@ namespace BonfieFood
             string query = "SELECT COUNT(*) FROM Users WHERE emailUser = @email AND idUser != @userId";
             using (SqlCommand command = new SqlCommand(query, db.getConnection()))
             {
-                command.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
-                command.Parameters.Add("@userId", SqlDbType.Int).Value = CurrentUser.UserId;
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@userId", CurrentUser.UserId);
                 db.openConnection();
                 int count = (int)command.ExecuteScalar();
                 db.closeConnection();
@@ -191,7 +199,7 @@ namespace BonfieFood
             string query = "SELECT passwordUser FROM Users WHERE idUser = @userId";
             using (SqlCommand command = new SqlCommand(query, db.getConnection()))
             {
-                command.Parameters.Add("@userId", SqlDbType.Int).Value = CurrentUser.UserId;
+                command.Parameters.AddWithValue("@userId", CurrentUser.UserId);
 
                 db.openConnection();
                 object result = command.ExecuteScalar();
@@ -229,6 +237,18 @@ namespace BonfieFood
                 confirmPass.PasswordChar = '\0';
                 iconConfirmPass.Image = Properties.Resources.password_show;
             }
+        }
+
+        private void UpdateTexts()
+        {
+            label_EmailPassword.Text = Properties.Resources.label_EmailPassword;
+            label_Message_h2.Text = Properties.Resources.label_Message_h2;
+            label_Email.Text = Properties.Resources.label_Email;
+            label_NewEmail.Text = Properties.Resources.label_NewEmail;
+            label_CurrentPassword.Text = Properties.Resources.label_CurrentPassword;
+            label_NewPassword.Text = Properties.Resources.label_NewPassword;
+            label_ConfirmPassword.Text = Properties.Resources.label_ConfirmPassword;
+            saveEmPass.Text = Properties.Resources.saveEmPass;
         }
     }
 }

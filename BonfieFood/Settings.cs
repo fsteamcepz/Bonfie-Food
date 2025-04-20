@@ -24,6 +24,7 @@ namespace BonfieFood
         private void Settings_Load(object sender, EventArgs e)
         {
             LoadUserImg();
+            UpdateTexts();
 
             IconButton[] btn = { personalInfo, EmailAndPass };
             foreach (IconButton i in btn)
@@ -34,8 +35,11 @@ namespace BonfieFood
             ActivateButton(personalInfo);
             CurrentPage(new Settings_PersonInfo());
 
-            toolTip_delete.SetToolTip(delete_photo, "Видалити фото");
-            toolTip_Version.SetToolTip(versionApp, "Версія застосунку");
+            Language.OnLanguageChanged += ChangeLanguage;
+        }
+        private void ChangeLanguage(string cultureCode)
+        {
+            UpdateTexts();
         }
         private void ActivateButton(object senderBtn)
         {
@@ -283,6 +287,15 @@ namespace BonfieFood
         {
             ActivateButton(sender);
             CurrentPage(new Settings_UsernamePass());
+        }
+
+        private void UpdateTexts()
+        {
+            upload_img.Text = Properties.Resources.upload_img;
+            personalInfo.Text = Properties.Resources.personalInfo;
+            EmailAndPass.Text = Properties.Resources.EmailAndPass;
+            toolTip_delete.SetToolTip(delete_photo, Properties.Resources.toolTip_delete);
+            toolTip_Version.SetToolTip(versionApp, Properties.Resources.toolTip_Version);
         }
     }
 }

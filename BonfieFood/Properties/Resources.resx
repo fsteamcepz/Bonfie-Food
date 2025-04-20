@@ -127,6 +127,9 @@
   <data name="bonfie" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bonfie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btnAddNutrition" xml:space="preserve">
+    <value>Add</value>
+  </data>
   <data name="B_logo_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\B-logo-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -141,6 +144,15 @@
   </data>
   <data name="invisible_pas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\invisible-pas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="label_HealthMessage_h2" xml:space="preserve">
+    <value>Health must always come first</value>
+  </data>
+  <data name="label_IntegratedDB_h2" xml:space="preserve">
+    <value>Integrated Product and Recipe Database</value>
+  </data>
+  <data name="label_Nutrition_h2" xml:space="preserve">
+    <value>Nutrition </value>
   </data>
   <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,22 +232,205 @@
   <data name="Warning_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warning-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="label_Products_h3" xml:space="preserve">
+    <value>900,000 Products</value>
+  </data>
+  <data name="label_QuickAction_h1" xml:space="preserve">
+    <value>Quick Actions</value>
+  </data>
+  <data name="label_Recipes_h3" xml:space="preserve">
+    <value>2.3M+ Recipes</value>
+  </data>
+  <data name="label_Goals_h1" xml:space="preserve">
+    <value>Goals</value>
+  </data>
+  <data name="btnViewGoals" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="label_SavedRecipes_h2" xml:space="preserve">
+    <value>Saved Recipes</value>
+  </data>
+  <data name="btnViewSavedRecipes" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="toolTip_logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="btnRecipes" xml:space="preserve">
+    <value>Recipes</value>
+  </data>
+  <data name="btnProducts" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="label_GoalProgress_h2" xml:space="preserve">
+    <value>Goal Progress</value>
+  </data>
+  <data name="toolTip_languageUK" xml:space="preserve">
+    <value>Ukrainian</value>
+  </data>
+  <data name="toolTip_languageEN" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="label_Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="label_Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="label_FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="label_LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="label_Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="label_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="label_DateOfBirth" xml:space="preserve">
+    <value>Date Of Birth</value>
+  </data>
+  <data name="label_FavoriteDish" xml:space="preserve">
+    <value>Favorite Dish</value>
+  </data>
+  <data name="btnSavePerInfo" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="label_PersonalInformation" xml:space="preserve">
+    <value>Personal Information</value>
+  </data>
+  <data name="myProfile" xml:space="preserve">
+    <value>My profile</value>
+  </data>
+  <data name="DBProduct_Title" xml:space="preserve">
+    <value>Product database</value>
+  </data>
+  <data name="DBRecipe_Title" xml:space="preserve">
+    <value>Recipe database</value>
+  </data>
+  <data name="DBProduct_SetToolTip" xml:space="preserve">
+    <value>Make informed choices - get nutritional data on almost 900,000 products!</value>
+  </data>
+  <data name="DBRecipe_SetToolTip" xml:space="preserve">
+    <value>Over 2.3 million recipes - find exactly what you like!</value>
+  </data>
+  <data name="toolTip_TotalGoals_Title" xml:space="preserve">
+    <value>Total goals</value>
+  </data>
+  <data name="toolTip_Goals_SetToolTip" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="toolTip_Competed_Title" xml:space="preserve">
+    <value>Completed goals</value>
+  </data>
   <data name="_1_one" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1-one.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\_1-one.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_2_two" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2-two.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\_2-two.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_3_three" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3-three.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\_3-three.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_4_four" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4-four.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\_4-four.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_5_five" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5-five.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\_5-five.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_6_six" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\6-six.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\_6-six.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EmailAndPass" xml:space="preserve">
+    <value>Email ＆ Password</value>
+  </data>
+  <data name="personalInfo" xml:space="preserve">
+    <value>Personal Information</value>
+  </data>
+  <data name="toolTip_delete" xml:space="preserve">
+    <value>Delete photo</value>
+  </data>
+  <data name="toolTip_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="upload_img" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="label_EmailPassword" xml:space="preserve">
+    <value>Email ＆ Password</value>
+  </data>
+  <data name="label_Message_h2" xml:space="preserve">
+    <value>You have the option to update your email address and password as needed.</value>
+  </data>
+  <data name="label_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="label_NewEmail" xml:space="preserve">
+    <value>New Email</value>
+  </data>
+  <data name="label_ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="label_CurrentPassword" xml:space="preserve">
+    <value>Current Password</value>
+  </data>
+  <data name="label_NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="saveEmPass" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="label_GeneralInfo" xml:space="preserve">
+    <value>General Information</value>
+  </data>
+  <data name="label_TDEE" xml:space="preserve">
+    <value>Total Daily Energy</value>
+  </data>
+  <data name="label_History" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="calculateTheTDEE" xml:space="preserve">
+    <value>Calculate TDEE</value>
+  </data>
+  <data name="updateTheTDEE" xml:space="preserve">
+    <value>Update TDEE</value>
+  </data>
+  <data name="label_CalculateTDEE" xml:space="preserve">
+    <value>Calculate TDEE</value>
+  </data>
+  <data name="calculation" xml:space="preserve">
+    <value>Calculation</value>
+  </data>
+  <data name="label_Height" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="label_Weight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="label_PhsActivity" xml:space="preserve">
+    <value>Physical Activity</value>
+  </data>
+  <data name="toolTip_closeSidebar" xml:space="preserve">
+    <value>Close sidebar</value>
+  </data>
+  <data name="label_NotFound" xml:space="preserve">
+    <value>History not found</value>
+  </data>
+  <data name="toolTip_openSidebar" xml:space="preserve">
+    <value>Open sidebar</value>
+  </data>
+  <data name="toolTip_newChat" xml:space="preserve">
+    <value>New chat</value>
+  </data>
+  <data name="toolTip_timer" xml:space="preserve">
+    <value>Bot response time</value>
+  </data>
+  <data name="messageFromUser" xml:space="preserve">
+    <value>Write a message...</value>
+  </data>
+  <data name="textSession" xml:space="preserve">
+    <value>Session</value>
   </data>
 </root>

@@ -27,9 +27,20 @@ namespace BonfieFood
 
         private void Settings_PersonInfo_Load(object sender, EventArgs e)
         {
+            string savedLanguage = Properties.Settings.Default.Language;
+            switchLanguage.Checked = savedLanguage == "en";
+            UpdateTexts();
+
             LoadCountriesAsync();
+            dateOfBirth.Value = DateTime.Today;
             switchBirthDate.Checked = false;
             dateOfBirth.Visible = false;
+
+            Language.OnLanguageChanged += ChangeLanguage;
+        }
+        private void ChangeLanguage(string cultureCode)
+        {
+            UpdateTexts();
         }
         private async void LoadCountriesAsync()
         {
@@ -122,8 +133,8 @@ namespace BonfieFood
                     if (reader.Read())
                     {
                         string gender = reader["gender"].ToString();
-                        if (gender == "Чоловік") male.Checked = true;
-                        else if (gender == "Жінка") female.Checked = true;
+                        if (gender == "Чоловік") label_Male.Checked = true;
+                        else if (gender == "Жінка") label_Female.Checked = true;
 
                         // Ім'я
                         firstName.Text = reader["firstName"].ToString();
@@ -144,9 +155,9 @@ namespace BonfieFood
                         }
 
                         // Дата народження
-                        if (!reader.IsDBNull(reader.GetOrdinal("birthDate")))
+                        if (reader["birthDate"] != DBNull.Value)
                         {
-                            dateOfBirth.Value = reader.GetDateTime(reader.GetOrdinal("birthDate"));
+                            dateOfBirth.Value = Convert.ToDateTime(reader["birthDate"]);
                             switchBirthDate.Checked = true;
                             dateOfBirth.Visible = true;
                         }
@@ -166,13 +177,13 @@ namespace BonfieFood
             isInitialLoad = false; // початкове завантаження завершено
         }
 
-        private void savePerInfo_Click(object sender, EventArgs e)
+        private void btnSavePerInfo_Click(object sender, EventArgs e)
         {
             // Стать
             string genderU = null;
-            if (male.Checked)
+            if (label_Male.Checked)
                 genderU = "Чоловік";
-            else if (female.Checked)
+            else if (label_Female.Checked)
                 genderU = "Жінка";
 
             // Ім'я
@@ -337,8 +348,8 @@ namespace BonfieFood
 
         private void clearGender_Click(object sender, EventArgs e)
         {
-            male.Checked = false;
-            female.Checked = false;
+            label_Male.Checked = false;
+            label_Female.Checked = false;
         }
         private void clearFirstName_Click(object sender, EventArgs e)
         {
@@ -376,6 +387,29 @@ namespace BonfieFood
                 dateOfBirth.Enabled = false;
                 dateOfBirth.Visible = false;
             }
+        }
+
+        private void switchLanguage_CheckedChanged(object sender, EventArgs e)
+        {
+            string language = switchLanguage.Checked ? "en" : "uk";
+            Language.ChangeLanguage(language);
+        }
+        
+        private void UpdateTexts()
+        {
+            label_PersonalInformation.Text = Properties.Resources.label_PersonalInformation;
+            label_Male.Text = Properties.Resources.label_Male;
+            label_Female.Text = Properties.Resources.label_Female;
+            label_FirstName.Text = Properties.Resources.label_FirstName;
+            label_LastName.Text = Properties.Resources.label_LastName;
+            label_Country.Text = Properties.Resources.label_Country;
+            label_City.Text = Properties.Resources.label_City;
+            label_DateOfBirth.Text = Properties.Resources.label_DateOfBirth;
+            label_FavoriteDish.Text = Properties.Resources.label_FavoriteDish;
+            btnSavePerInfo.Text = Properties.Resources.btnSavePerInfo;
+
+            toolTip_languageUK.SetToolTip(language_UK, Properties.Resources.toolTip_languageUK);
+            toolTip_languageEN.SetToolTip(language_EN, Properties.Resources.toolTip_languageEN);
         }
     }
 }

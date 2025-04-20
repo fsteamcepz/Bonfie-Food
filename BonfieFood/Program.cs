@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace BonfieFood
 {
@@ -18,16 +17,19 @@ namespace BonfieFood
             Application.SetCompatibleTextRenderingDefault(false);
 
             if (new Login().AutomaticLogin())
-            {
+            {                
+                string savedLanguage = Properties.Settings.Default.Language;
+                Thread.CurrentThread.CurrentCulture = new CultureInfo(savedLanguage);
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(savedLanguage);
+
                 Application.Run(new Home());
-                //Application.Run(new Nutrition());
             }
             else
             {
+                string defaultLanguage = Properties.Settings.Default.Language = "en";
+                Thread.CurrentThread.CurrentCulture = new CultureInfo(defaultLanguage);
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(defaultLanguage);
                 Application.Run(new Login());
-                //Application.Run(new Home());
-                //Application.Run(new Profile());
-                //Application.Run(new panelTheCPFC());
             }
         }
     }

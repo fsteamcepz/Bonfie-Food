@@ -55,7 +55,7 @@ namespace BonfieFood
                     parameters = new
                     {
                         temperature = 0.7,
-                        max_length = 3000,
+                        max_tokens = 3072,
                         top_p = 0.9,
                         return_full_text = false
                     }

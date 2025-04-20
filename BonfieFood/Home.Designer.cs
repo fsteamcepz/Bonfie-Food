@@ -62,11 +62,11 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.savedRecipesLine = new Guna.UI2.WinForms.Guna2Button();
             this.label_TotalSaved = new System.Windows.Forms.Label();
-            this.label_SavedRecipes = new System.Windows.Forms.Label();
+            this.label_SavedRecipes_h2 = new System.Windows.Forms.Label();
             this.guna2Button16 = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewSavedRecipes = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label_Goals = new System.Windows.Forms.Label();
+            this.label_GoalProgress_h2 = new System.Windows.Forms.Label();
             this.label_GoalsCompleted = new System.Windows.Forms.Label();
             this.label_GoalsTotal = new System.Windows.Forms.Label();
             this.competedGoalsLine = new Guna.UI2.WinForms.Guna2Button();
@@ -75,27 +75,27 @@
             this.guna2Button19 = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewGoals = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label_longestRecipe = new System.Windows.Forms.Label();
-            this.label_shortestRecipe = new System.Windows.Forms.Label();
+            this.label_Recipes_h3 = new System.Windows.Forms.Label();
+            this.label_Products_h3 = new System.Windows.Forms.Label();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.DBRecipeLine = new Guna.UI2.WinForms.Guna2Button();
-            this.label_Recipe = new System.Windows.Forms.Label();
+            this.label_IntegratedDB_h2 = new System.Windows.Forms.Label();
             this.btnRecipes = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
             this.DBProductsLine = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.morningLine = new Guna.UI2.WinForms.Guna2Button();
             this.backgroundMorningLine = new Guna.UI2.WinForms.Guna2Button();
-            this.label_Nutrition = new System.Windows.Forms.Label();
+            this.label_Nutrition_h2 = new System.Windows.Forms.Label();
             this.dinnerLine = new Guna.UI2.WinForms.Guna2Button();
             this.lunchLine = new Guna.UI2.WinForms.Guna2Button();
             this.backgroundDinnerLine = new Guna.UI2.WinForms.Guna2Button();
             this.backgroundLunchLine = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddNutrition = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label_Goals_h1 = new System.Windows.Forms.Label();
+            this.label_HealthMessage_h2 = new System.Windows.Forms.Label();
+            this.label_QuickAction_h1 = new System.Windows.Forms.Label();
             this.toolTip_logout = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.toolTip_Morning = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.toolTip_Lunch = new Guna.UI2.WinForms.Guna2HtmlToolTip();
@@ -495,11 +495,11 @@
             this.guna2Panel1_home.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel1_home.Controls.Add(this.savedRecipesLine);
             this.guna2Panel1_home.Controls.Add(this.label_TotalSaved);
-            this.guna2Panel1_home.Controls.Add(this.label_SavedRecipes);
+            this.guna2Panel1_home.Controls.Add(this.label_SavedRecipes_h2);
             this.guna2Panel1_home.Controls.Add(this.guna2Button16);
             this.guna2Panel1_home.Controls.Add(this.btnViewSavedRecipes);
             this.guna2Panel1_home.Controls.Add(this.guna2PictureBox6);
-            this.guna2Panel1_home.Controls.Add(this.label_Goals);
+            this.guna2Panel1_home.Controls.Add(this.label_GoalProgress_h2);
             this.guna2Panel1_home.Controls.Add(this.label_GoalsCompleted);
             this.guna2Panel1_home.Controls.Add(this.label_GoalsTotal);
             this.guna2Panel1_home.Controls.Add(this.competedGoalsLine);
@@ -508,27 +508,27 @@
             this.guna2Panel1_home.Controls.Add(this.guna2Button19);
             this.guna2Panel1_home.Controls.Add(this.btnViewGoals);
             this.guna2Panel1_home.Controls.Add(this.guna2PictureBox4);
-            this.guna2Panel1_home.Controls.Add(this.label_longestRecipe);
-            this.guna2Panel1_home.Controls.Add(this.label_shortestRecipe);
+            this.guna2Panel1_home.Controls.Add(this.label_Recipes_h3);
+            this.guna2Panel1_home.Controls.Add(this.label_Products_h3);
             this.guna2Panel1_home.Controls.Add(this.guna2Button8);
             this.guna2Panel1_home.Controls.Add(this.DBRecipeLine);
-            this.guna2Panel1_home.Controls.Add(this.label_Recipe);
+            this.guna2Panel1_home.Controls.Add(this.label_IntegratedDB_h2);
             this.guna2Panel1_home.Controls.Add(this.btnRecipes);
             this.guna2Panel1_home.Controls.Add(this.guna2Button11);
             this.guna2Panel1_home.Controls.Add(this.DBProductsLine);
             this.guna2Panel1_home.Controls.Add(this.guna2PictureBox3);
             this.guna2Panel1_home.Controls.Add(this.morningLine);
             this.guna2Panel1_home.Controls.Add(this.backgroundMorningLine);
-            this.guna2Panel1_home.Controls.Add(this.label_Nutrition);
+            this.guna2Panel1_home.Controls.Add(this.label_Nutrition_h2);
             this.guna2Panel1_home.Controls.Add(this.dinnerLine);
             this.guna2Panel1_home.Controls.Add(this.lunchLine);
             this.guna2Panel1_home.Controls.Add(this.backgroundDinnerLine);
             this.guna2Panel1_home.Controls.Add(this.backgroundLunchLine);
             this.guna2Panel1_home.Controls.Add(this.btnAddNutrition);
             this.guna2Panel1_home.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel1_home.Controls.Add(this.label2);
-            this.guna2Panel1_home.Controls.Add(this.label1);
-            this.guna2Panel1_home.Controls.Add(this.label7);
+            this.guna2Panel1_home.Controls.Add(this.label_Goals_h1);
+            this.guna2Panel1_home.Controls.Add(this.label_HealthMessage_h2);
+            this.guna2Panel1_home.Controls.Add(this.label_QuickAction_h1);
             this.guna2Panel1_home.Location = new System.Drawing.Point(9, 8);
             this.guna2Panel1_home.Name = "guna2Panel1_home";
             this.guna2Panel1_home.Size = new System.Drawing.Size(702, 482);
@@ -649,17 +649,17 @@
             this.label_TotalSaved.Text = "N";
             this.label_TotalSaved.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label_SavedRecipes
+            // label_SavedRecipes_h2
             // 
-            this.label_SavedRecipes.AutoSize = true;
-            this.label_SavedRecipes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_SavedRecipes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label_SavedRecipes.Location = new System.Drawing.Point(465, 336);
-            this.label_SavedRecipes.Name = "label_SavedRecipes";
-            this.label_SavedRecipes.Size = new System.Drawing.Size(118, 21);
-            this.label_SavedRecipes.TabIndex = 109;
-            this.label_SavedRecipes.Text = "Saved Recipes";
-            this.label_SavedRecipes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_SavedRecipes_h2.AutoSize = true;
+            this.label_SavedRecipes_h2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_SavedRecipes_h2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_SavedRecipes_h2.Location = new System.Drawing.Point(465, 336);
+            this.label_SavedRecipes_h2.Name = "label_SavedRecipes_h2";
+            this.label_SavedRecipes_h2.Size = new System.Drawing.Size(118, 21);
+            this.label_SavedRecipes_h2.TabIndex = 109;
+            this.label_SavedRecipes_h2.Text = "Saved Recipes";
+            this.label_SavedRecipes_h2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Button16
             // 
@@ -706,7 +706,7 @@
             // 
             this.guna2PictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox6.BorderRadius = 20;
-            this.guna2PictureBox6.Image = global::BonfieFood.Properties.Resources._6_six;
+            this.guna2PictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox6.Image")));
             this.guna2PictureBox6.ImageRotate = 0F;
             this.guna2PictureBox6.Location = new System.Drawing.Point(453, 303);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
@@ -716,17 +716,17 @@
             this.guna2PictureBox6.TabStop = false;
             this.guna2PictureBox6.UseTransparentBackground = true;
             // 
-            // label_Goals
+            // label_GoalProgress_h2
             // 
-            this.label_Goals.AutoSize = true;
-            this.label_Goals.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_Goals.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label_Goals.Location = new System.Drawing.Point(21, 339);
-            this.label_Goals.Name = "label_Goals";
-            this.label_Goals.Size = new System.Drawing.Size(52, 21);
-            this.label_Goals.TabIndex = 97;
-            this.label_Goals.Text = "Goals";
-            this.label_Goals.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_GoalProgress_h2.AutoSize = true;
+            this.label_GoalProgress_h2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_GoalProgress_h2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_GoalProgress_h2.Location = new System.Drawing.Point(21, 339);
+            this.label_GoalProgress_h2.Name = "label_GoalProgress_h2";
+            this.label_GoalProgress_h2.Size = new System.Drawing.Size(114, 21);
+            this.label_GoalProgress_h2.TabIndex = 97;
+            this.label_GoalProgress_h2.Text = "Goal Progress";
+            this.label_GoalProgress_h2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_GoalsCompleted
             // 
@@ -867,29 +867,29 @@
             this.guna2PictureBox4.TabStop = false;
             this.guna2PictureBox4.UseTransparentBackground = true;
             // 
-            // label_longestRecipe
+            // label_Recipes_h3
             // 
-            this.label_longestRecipe.AutoSize = true;
-            this.label_longestRecipe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_longestRecipe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label_longestRecipe.Location = new System.Drawing.Point(571, 167);
-            this.label_longestRecipe.Name = "label_longestRecipe";
-            this.label_longestRecipe.Size = new System.Drawing.Size(95, 17);
-            this.label_longestRecipe.TabIndex = 92;
-            this.label_longestRecipe.Text = "2.3M+ Recipes";
-            this.label_longestRecipe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Recipes_h3.AutoSize = true;
+            this.label_Recipes_h3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_Recipes_h3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_Recipes_h3.Location = new System.Drawing.Point(571, 167);
+            this.label_Recipes_h3.Name = "label_Recipes_h3";
+            this.label_Recipes_h3.Size = new System.Drawing.Size(95, 17);
+            this.label_Recipes_h3.TabIndex = 92;
+            this.label_Recipes_h3.Text = "2.3M+ Recipes";
+            this.label_Recipes_h3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label_shortestRecipe
+            // label_Products_h3
             // 
-            this.label_shortestRecipe.AutoSize = true;
-            this.label_shortestRecipe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_shortestRecipe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label_shortestRecipe.Location = new System.Drawing.Point(571, 145);
-            this.label_shortestRecipe.Name = "label_shortestRecipe";
-            this.label_shortestRecipe.Size = new System.Drawing.Size(108, 17);
-            this.label_shortestRecipe.TabIndex = 86;
-            this.label_shortestRecipe.Text = "900,000 Products";
-            this.label_shortestRecipe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Products_h3.AutoSize = true;
+            this.label_Products_h3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_Products_h3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_Products_h3.Location = new System.Drawing.Point(571, 145);
+            this.label_Products_h3.Name = "label_Products_h3";
+            this.label_Products_h3.Size = new System.Drawing.Size(108, 17);
+            this.label_Products_h3.TabIndex = 86;
+            this.label_Products_h3.Text = "900,000 Products";
+            this.label_Products_h3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Button8
             // 
@@ -932,15 +932,15 @@
             this.DBRecipeLine.TabIndex = 90;
             this.DBRecipeLine.UseTransparentBackground = true;
             // 
-            // label_Recipe
+            // label_IntegratedDB_h2
             // 
-            this.label_Recipe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_Recipe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label_Recipe.Location = new System.Drawing.Point(465, 90);
-            this.label_Recipe.Name = "label_Recipe";
-            this.label_Recipe.Size = new System.Drawing.Size(213, 50);
-            this.label_Recipe.TabIndex = 88;
-            this.label_Recipe.Text = "Integrated Product and Recipe Database";
+            this.label_IntegratedDB_h2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_IntegratedDB_h2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_IntegratedDB_h2.Location = new System.Drawing.Point(465, 90);
+            this.label_IntegratedDB_h2.Name = "label_IntegratedDB_h2";
+            this.label_IntegratedDB_h2.Size = new System.Drawing.Size(213, 50);
+            this.label_IntegratedDB_h2.TabIndex = 88;
+            this.label_IntegratedDB_h2.Text = "Integrated Product and Recipe Database";
             // 
             // btnRecipes
             // 
@@ -1058,18 +1058,18 @@
             this.backgroundMorningLine.TabIndex = 81;
             this.backgroundMorningLine.UseTransparentBackground = true;
             // 
-            // label_Nutrition
+            // label_Nutrition_h2
             // 
-            this.label_Nutrition.AutoSize = true;
-            this.label_Nutrition.BackColor = System.Drawing.Color.Transparent;
-            this.label_Nutrition.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_Nutrition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label_Nutrition.Location = new System.Drawing.Point(21, 87);
-            this.label_Nutrition.Name = "label_Nutrition";
-            this.label_Nutrition.Size = new System.Drawing.Size(70, 21);
-            this.label_Nutrition.TabIndex = 76;
-            this.label_Nutrition.Text = "Nutrion";
-            this.label_Nutrition.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Nutrition_h2.AutoSize = true;
+            this.label_Nutrition_h2.BackColor = System.Drawing.Color.Transparent;
+            this.label_Nutrition_h2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_Nutrition_h2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_Nutrition_h2.Location = new System.Drawing.Point(21, 87);
+            this.label_Nutrition_h2.Name = "label_Nutrition_h2";
+            this.label_Nutrition_h2.Size = new System.Drawing.Size(81, 21);
+            this.label_Nutrition_h2.TabIndex = 76;
+            this.label_Nutrition_h2.Text = "Nutrition";
+            this.label_Nutrition_h2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dinnerLine
             // 
@@ -1188,41 +1188,41 @@
             this.guna2PictureBox1.UseTransparentBackground = true;
             this.guna2PictureBox1.WaitOnLoad = true;
             // 
-            // label2
+            // label_Goals_h1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label2.Location = new System.Drawing.Point(7, 263);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 29);
-            this.label2.TabIndex = 70;
-            this.label2.Text = "Goals";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Goals_h1.AutoSize = true;
+            this.label_Goals_h1.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_Goals_h1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_Goals_h1.Location = new System.Drawing.Point(7, 263);
+            this.label_Goals_h1.Name = "label_Goals_h1";
+            this.label_Goals_h1.Size = new System.Drawing.Size(77, 29);
+            this.label_Goals_h1.TabIndex = 70;
+            this.label_Goals_h1.Text = "Goals";
+            this.label_Goals_h1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // label_HealthMessage_h2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(8, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 19);
-            this.label1.TabIndex = 69;
-            this.label1.Text = "Health must always come first";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_HealthMessage_h2.AutoSize = true;
+            this.label_HealthMessage_h2.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_HealthMessage_h2.ForeColor = System.Drawing.Color.Silver;
+            this.label_HealthMessage_h2.Location = new System.Drawing.Point(8, 37);
+            this.label_HealthMessage_h2.Name = "label_HealthMessage_h2";
+            this.label_HealthMessage_h2.Size = new System.Drawing.Size(237, 19);
+            this.label_HealthMessage_h2.TabIndex = 69;
+            this.label_HealthMessage_h2.Text = "Health must always come first";
+            this.label_HealthMessage_h2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // label_QuickAction_h1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label7.Location = new System.Drawing.Point(3, 3);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(174, 29);
-            this.label7.TabIndex = 64;
-            this.label7.Text = "Quick Actions";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_QuickAction_h1.AutoSize = true;
+            this.label_QuickAction_h1.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_QuickAction_h1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_QuickAction_h1.Location = new System.Drawing.Point(3, 3);
+            this.label_QuickAction_h1.Name = "label_QuickAction_h1";
+            this.label_QuickAction_h1.Size = new System.Drawing.Size(174, 29);
+            this.label_QuickAction_h1.TabIndex = 64;
+            this.label_QuickAction_h1.Text = "Quick Actions";
+            this.label_QuickAction_h1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // toolTip_logout
             // 
@@ -1384,28 +1384,28 @@
         private Guna.UI2.WinForms.Guna2Panel mainPagePanel;
         private FontAwesome.Sharp.IconPictureBox iconOfPage;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1_home;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label_Goals_h1;
+        private System.Windows.Forms.Label label_HealthMessage_h2;
+        private System.Windows.Forms.Label label_QuickAction_h1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Label label_longestRecipe;
-        private System.Windows.Forms.Label label_shortestRecipe;
+        private System.Windows.Forms.Label label_Recipes_h3;
+        private System.Windows.Forms.Label label_Products_h3;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button DBRecipeLine;
-        private System.Windows.Forms.Label label_Recipe;
+        private System.Windows.Forms.Label label_IntegratedDB_h2;
         private Guna.UI2.WinForms.Guna2Button btnRecipes;
         private Guna.UI2.WinForms.Guna2Button guna2Button11;
         private Guna.UI2.WinForms.Guna2Button DBProductsLine;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2Button morningLine;
         private Guna.UI2.WinForms.Guna2Button backgroundMorningLine;
-        private System.Windows.Forms.Label label_Nutrition;
+        private System.Windows.Forms.Label label_Nutrition_h2;
         private Guna.UI2.WinForms.Guna2Button dinnerLine;
         private Guna.UI2.WinForms.Guna2Button lunchLine;
         private Guna.UI2.WinForms.Guna2Button backgroundDinnerLine;
         private Guna.UI2.WinForms.Guna2Button backgroundLunchLine;
         private Guna.UI2.WinForms.Guna2Button btnAddNutrition;
-        private System.Windows.Forms.Label label_Goals;
+        private System.Windows.Forms.Label label_GoalProgress_h2;
         private System.Windows.Forms.Label label_GoalsCompleted;
         private System.Windows.Forms.Label label_GoalsTotal;
         private Guna.UI2.WinForms.Guna2Button competedGoalsLine;
@@ -1415,7 +1415,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI2.WinForms.Guna2Button savedRecipesLine;
         private System.Windows.Forms.Label label_TotalSaved;
-        private System.Windows.Forms.Label label_SavedRecipes;
+        private System.Windows.Forms.Label label_SavedRecipes_h2;
         private Guna.UI2.WinForms.Guna2Button guna2Button16;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;

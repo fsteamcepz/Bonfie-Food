@@ -42,9 +42,9 @@
             this.myHeight = new Guna.UI2.WinForms.Guna2Button();
             this.label6 = new System.Windows.Forms.Label();
             this.myAge = new Guna.UI2.WinForms.Guna2Button();
-            this.calculateTheCPFC = new Guna.UI2.WinForms.Guna2Button();
+            this.calculateTheTDEE = new Guna.UI2.WinForms.Guna2Button();
             this.myWeight = new Guna.UI2.WinForms.Guna2Button();
-            this.label_CPFC = new System.Windows.Forms.Label();
+            this.label_TDEE = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel_History = new Guna.UI2.WinForms.Guna2Panel();
             this.label12 = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label_History = new System.Windows.Forms.Label();
             this.guna2Panel_Norms = new Guna.UI2.WinForms.Guna2Panel();
             this.info_dish = new FontAwesome.Sharp.IconPictureBox();
             this.guna2Panel_MyInfo = new Guna.UI2.WinForms.Guna2Panel();
@@ -64,7 +64,7 @@
             this.BMI_3 = new Guna.UI2.WinForms.Guna2Button();
             this.BMI_2 = new Guna.UI2.WinForms.Guna2Button();
             this.BMI_1 = new Guna.UI2.WinForms.Guna2Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label_GeneralInfo = new System.Windows.Forms.Label();
             this.myGender = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip_BMI = new Guna.UI2.WinForms.Guna2HtmlToolTip();
@@ -296,28 +296,28 @@
             this.myAge.Text = "?";
             this.myAge.UseTransparentBackground = true;
             // 
-            // calculateTheCPFC
+            // calculateTheTDEE
             // 
-            this.calculateTheCPFC.Animated = true;
-            this.calculateTheCPFC.BackColor = System.Drawing.Color.Transparent;
-            this.calculateTheCPFC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.calculateTheCPFC.BorderRadius = 10;
-            this.calculateTheCPFC.BorderThickness = 2;
-            this.calculateTheCPFC.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.calculateTheCPFC.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.calculateTheCPFC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.calculateTheCPFC.DisabledState.ForeColor = System.Drawing.Color.DarkGray;
-            this.calculateTheCPFC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(20)))), ((int)(((byte)(85)))));
-            this.calculateTheCPFC.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.calculateTheCPFC.ForeColor = System.Drawing.Color.Gainsboro;
-            this.calculateTheCPFC.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.calculateTheCPFC.Location = new System.Drawing.Point(150, 178);
-            this.calculateTheCPFC.Name = "calculateTheCPFC";
-            this.calculateTheCPFC.Size = new System.Drawing.Size(164, 35);
-            this.calculateTheCPFC.TabIndex = 55;
-            this.calculateTheCPFC.Text = "Calculate TDEE";
-            this.calculateTheCPFC.UseTransparentBackground = true;
-            this.calculateTheCPFC.Click += new System.EventHandler(this.calculateTheCPFC_Click);
+            this.calculateTheTDEE.Animated = true;
+            this.calculateTheTDEE.BackColor = System.Drawing.Color.Transparent;
+            this.calculateTheTDEE.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.calculateTheTDEE.BorderRadius = 10;
+            this.calculateTheTDEE.BorderThickness = 2;
+            this.calculateTheTDEE.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.calculateTheTDEE.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.calculateTheTDEE.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.calculateTheTDEE.DisabledState.ForeColor = System.Drawing.Color.DarkGray;
+            this.calculateTheTDEE.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(20)))), ((int)(((byte)(85)))));
+            this.calculateTheTDEE.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.calculateTheTDEE.ForeColor = System.Drawing.Color.Gainsboro;
+            this.calculateTheTDEE.HoverState.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.calculateTheTDEE.Location = new System.Drawing.Point(150, 178);
+            this.calculateTheTDEE.Name = "calculateTheTDEE";
+            this.calculateTheTDEE.Size = new System.Drawing.Size(164, 35);
+            this.calculateTheTDEE.TabIndex = 55;
+            this.calculateTheTDEE.Text = "Calculate TDEE";
+            this.calculateTheTDEE.UseTransparentBackground = true;
+            this.calculateTheTDEE.Click += new System.EventHandler(this.calculateTheCPFC_Click);
             // 
             // myWeight
             // 
@@ -341,17 +341,17 @@
             this.myWeight.Text = "?";
             this.myWeight.UseTransparentBackground = true;
             // 
-            // label_CPFC
+            // label_TDEE
             // 
-            this.label_CPFC.AutoSize = true;
-            this.label_CPFC.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_CPFC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label_CPFC.Location = new System.Drawing.Point(10, 16);
-            this.label_CPFC.Name = "label_CPFC";
-            this.label_CPFC.Size = new System.Drawing.Size(206, 29);
-            this.label_CPFC.TabIndex = 56;
-            this.label_CPFC.Text = "Total Daily Energy";
-            this.label_CPFC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_TDEE.AutoSize = true;
+            this.label_TDEE.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_TDEE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_TDEE.Location = new System.Drawing.Point(10, 16);
+            this.label_TDEE.Name = "label_TDEE";
+            this.label_TDEE.Size = new System.Drawing.Size(206, 29);
+            this.label_TDEE.TabIndex = 56;
+            this.label_TDEE.Text = "Total Daily Energy";
+            this.label_TDEE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Panel1
             // 
@@ -378,7 +378,7 @@
             this.guna2Panel_History.Controls.Add(this.label9);
             this.guna2Panel_History.Controls.Add(this.label8);
             this.guna2Panel_History.Controls.Add(this.iconPictureBox1);
-            this.guna2Panel_History.Controls.Add(this.label3);
+            this.guna2Panel_History.Controls.Add(this.label_History);
             this.guna2Panel_History.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(20)))), ((int)(((byte)(85)))));
             this.guna2Panel_History.Location = new System.Drawing.Point(490, 257);
             this.guna2Panel_History.Name = "guna2Panel_History";
@@ -502,17 +502,17 @@
             this.iconPictureBox1.TabIndex = 41;
             this.iconPictureBox1.TabStop = false;
             // 
-            // label3
+            // label_History
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label3.Location = new System.Drawing.Point(5, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 26);
-            this.label3.TabIndex = 57;
-            this.label3.Text = "History";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_History.AutoSize = true;
+            this.label_History.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_History.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_History.Location = new System.Drawing.Point(5, 11);
+            this.label_History.Name = "label_History";
+            this.label_History.Size = new System.Drawing.Size(80, 26);
+            this.label_History.TabIndex = 57;
+            this.label_History.Text = "History";
+            this.label_History.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Panel_Norms
             // 
@@ -520,8 +520,8 @@
             this.guna2Panel_Norms.BorderRadius = 10;
             this.guna2Panel_Norms.Controls.Add(this.info_dish);
             this.guna2Panel_Norms.Controls.Add(this.myCarbs);
-            this.guna2Panel_Norms.Controls.Add(this.calculateTheCPFC);
-            this.guna2Panel_Norms.Controls.Add(this.label_CPFC);
+            this.guna2Panel_Norms.Controls.Add(this.calculateTheTDEE);
+            this.guna2Panel_Norms.Controls.Add(this.label_TDEE);
             this.guna2Panel_Norms.Controls.Add(this.myCal);
             this.guna2Panel_Norms.Controls.Add(this.myFat);
             this.guna2Panel_Norms.Controls.Add(this.myProtein);
@@ -554,7 +554,7 @@
             this.guna2Panel_MyInfo.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel_MyInfo.BorderRadius = 10;
             this.guna2Panel_MyInfo.Controls.Add(this.guna2Panel2);
-            this.guna2Panel_MyInfo.Controls.Add(this.label7);
+            this.guna2Panel_MyInfo.Controls.Add(this.label_GeneralInfo);
             this.guna2Panel_MyInfo.Controls.Add(this.myGender);
             this.guna2Panel_MyInfo.Controls.Add(this.label1);
             this.guna2Panel_MyInfo.Controls.Add(this.myWeight);
@@ -637,17 +637,17 @@
             this.BMI_1.Size = new System.Drawing.Size(50, 20);
             this.BMI_1.TabIndex = 57;
             // 
-            // label7
+            // label_GeneralInfo
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label7.Location = new System.Drawing.Point(10, 15);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(227, 29);
-            this.label7.TabIndex = 57;
-            this.label7.Text = "General information";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_GeneralInfo.AutoSize = true;
+            this.label_GeneralInfo.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_GeneralInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label_GeneralInfo.Location = new System.Drawing.Point(10, 15);
+            this.label_GeneralInfo.Name = "label_GeneralInfo";
+            this.label_GeneralInfo.Size = new System.Drawing.Size(228, 29);
+            this.label_GeneralInfo.TabIndex = 57;
+            this.label_GeneralInfo.Text = "General Information";
+            this.label_GeneralInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // myGender
             // 
@@ -751,17 +751,17 @@
         private Guna.UI2.WinForms.Guna2Button myHeight;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Button myAge;
-        private Guna.UI2.WinForms.Guna2Button calculateTheCPFC;
+        private Guna.UI2.WinForms.Guna2Button calculateTheTDEE;
         private Guna.UI2.WinForms.Guna2Button myWeight;
-        private System.Windows.Forms.Label label_CPFC;
+        private System.Windows.Forms.Label label_TDEE;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel_MyInfo;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel_Norms;
         private Guna.UI2.WinForms.Guna2Button myGender;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel_History;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label_History;
+        private System.Windows.Forms.Label label_GeneralInfo;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

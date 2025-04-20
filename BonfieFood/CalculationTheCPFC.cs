@@ -18,12 +18,19 @@ namespace BonfieFood
         // Подія для передачі даних з panelTheCPFC форми до Profile
         public event Action<int, int, decimal, string, int, decimal, int> OnCalculationComplete;
         DataBase db = new DataBase();
+
         public PanelTheCPFC()
         {
             InitializeComponent();
             LoadUserData();
+            UpdateTexts();
+
+            Language.OnLanguageChanged += ChangeLanguage;
         }
-        
+        private void ChangeLanguage(string cultureCode)
+        {
+            UpdateTexts();
+        }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             // чи натиснута клавіша Enter
@@ -319,6 +326,18 @@ namespace BonfieFood
 
                 return result != null ? (int)result : 0;
             }
+        }
+
+        private void UpdateTexts()
+        {
+            label_CalculateTDEE.Text = Properties.Resources.label_CalculateTDEE;
+            label_DateOfBirth.Text = Properties.Resources.label_DateOfBirth;
+            label_Height.Text = Properties.Resources.label_Height;
+            label_Weight.Text = Properties.Resources.label_Weight;
+            male.Text = Properties.Resources.label_Male;
+            female.Text = Properties.Resources.label_Female;
+            label_PhsActivity.Text = Properties.Resources.label_PhsActivity;
+            calculation.Text = Properties.Resources.calculation;
         }
     }
 }

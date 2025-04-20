@@ -40,10 +40,10 @@
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.sidebarBtn = new FontAwesome.Sharp.IconPictureBox();
             this.newChat_btn = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label_notfound = new System.Windows.Forms.Label();
+            this.label_NotFound = new System.Windows.Forms.Label();
             this.guna2Panel_between = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label_history = new System.Windows.Forms.Label();
+            this.label_History = new System.Windows.Forms.Label();
             this.timer_botResponse = new System.Windows.Forms.Timer(this.components);
             this.sidebarTransitions = new System.Windows.Forms.Timer(this.components);
             this.toolTip_newChat = new Guna.UI2.WinForms.Guna2HtmlToolTip();
@@ -151,7 +151,6 @@
             this.messageFromUser.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.messageFromUser.Multiline = true;
             this.messageFromUser.Name = "messageFromUser";
-            this.messageFromUser.PasswordChar = '\0';
             this.messageFromUser.PlaceholderForeColor = System.Drawing.Color.Gainsboro;
             this.messageFromUser.PlaceholderText = "Write a message...";
             this.messageFromUser.SelectedText = "";
@@ -165,9 +164,9 @@
             this.guna2Panel_left.Controls.Add(this.guna2Panel4);
             this.guna2Panel_left.Controls.Add(this.sidebarBtn);
             this.guna2Panel_left.Controls.Add(this.newChat_btn);
-            this.guna2Panel_left.Controls.Add(this.label_notfound);
+            this.guna2Panel_left.Controls.Add(this.label_NotFound);
             this.guna2Panel_left.Controls.Add(this.guna2Panel_between);
-            this.guna2Panel_left.Controls.Add(this.label_history);
+            this.guna2Panel_left.Controls.Add(this.label_History);
             this.guna2Panel_left.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel_left.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel_left.Name = "guna2Panel_left";
@@ -220,17 +219,17 @@
             this.newChat_btn.MouseLeave += new System.EventHandler(this.newChat_btn_MouseLeave);
             this.newChat_btn.MouseHover += new System.EventHandler(this.newChat_btn_MouseHover);
             // 
-            // label_notfound
+            // label_NotFound
             // 
-            this.label_notfound.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_notfound.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
-            this.label_notfound.Location = new System.Drawing.Point(0, 231);
-            this.label_notfound.Name = "label_notfound";
-            this.label_notfound.Size = new System.Drawing.Size(142, 49);
-            this.label_notfound.TabIndex = 113;
-            this.label_notfound.Text = "History not found";
-            this.label_notfound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_notfound.Visible = false;
+            this.label_NotFound.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_NotFound.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.label_NotFound.Location = new System.Drawing.Point(0, 231);
+            this.label_NotFound.Name = "label_NotFound";
+            this.label_NotFound.Size = new System.Drawing.Size(142, 49);
+            this.label_NotFound.TabIndex = 113;
+            this.label_NotFound.Text = "History not found";
+            this.label_NotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_NotFound.Visible = false;
             // 
             // guna2Panel_between
             // 
@@ -249,19 +248,19 @@
             this.guna2Panel1.Size = new System.Drawing.Size(142, 1);
             this.guna2Panel1.TabIndex = 105;
             // 
-            // label_history
+            // label_History
             // 
-            this.label_history.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label_history.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_history.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_history.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label_history.Location = new System.Drawing.Point(0, 0);
-            this.label_history.Name = "label_history";
-            this.label_history.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label_history.Size = new System.Drawing.Size(142, 49);
-            this.label_history.TabIndex = 65;
-            this.label_history.Text = "History";
-            this.label_history.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label_History.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label_History.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_History.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_History.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label_History.Location = new System.Drawing.Point(0, 0);
+            this.label_History.Name = "label_History";
+            this.label_History.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label_History.Size = new System.Drawing.Size(142, 49);
+            this.label_History.TabIndex = 65;
+            this.label_History.Text = "History";
+            this.label_History.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // timer_botResponse
             // 
@@ -342,9 +341,9 @@
         private System.Windows.Forms.Label timer_answerBot;
         private System.Windows.Forms.Timer timer_botResponse;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel_between;
-        private System.Windows.Forms.Label label_history;
+        private System.Windows.Forms.Label label_History;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label_notfound;
+        private System.Windows.Forms.Label label_NotFound;
         private Guna.UI2.WinForms.Guna2PictureBox newChat_btn;
         private FontAwesome.Sharp.IconPictureBox sidebarBtn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
