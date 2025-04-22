@@ -354,6 +354,15 @@ namespace BonfieFood.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Chatbot Dialogue.
+        /// </summary>
+        internal static string label_Chatbot {
+            get {
+                return ResourceManager.GetString("label_Chatbot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to City.
         /// </summary>
         internal static string label_City {
@@ -395,6 +404,15 @@ namespace BonfieFood.Properties {
         internal static string label_CreateGoal_h1 {
             get {
                 return ResourceManager.GetString("label_CreateGoal_h1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Goal Creation.
+        /// </summary>
+        internal static string label_CreationGoal {
+            get {
+                return ResourceManager.GetString("label_CreationGoal", resourceCulture);
             }
         }
         
@@ -480,6 +498,15 @@ namespace BonfieFood.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Food Analysis.
+        /// </summary>
+        internal static string label_FoodAnalysis {
+            get {
+                return ResourceManager.GetString("label_FoodAnalysis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fri.
         /// </summary>
         internal static string label_Fri {
@@ -557,6 +584,15 @@ namespace BonfieFood.Properties {
         internal static string label_History {
             get {
                 return ResourceManager.GetString("label_History", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to History not found.
+        /// </summary>
+        internal static string label_HistoryNotFound {
+            get {
+                return ResourceManager.GetString("label_HistoryNotFound", resourceCulture);
             }
         }
         
@@ -719,6 +755,24 @@ namespace BonfieFood.Properties {
         internal static string label_SavedRecipes_h2 {
             get {
                 return ResourceManager.GetString("label_SavedRecipes_h2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Search.
+        /// </summary>
+        internal static string label_SearchProducts {
+            get {
+                return ResourceManager.GetString("label_SearchProducts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recipe Search.
+        /// </summary>
+        internal static string label_SearchRecipes {
+            get {
+                return ResourceManager.GetString("label_SearchRecipes", resourceCulture);
             }
         }
         
@@ -1247,6 +1301,15 @@ namespace BonfieFood.Properties {
         internal static string toolTip_uploadPhoto {
             get {
                 return ResourceManager.GetString("toolTip_uploadPhoto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User name.
+        /// </summary>
+        internal static string toolTip_Username {
+            get {
+                return ResourceManager.GetString("toolTip_Username", resourceCulture);
             }
         }
         

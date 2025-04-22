@@ -415,4 +415,25 @@
   <data name="dinner" xml:space="preserve">
     <value>Вечеря</value>
   </data>
+  <data name="toolTip_Username" xml:space="preserve">
+    <value>Ім'я користувача</value>
+  </data>
+  <data name="label_HistoryNotFound" xml:space="preserve">
+    <value>Історію не знайдено</value>
+  </data>
+  <data name="label_FoodAnalysis" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_SearchRecipes" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_SearchProducts" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_Chatbot" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label_CreationGoal" xml:space="preserve">
+    <value />
+  </data>
 </root>

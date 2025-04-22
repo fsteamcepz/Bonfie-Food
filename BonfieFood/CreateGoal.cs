@@ -103,6 +103,8 @@ namespace BonfieFood
                 db.getConnection();
             }
 
+            ActionHistory.SaveActionHistoryToDB(db, "Додавання цілі");
+
             // передаємо результати (ціль, дата завершення, результат, опис)
             OnCreateGoalComplete?.Invoke(goalUser, goalDateUser, targetValueUser, description, false);
             this.Hide();

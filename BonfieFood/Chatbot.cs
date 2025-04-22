@@ -183,8 +183,8 @@ namespace BonfieFood
         private void sidebarBtn_Tick(object sender, EventArgs e)
         {
             // Цільові координати та розміри для messageFromUser
-            Point locCollapsed = new Point(97, 452); // Згорнутий стан
-            Point locExpanded = new Point(205, 452); // Розгорнутий стан
+            Point locCollapsed = new Point(97, 452);      // Згорнутий стан
+            Point locExpanded = new Point(205, 452);      // Розгорнутий стан
             Size sizeCollapsed = new Size(561, 36);       // Згорнутий стан
             Size sizeExpanded = new Size(453, 36);        // Розгорнутий стан
 
@@ -238,6 +238,7 @@ namespace BonfieFood
                     if (!hasButton)
                     {
                         label_NotFound.Show();
+                        label_NotFound.Text = Properties.Resources.label_HistoryNotFound;
                     }
                     else
                     {
@@ -399,6 +400,8 @@ namespace BonfieFood
 
             SaveMessageToDB(currentSessionId, botAnswer, false, DateTime.Now);
 
+            ActionHistory.SaveActionHistoryToDB(db, "Діалог з чат-ботом");
+
             displayQuestionAnswer(userText, botAnswer);
             messageFromUser.Clear();
 
@@ -505,6 +508,7 @@ namespace BonfieFood
             if (sessionDates.Count < 1)
             {
                 label_NotFound.Visible = true;
+                label_NotFound.Text = Properties.Resources.label_HistoryNotFound;
             }
             else
             {
@@ -562,13 +566,10 @@ namespace BonfieFood
         }
         private int GetSessionIdByDate(DateTime sessionDate)
         {
-            Debug.WriteLine($"Пошук ID сесії для дати: {sessionDate}");
-
-            string query = @"
-                            SELECT idSession 
-                            FROM Sessions 
-                            WHERE CONVERT(VARCHAR, startTime, 120) = CONVERT(VARCHAR, @StartTime, 120)
-                            AND id_User = @UserId";
+            string query = @"SELECT idSession 
+                             FROM Sessions 
+                             WHERE CONVERT(VARCHAR, startTime, 120) = CONVERT(VARCHAR, @StartTime, 120)
+                             AND id_User = @UserId";
 
             using (SqlCommand cmd = new SqlCommand(query, db.getConnection()))
             {
@@ -579,9 +580,7 @@ namespace BonfieFood
                 object result = cmd.ExecuteScalar();
                 db.closeConnection();
 
-                int sessionId = result != null ? Convert.ToInt32(result) : -1;
-                Debug.WriteLine($"ID сесії для дати {sessionDate}: {sessionId}");
-                return sessionId;
+                return result != null ? Convert.ToInt32(result) : -1;
             }
         }
         private void SessionButton_Click(object sender, EventArgs e)

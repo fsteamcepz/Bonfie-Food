@@ -47,15 +47,16 @@
             this.label_TDEE = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel_History = new Guna.UI2.WinForms.Guna2Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.guna2Panel_miniHistory = new Guna.UI2.WinForms.Guna2Panel();
+            this.label_HistoryNotFound = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox8 = new FontAwesome.Sharp.IconPictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.iconPictureBox7 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label_History = new System.Windows.Forms.Label();
             this.guna2Panel_Norms = new Guna.UI2.WinForms.Guna2Panel();
             this.info_dish = new FontAwesome.Sharp.IconPictureBox();
@@ -69,14 +70,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip_BMI = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.toolTip_formula = new Guna.UI2.WinForms.Guna2HtmlToolTip();
+            this.toolTip_Username = new Guna.UI2.WinForms.Guna2HtmlToolTip();
             this.guna2Panel_Img.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgBox_profile)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel_History.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.guna2Panel_miniHistory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).BeginInit();
             this.guna2Panel_Norms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.info_dish)).BeginInit();
             this.guna2Panel_MyInfo.SuspendLayout();
@@ -369,15 +372,7 @@
             // 
             this.guna2Panel_History.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel_History.BorderRadius = 10;
-            this.guna2Panel_History.Controls.Add(this.label12);
-            this.guna2Panel_History.Controls.Add(this.iconPictureBox4);
-            this.guna2Panel_History.Controls.Add(this.label11);
-            this.guna2Panel_History.Controls.Add(this.iconPictureBox3);
-            this.guna2Panel_History.Controls.Add(this.label10);
-            this.guna2Panel_History.Controls.Add(this.iconPictureBox2);
-            this.guna2Panel_History.Controls.Add(this.label9);
-            this.guna2Panel_History.Controls.Add(this.label8);
-            this.guna2Panel_History.Controls.Add(this.iconPictureBox1);
+            this.guna2Panel_History.Controls.Add(this.guna2Panel_miniHistory);
             this.guna2Panel_History.Controls.Add(this.label_History);
             this.guna2Panel_History.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(20)))), ((int)(((byte)(85)))));
             this.guna2Panel_History.Location = new System.Drawing.Point(490, 257);
@@ -385,122 +380,136 @@
             this.guna2Panel_History.Size = new System.Drawing.Size(201, 216);
             this.guna2Panel_History.TabIndex = 58;
             // 
-            // label12
+            // guna2Panel_miniHistory
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label12.Location = new System.Drawing.Point(44, 179);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(144, 20);
-            this.label12.TabIndex = 67;
-            this.label12.Text = "Генерація рецептів";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.guna2Panel_miniHistory.Controls.Add(this.label_HistoryNotFound);
+            this.guna2Panel_miniHistory.Controls.Add(this.label2);
+            this.guna2Panel_miniHistory.Controls.Add(this.label8);
+            this.guna2Panel_miniHistory.Controls.Add(this.iconPictureBox5);
+            this.guna2Panel_miniHistory.Controls.Add(this.iconPictureBox8);
+            this.guna2Panel_miniHistory.Controls.Add(this.label3);
+            this.guna2Panel_miniHistory.Controls.Add(this.iconPictureBox7);
+            this.guna2Panel_miniHistory.Controls.Add(this.iconPictureBox6);
+            this.guna2Panel_miniHistory.Controls.Add(this.label7);
+            this.guna2Panel_miniHistory.Location = new System.Drawing.Point(8, 44);
+            this.guna2Panel_miniHistory.Name = "guna2Panel_miniHistory";
+            this.guna2Panel_miniHistory.Size = new System.Drawing.Size(193, 172);
+            this.guna2Panel_miniHistory.TabIndex = 195;
             // 
-            // iconPictureBox4
+            // label_HistoryNotFound
             // 
-            this.iconPictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconPictureBox4.ForeColor = System.Drawing.Color.Gold;
-            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.RectangleList;
-            this.iconPictureBox4.IconColor = System.Drawing.Color.Gold;
-            this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox4.Location = new System.Drawing.Point(10, 176);
-            this.iconPictureBox4.Name = "iconPictureBox4";
-            this.iconPictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox4.TabIndex = 66;
-            this.iconPictureBox4.TabStop = false;
+            this.label_HistoryNotFound.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_HistoryNotFound.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label_HistoryNotFound.Location = new System.Drawing.Point(26, 44);
+            this.label_HistoryNotFound.Name = "label_HistoryNotFound";
+            this.label_HistoryNotFound.Size = new System.Drawing.Size(142, 49);
+            this.label_HistoryNotFound.TabIndex = 196;
+            this.label_HistoryNotFound.Text = "History not found";
+            this.label_HistoryNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label11
+            // label2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label11.Location = new System.Drawing.Point(44, 137);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(144, 20);
-            this.label11.TabIndex = 65;
-            this.label11.Text = "Генерація рецептів";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // iconPictureBox3
-            // 
-            this.iconPictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconPictureBox3.ForeColor = System.Drawing.Color.Gold;
-            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.RectangleList;
-            this.iconPictureBox3.IconColor = System.Drawing.Color.Gold;
-            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox3.Location = new System.Drawing.Point(10, 134);
-            this.iconPictureBox3.Name = "iconPictureBox3";
-            this.iconPictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox3.TabIndex = 64;
-            this.iconPictureBox3.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label10.Location = new System.Drawing.Point(44, 94);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 20);
-            this.label10.TabIndex = 63;
-            this.label10.Text = "Розпізнавання фото";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.Gold;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.RectangleList;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.Gold;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.Location = new System.Drawing.Point(10, 91);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox2.TabIndex = 62;
-            this.iconPictureBox2.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
-            this.label9.Location = new System.Drawing.Point(44, 54);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(144, 20);
-            this.label9.TabIndex = 61;
-            this.label9.Text = "Генерація рецептів";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label2.Location = new System.Drawing.Point(34, 137);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 20);
+            this.label2.TabIndex = 75;
+            this.label2.Text = "Пошук продуктів";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(187)))), ((int)(((byte)(236)))));
-            this.label8.Location = new System.Drawing.Point(133, 18);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label8.Location = new System.Drawing.Point(34, 12);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 19);
-            this.label8.TabIndex = 60;
-            this.label8.Text = "See all";
+            this.label8.Size = new System.Drawing.Size(157, 20);
+            this.label8.TabIndex = 69;
+            this.label8.Text = "Dialogue with chatbot";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // iconPictureBox1
+            // iconPictureBox5
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Gold;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.RectangleList;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Gold;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(10, 51);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox1.TabIndex = 41;
-            this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconPictureBox5.ForeColor = System.Drawing.Color.Gold;
+            this.iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.RectangleList;
+            this.iconPictureBox5.IconColor = System.Drawing.Color.Gold;
+            this.iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox5.Location = new System.Drawing.Point(0, 134);
+            this.iconPictureBox5.Name = "iconPictureBox5";
+            this.iconPictureBox5.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox5.TabIndex = 74;
+            this.iconPictureBox5.TabStop = false;
+            // 
+            // iconPictureBox8
+            // 
+            this.iconPictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconPictureBox8.ForeColor = System.Drawing.Color.Gold;
+            this.iconPictureBox8.IconChar = FontAwesome.Sharp.IconChar.RectangleList;
+            this.iconPictureBox8.IconColor = System.Drawing.Color.Gold;
+            this.iconPictureBox8.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox8.Location = new System.Drawing.Point(0, 9);
+            this.iconPictureBox8.Name = "iconPictureBox8";
+            this.iconPictureBox8.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox8.TabIndex = 68;
+            this.iconPictureBox8.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label3.Location = new System.Drawing.Point(34, 95);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(120, 20);
+            this.label3.TabIndex = 73;
+            this.label3.Text = "Пошук рецептів";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // iconPictureBox7
+            // 
+            this.iconPictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconPictureBox7.ForeColor = System.Drawing.Color.Gold;
+            this.iconPictureBox7.IconChar = FontAwesome.Sharp.IconChar.RectangleList;
+            this.iconPictureBox7.IconColor = System.Drawing.Color.Gold;
+            this.iconPictureBox7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox7.Location = new System.Drawing.Point(0, 49);
+            this.iconPictureBox7.Name = "iconPictureBox7";
+            this.iconPictureBox7.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox7.TabIndex = 70;
+            this.iconPictureBox7.TabStop = false;
+            // 
+            // iconPictureBox6
+            // 
+            this.iconPictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconPictureBox6.ForeColor = System.Drawing.Color.Gold;
+            this.iconPictureBox6.IconChar = FontAwesome.Sharp.IconChar.RectangleList;
+            this.iconPictureBox6.IconColor = System.Drawing.Color.Gold;
+            this.iconPictureBox6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox6.Location = new System.Drawing.Point(0, 92);
+            this.iconPictureBox6.Name = "iconPictureBox6";
+            this.iconPictureBox6.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox6.TabIndex = 72;
+            this.iconPictureBox6.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.label7.Location = new System.Drawing.Point(34, 52);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(150, 20);
+            this.label7.TabIndex = 71;
+            this.label7.Text = "Розпізнавання фото";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_History
             // 
@@ -705,6 +714,17 @@
             this.toolTip_formula.ReshowDelay = 100;
             this.toolTip_formula.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(151)))), ((int)(((byte)(254)))));
             // 
+            // toolTip_Username
+            // 
+            this.toolTip_Username.AllowLinksHandling = true;
+            this.toolTip_Username.AutoPopDelay = 5000;
+            this.toolTip_Username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(15)))), ((int)(((byte)(40)))));
+            this.toolTip_Username.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(67)))), ((int)(((byte)(83)))));
+            this.toolTip_Username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(235)))), ((int)(((byte)(250)))));
+            this.toolTip_Username.InitialDelay = 100;
+            this.toolTip_Username.MaximumSize = new System.Drawing.Size(0, 0);
+            this.toolTip_Username.ReshowDelay = 100;
+            // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -724,10 +744,12 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel_History.ResumeLayout(false);
             this.guna2Panel_History.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.guna2Panel_miniHistory.ResumeLayout(false);
+            this.guna2Panel_miniHistory.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).EndInit();
             this.guna2Panel_Norms.ResumeLayout(false);
             this.guna2Panel_Norms.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.info_dish)).EndInit();
@@ -762,15 +784,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel_History;
         private System.Windows.Forms.Label label_History;
         private System.Windows.Forms.Label label_GeneralInfo;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label12;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
-        private System.Windows.Forms.Label label11;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
-        private System.Windows.Forms.Label label10;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private Guna.UI2.WinForms.Guna2Button BMI_1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button BMI_3;
@@ -780,5 +793,16 @@
         private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_BMI;
         private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_formula;
         private FontAwesome.Sharp.IconPictureBox info_dish;
+        private Guna.UI2.WinForms.Guna2HtmlToolTip toolTip_Username;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel_miniHistory;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label8;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox5;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox8;
+        private System.Windows.Forms.Label label3;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox7;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label_HistoryNotFound;
     }
 }

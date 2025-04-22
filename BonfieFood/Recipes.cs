@@ -66,6 +66,8 @@ namespace BonfieFood
 
                 isDataLoaded = true;
                 ShowRecipes(currentRecipes);
+
+                ActionHistory.SaveActionHistoryToDB(db, "Пошук рецептів");
             }
             catch (Exception ex)
             {

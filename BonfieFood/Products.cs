@@ -3,6 +3,7 @@ using Guna.UI2.WinForms;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -16,6 +17,8 @@ namespace BonfieFood
 {
     public partial class Products : Form
     {
+        DataBase db = new DataBase();
+
         private Edamam_Products edamamProducts = new Edamam_Products();
         private bool isMouseOverSend = false;
         private bool isBtnSearchClicked = false;
@@ -67,6 +70,8 @@ namespace BonfieFood
             currentProducts = productInfo;
             ShowResultForm();
             ShowProducts(currentProducts);
+
+            ActionHistory.SaveActionHistoryToDB(db, "Пошук продуктів");
         }
         private async Task<List<Edamam_Products>> GetInfoFromEdamam(string productName)
         {

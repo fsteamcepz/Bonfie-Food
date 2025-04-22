@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Data.SqlClient;
 using Guna.UI2.WinForms;
+using FontAwesome.Sharp;
+using System.Globalization;
 
 namespace BonfieFood
 {
@@ -20,11 +22,12 @@ namespace BonfieFood
         {
             // Фото
             LoadUserImg();
+            LoadHistory();
 
             // виводимо інформацію про користувача
             LoadUserData();
             label_username.Text = CurrentUser.UserName;
-            ConfigureInfoCPFC();
+            ConfigureInfoCPFC();            
 
             UpdateTexts();
             Language.OnLanguageChanged += ChangeLanguage;
@@ -32,6 +35,131 @@ namespace BonfieFood
         private void ChangeLanguage(string cultureCode)
         {
             UpdateTexts();
+        }
+        private void LoadHistory()
+        {
+            CultureInfo culture = System.Threading.Thread.CurrentThread.CurrentCulture;
+
+            guna2Panel_miniHistory.Controls.Clear();
+
+            string select = @"SELECT nameAction, date
+                              FROM UserActionHistory
+                              WHERE @UserId = id_User
+                              ORDER BY date DESC";
+
+            using (SqlCommand cmd = new SqlCommand(select, db.getConnection()))
+            {
+                cmd.Parameters.AddWithValue("@UserId", CurrentUser.UserId);
+
+                db.openConnection();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    int locIcon = 10;
+                    int locName = 12;
+                    int top = 40;
+                    int count = 0;
+
+                    Label history = new Label
+                    {
+                        Text = Properties.Resources.label_HistoryNotFound,
+                        Size = new Size(142, 49),
+                        Location = new Point(26, 44),
+                        Font = new Font("Constantia", 12, FontStyle.Bold),
+                        ForeColor = Color.FromArgb(192, 192, 255),
+                        BackColor = Color.Transparent,
+                        Padding = new Padding(3, 0, 3, 0),
+                        TextAlign = ContentAlignment.MiddleCenter,
+                        AutoSize = false,
+                        Visible = false,
+                        Cursor = Cursors.Default
+                    };
+                    guna2Panel_miniHistory.Controls.Add(history);
+
+                    while (reader.Read())
+                    {
+                        if (count == 4)
+                            break;
+
+                        string actionName = reader["nameAction"].ToString();
+                        DateTime searchDate = Convert.ToDateTime(reader["date"]);
+
+                        IconPictureBox icon = new IconPictureBox
+                        {
+                            Size = new Size(32, 32),
+                            Location = new Point(0, locIcon),
+                            ForeColor = Color.Gold,
+                            IconChar = IconChar.RectangleList,
+                            IconFont = IconFont.Auto,
+                            Cursor = Cursors.Default
+                        };
+
+                        if (culture.ToString() == "en")
+                        {
+                            if (actionName == "Пошук рецептів")
+                            {
+                                icon.ForeColor = Color.FromArgb(85, 163, 0);
+                                actionName = Properties.Resources.label_SearchRecipes;
+                            }
+                            else if (actionName == "Пошук продуктів")
+                            {
+                                icon.ForeColor = Color.FromArgb(121, 85, 193);
+                                actionName = Properties.Resources.label_SearchProducts;
+                            }
+                            else if (actionName == "Діалог з чат-ботом")
+                            {
+                                icon.ForeColor = Color.Gold;
+                                actionName = Properties.Resources.label_Chatbot;
+                            }
+                            else if (actionName == "Аналіз їжі")
+                            {
+                                icon.ForeColor = Color.FromArgb(1, 75, 254);
+                                actionName = Properties.Resources.label_FoodAnalysis;
+                            }
+                            else if (actionName == "Додавання цілі")
+                            {
+                                icon.ForeColor = Color.DeepPink;
+                                actionName = Properties.Resources.label_CreationGoal;
+                            }
+                        }
+
+                        Guna2HtmlToolTip toolTip_History = new Guna2HtmlToolTip()
+                        {
+                            BackColor = Color.FromArgb(14, 15, 40),
+                            BorderColor = Color.FromArgb(70, 67, 83),
+                            ForeColor = Color.FromArgb(253, 235, 250),
+                            InitialDelay = 100,
+                            ReshowDelay = 100,
+                            Font = new Font("Segoe UI", 9),
+                            AutomaticDelay = 500,
+                            AutoPopDelay = 5000
+                        };
+                        toolTip_History.SetToolTip(icon, searchDate.ToString("dd.MM.yyyy (HH:mm)"));
+
+                        Label labelName = new Label
+                        {
+                            Text = actionName,
+                            Font = new Font("Segoe UI", 11.25F),
+                            ForeColor = Color.FromArgb(253, 235, 250),
+                            AutoSize = true,
+                            Location = new Point(34, locName),
+                            Cursor = Cursors.Default
+                        };
+
+                        guna2Panel_miniHistory.Controls.Add(icon);
+                        guna2Panel_miniHistory.Controls.Add(labelName);
+
+                        locIcon += top;
+                        locName += top;
+                        count++;
+                    }
+
+                    if (count == 0)
+                        history.Visible = true;
+                    else
+                        history.Visible = false;
+                }
+                db.closeConnection();
+            }
         }
         private void LoadUserData()
         {
@@ -365,6 +493,8 @@ namespace BonfieFood
             label_GeneralInfo.Text = Properties.Resources.label_GeneralInfo;
             label_TDEE.Text = Properties.Resources.label_TDEE;
             label_History.Text = Properties.Resources.label_History;
+
+            toolTip_Username.SetToolTip(label_username, Properties.Resources.toolTip_Username);
         }
     }
 }

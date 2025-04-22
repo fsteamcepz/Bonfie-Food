@@ -520,4 +520,25 @@
   <data name="dinner" xml:space="preserve">
     <value>Dinner</value>
   </data>
+  <data name="toolTip_Username" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="label_HistoryNotFound" xml:space="preserve">
+    <value>History not found</value>
+  </data>
+  <data name="label_FoodAnalysis" xml:space="preserve">
+    <value>Food Analysis</value>
+  </data>
+  <data name="label_SearchRecipes" xml:space="preserve">
+    <value>Recipe Search</value>
+  </data>
+  <data name="label_SearchProducts" xml:space="preserve">
+    <value>Product Search</value>
+  </data>
+  <data name="label_Chatbot" xml:space="preserve">
+    <value>Chatbot Dialogue</value>
+  </data>
+  <data name="label_CreationGoal" xml:space="preserve">
+    <value>Goal Creation</value>
+  </data>
 </root>

@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace BonfieFood
 {
-    class DataBase
+    public class DataBase
     {
         SqlConnection sqlConnection = new SqlConnection(@"Data Source=Tema\SQLEXPRESS01;Initial Catalog=BonfieFood;Integrated Security=True");
 

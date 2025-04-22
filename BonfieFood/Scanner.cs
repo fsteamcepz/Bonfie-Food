@@ -13,6 +13,7 @@ namespace BonfieFood
 {
     public partial class Scanner : Form
     {
+        DataBase db = new DataBase();
         private bool isBtnClicked = false;
         private string currentPhotoPath;
         private CloudVision cloudVision = new CloudVision();
@@ -110,6 +111,8 @@ namespace BonfieFood
                 uploadedUserPoto.Visible = false;
 
                 ShowPhotoAnalysisResults(dishName, products, totalNutritionInfo);
+
+                ActionHistory.SaveActionHistoryToDB(db, "Аналіз їжі");
             }
             catch (Exception error)
             {
