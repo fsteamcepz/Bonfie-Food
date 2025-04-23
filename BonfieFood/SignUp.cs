@@ -104,6 +104,12 @@ namespace BonfieFood
                 email_register.BorderColor = Color.Red;
                 return;
             }
+            if (CheckEmail(emailUser))
+            {
+                MessageBoxError.Show("Email вже зареєстровано! Введіть будь ласка інший.");
+                email_register.BorderColor = Color.Red;
+                return;
+            }
             email_register.BorderColor = ColorTranslator.FromHtml("#CC6EAA");
 
 
@@ -193,6 +199,22 @@ namespace BonfieFood
             dataBase.closeConnection();
 
             return result > 0; // 1 = якщо користувач існує, 0 = неіснує
+        }
+        private bool CheckEmail(string email)
+        {
+            string querySelect = @"SELECT COUNT(*)
+                                   FROM Users
+                                   WHERE emailUser = @EmailUser";
+
+            using (SqlCommand command = new SqlCommand(querySelect, db.getConnection()))
+            {
+                command.Parameters.AddWithValue("@EmailUser", email);
+                db.openConnection();
+                int result = (int)command.ExecuteScalar();
+                db.closeConnection();
+
+                return result > 0;
+            }
         }
         private void btnShowPass_Click(object sender, EventArgs e)
         {
