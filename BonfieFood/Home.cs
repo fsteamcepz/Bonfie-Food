@@ -34,6 +34,7 @@ namespace BonfieFood
         }
         private void Home_Load(object sender, EventArgs e)
         {
+            UpdateTexts();
             LoadUserImg();
             // створення панелі з межою
             leftBorderBtn = new Panel();
@@ -54,7 +55,6 @@ namespace BonfieFood
             TransparentLabels();
             ConfigureLogOut();
             ConfigureProfileImg();
-            UpdateTexts();
 
             Language.OnLanguageChanged += ChangeLanguage;
         }
@@ -212,7 +212,7 @@ namespace BonfieFood
 
             if (countPeriod > 0)
             {
-                btnAddNutrition.Text = "Edit";
+                btnAddNutrition.Text = Properties.Resources.textEdit;
             }
 
             foreach (string period in caloriesOfPeriodDay.Keys)
@@ -640,7 +640,7 @@ namespace BonfieFood
             lunchLine.Size = new Size(lunLine, lineHeight);
             dinnerLine.Size = new Size(dinLine, lineHeight);
 
-            btnAddNutrition.Text = "Edit";
+            btnAddNutrition.Text = Properties.Resources.textEdit;
         }
         private void SetupButtonColorEffects(IconButton btn)
         {

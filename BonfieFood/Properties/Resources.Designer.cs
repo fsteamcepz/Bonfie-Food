@@ -1152,6 +1152,15 @@ namespace BonfieFood.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        internal static string textEdit {
+            get {
+                return ResourceManager.GetString("textEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Session.
         /// </summary>
         internal static string textSession {

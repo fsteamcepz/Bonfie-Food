@@ -13,7 +13,7 @@ namespace BonfieFood
     {
         private const string HUGGINGFACE_KEY = "Huggingface.json";
         private readonly string apiKey;
-        private const string MODEL = "google/gemma-2-27b-it";
+        private const string MODEL = "HuggingFaceH4/zephyr-7b-beta"; // google/gemma-2-27b-it
         private const string HUGGINGFACE_URL = "https://api-inference.huggingface.co/models/" + MODEL;
 
 
@@ -55,7 +55,7 @@ namespace BonfieFood
                     parameters = new
                     {
                         temperature = 0.7,
-                        max_tokens = 3072,
+                        max_tokens = 2000,
                         top_p = 0.9,
                         return_full_text = false
                     }

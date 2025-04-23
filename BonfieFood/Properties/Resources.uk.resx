@@ -436,4 +436,7 @@
   <data name="label_CreationGoal" xml:space="preserve">
     <value />
   </data>
+  <data name="textEdit" xml:space="preserve">
+    <value>Змінити</value>
+  </data>
 </root>

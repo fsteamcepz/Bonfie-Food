@@ -541,4 +541,7 @@
   <data name="label_CreationGoal" xml:space="preserve">
     <value>Goal Creation</value>
   </data>
+  <data name="textEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
 </root>
