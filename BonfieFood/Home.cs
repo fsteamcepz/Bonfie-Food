@@ -511,7 +511,7 @@ namespace BonfieFood
         {
             ActivateButton(sender, pinkBar);
             CurrentPage(new Scanner());
-            nameOfPage.Text = "Food Analyzer";
+            nameOfPage.Text = "Food Analyser";
             iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
         }
         private void calendarBtn_Click(object sender, EventArgs e)
