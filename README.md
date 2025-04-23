@@ -1,10 +1,14 @@
 # Bonfie Food
 
 # Login
-![login form](https://github.com/fsteamcepz/Bonfie-Food/blob/master/screens/login.jpg?raw=true)
+<p align="center">
+  <img src="https://github.com/fsteamcepz/Bonfie-Food/blob/master/screens/login.jpg?raw=true" alt="login form" />
+</p>
 
 # Main menu
-![main menu](https://github.com/fsteamcepz/Bonfie-Food/blob/master/screens/home_page.jpg?raw=true)
+<p align="center">
+  <img src="https://github.com/fsteamcepz/Bonfie-Food/blob/master/screens/home_page.jpg?raw=true" alt="main menu" />
+</p>
 
 # Food Analysis
 ## Technologies Used
@@ -21,12 +25,17 @@ Edamam provides a comprehensive, ready-to-use food database and nutrition analys
 - **Recipe Licensing**: Over 180,000 full recipes and nutrition data for more than 2.3 million web recipes.
 - **Nutrition Analysis API**: Instantly analyzes the nutrition of any recipe from plain text input.
 
-![photo upload](https://github.com/fsteamcepz/Bonfie-Food/blob/master/screens/analysis_food_1.jpg?raw=true)
-![result](https://github.com/fsteamcepz/Bonfie-Food/blob/master/screens/analysis_food_2.jpg?raw=true)
+<p align="center">
+  <img src="https://github.com/fsteamcepz/Bonfie-Food/blob/master/screens/analysis_food_1.jpg?raw=true" alt="photo upload" />
+  <br/>
+  <img src="https://github.com/fsteamcepz/Bonfie-Food/blob/master/screens/analysis_food_2.jpg?raw=true" alt="result" />
+</p>
 
 # Chatbot
 ## Technologies Used
 ### [Hugging Face API](https://huggingface.co/)
 - The chatbot uses the `HuggingFaceH4/zephyr-7b-beta` model for generating human-like, context-aware responses.
 
-![history with chatbot](https://github.com/fsteamcepz/Bonfie-Food/blob/master/screens/chatbot.jpg?raw=true)
+<p align="center">
+  <img src="https://github.com/fsteamcepz/Bonfie-Food/blob/master/screens/chatbot.jpg?raw=true" alt="history with chatbot" />
+</p>
