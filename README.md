@@ -1,6 +1,6 @@
 # Bonfie Food
 
-# Login
+# Authentication
 <p align="center">
   <img src="https://github.com/fsteamcepz/Bonfie-Food/blob/master/screens/login.jpg?raw=true" alt="login form" />
 </p>
