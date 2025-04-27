@@ -22,7 +22,7 @@ Used for retrieving nutritional information about food products.
 Edamam provides a comprehensive, ready-to-use food database and nutrition analysis service:
 
 - **Food Database API**: Free access to a database with close to 900,000 foods and over 680,000 unique UPC codes.
-- **Recipe Licensing**: Over 180,000 full recipes and nutrition data for more than 2.3 million web recipes.
+- **Recipe Search API**: Over 2.3 million recipes by diets, calories and nutrient ranges.
 - **Nutrition Analysis API**: Instantly analyzes the nutrition of any recipe from plain text input.
 
 <p align="center">
