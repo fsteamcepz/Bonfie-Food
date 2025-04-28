@@ -98,5 +98,5 @@ private string GenerateRandomPassword(int length)
 }
 ```
 <p align="center">
-  <img src="#" alt="forgot password form" />
+  <img src="https://github.com/fsteamcepz/Bonfie-Food/blob/master/screens/reset_password.jpg?raw=true" alt="forgot password form" />
 </p>
