@@ -31,6 +31,12 @@ namespace BonfieFood
         {
             InitializeComponent();
             InitializeTimer();
+
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MinimumSize = new Size(916, 609);
         }
         private void Home_Load(object sender, EventArgs e)
         {
