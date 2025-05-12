@@ -9,13 +9,12 @@ using System.Text;
 
 namespace BonfieFood
 {
-    public class Huggingface
+    public class Huggingface : ApiKeyFileChecker
     {
         private const string HUGGINGFACE_KEY = "Huggingface.json";
         private readonly string apiKey;
         private const string MODEL = "HuggingFaceH4/zephyr-7b-beta"; // google/gemma-2-27b-it
         private const string HUGGINGFACE_URL = "https://api-inference.huggingface.co/models/" + MODEL;
-
 
         public Huggingface()
         {
@@ -29,10 +28,11 @@ namespace BonfieFood
                     MessageBoxError.Show($"API ключ не вказано або некоректний у файлі «{HUGGINGFACE_KEY}».");
                 }
                 apiKey = config.ApiKey;
+                isFileAvailable = true;
             }
             else
             {
-                MessageBoxError.Show($"Файл «{HUGGINGFACE_KEY}» не знайдено.");
+                isFileAvailable = false;
             }
         }
         public async Task<string> GetResponse(string userPrompt)

@@ -313,6 +313,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionHistory.cs" />
+    <Compile Include="ApiKeyFileChecker.cs" />
     <Compile Include="CalculationTheCPFC.cs">
       <SubType>Form</SubType>
     </Compile>

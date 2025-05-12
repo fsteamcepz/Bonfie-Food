@@ -70,6 +70,7 @@ namespace BonfieFood
             messageFromUser.Location = new Point(205, 452);
             btnSend.Image = Properties.Resources.send_active;
             btnSend.Location = new Point(629, 462);
+            btnSend.Size = new Size(15, 15);
             newChat_btn.Visible = false;
 
             // встановлення батьківських елементів

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BonfieFood
 {
-    public class OAuthEmail
+    public class OAuthEmail : ApiKeyFileChecker
     {
         private const string OAUTH2_API = "client_secret_email.json";   // авторизація до OAuth 2.0
         private const string TOKEN_USER = "token.json";                 // токен доступу (уникаємо повторної авторизації)
@@ -55,9 +55,10 @@ namespace BonfieFood
             string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, OAUTH2_API);
             if (!File.Exists(path))
             {
-                MessageBoxError.Show($"Помилка аутентифікації:\nФайл «{OAUTH2_API}» не знайдено!");
+                isFileAvailable = false;
                 return null;
             }
+            isFileAvailable = true;
 
             using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read))
             {

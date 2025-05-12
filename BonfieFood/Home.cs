@@ -27,6 +27,15 @@ namespace BonfieFood
         private int lineHeight = 12;
         private int minWidth = 13;
 
+        // об'єкти класів з API
+        Huggingface _hugg = new Huggingface();
+        CloudVision _cloud = new CloudVision();
+        Clarifai _clarifai = new Clarifai();
+        Edamam_Nutrition _nutrition = new Edamam_Nutrition();
+        Edamam_Products _products = new Edamam_Products();
+        Edamam_Recipe _recipe = new Edamam_Recipe();
+        OAuthEmail _email = new OAuthEmail();
+
         public Home()
         {
             InitializeComponent();
@@ -490,35 +499,60 @@ namespace BonfieFood
         }
         private void recipesBtn_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, pinkBar);
-            iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
-            
-            Recipes recipes = new Recipes();
-            recipes.RecipesUpdated += LoadDataSavedRecipes;
-            CurrentPage(recipes);           
+
+            if (_recipe.isFileAvailable)
+            {
+                ActivateButton(sender, pinkBar);
+                iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
+
+                Recipes recipes = new Recipes();
+                recipes.RecipesUpdated += LoadDataSavedRecipes;
+                CurrentPage(recipes);
+            }
+            else
+            {
+                MessageBoxError.Show($"Функція «Пошук рецептів» недоступна через відсутність API ключів!");
+            }
         }
         private void productsBtn_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, pinkBar);
-            CurrentPage(new Products());
-            iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
+            if (_products.isFileAvailable)
+            {
+                ActivateButton(sender, pinkBar);
+                CurrentPage(new Products());
+                iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
+            }
+            else
+            {
+                MessageBoxError.Show($"Функція «Пошук продуктів» недоступна через відсутність API ключів!");
+            }
         }
         private void chatbotBtn_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, pinkBar);
-            CurrentPage(new Chatbot());
-            iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
-        }
-        private void categoryBtn_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, pinkBar);
+            if (_hugg.isFileAvailable)
+            {
+                ActivateButton(sender, pinkBar);
+                CurrentPage(new Chatbot());
+                iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
+            }
+            else
+            {
+                MessageBoxError.Show($"Функція Chatbot недоступна через відсутність API ключів!");
+            }
         }
         private void scannerBtn_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, pinkBar);
-            CurrentPage(new Scanner());
-            nameOfPage.Text = "Food Analyser";
-            iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
+            if (_cloud.isFileAvailable || _clarifai.isFileAvailable || _products.isFileAvailable)
+            {
+                ActivateButton(sender, pinkBar);
+                CurrentPage(new Scanner());
+                nameOfPage.Text = "Food Analyser";
+                iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
+            }
+            else
+            {
+                MessageBoxError.Show($"Функція «Аналіз їжі» недоступна через відсутність API ключів!");
+            }
         }
         private void calendarBtn_Click(object sender, EventArgs e)
         {
@@ -558,18 +592,25 @@ namespace BonfieFood
         }
         private void btnAddNutrition_Click(object sender, EventArgs e)
         {
-            // isDataNull - псевдонім перевірки
-            bool isDataNull = CheckDailyRate();
-
-            if (!isDataNull)
+            if (_nutrition.isFileAvailable)
             {
-                MessageBoxError.Show("Для того щоб додати харчування, спершу введіть свою інформацію в профілі!");
-                return;
-            }
+                // isDataNull - псевдонім перевірки
+                bool isDataNull = CheckDailyRate();
 
-            Nutrition nut = new Nutrition();
-            nut.OnUpdateCalories += UpdateUserNutrition;
-            nut.ShowDialog();
+                if (!isDataNull)
+                {
+                    MessageBoxError.Show("Для того щоб додати харчування, спершу потрібно розрахувати добову норму калорій в профілі!");
+                    return;
+                }
+
+                Nutrition nut = new Nutrition();
+                nut.OnUpdateCalories += UpdateUserNutrition;
+                nut.ShowDialog();
+            }
+            else
+            {
+                MessageBoxError.Show($"Функція «Харчування» недоступна через відсутність API ключів!");
+            }            
         }
         private void btnViewGoals_Click(object sender, EventArgs e)
         {
@@ -587,18 +628,32 @@ namespace BonfieFood
         }
         private void btnProducts_Click(object sender, EventArgs e)
         {
-            ActivateButton(productsBtn, pinkBar);
-            CurrentPage(new Products());
-            iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
+            if (_hugg.isFileAvailable)
+            {
+                ActivateButton(productsBtn, pinkBar);
+                CurrentPage(new Products());
+                iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
+            }
+            else
+            {
+                MessageBoxError.Show($"Функція «Пошук продуктів» недоступна через відсутність API ключів!");
+            }
         }
         private void btnRecipes_Click(object sender, EventArgs e)
         {
-            ActivateButton(recipesBtn, pinkBar);
-            iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
+            if (_hugg.isFileAvailable)
+            {
+                ActivateButton(recipesBtn, pinkBar);
+                iconOfPage.IconColor = Color.FromArgb(132, 24, 211);
 
-            Recipes recipes = new Recipes();
-            recipes.RecipesUpdated += LoadDataSavedRecipes;
-            CurrentPage(recipes);
+                Recipes recipes = new Recipes();
+                recipes.RecipesUpdated += LoadDataSavedRecipes;
+                CurrentPage(recipes);
+            }
+            else
+            {
+                MessageBoxError.Show($"Функція «Пошук рецептів» недоступна через відсутність API ключів!");
+            }
         }
         private bool CheckDailyRate()
         {

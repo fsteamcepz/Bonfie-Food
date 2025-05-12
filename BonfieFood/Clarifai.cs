@@ -9,7 +9,7 @@ using System.Text;
 
 namespace BonfieFood
 {
-    public class Clarifai
+    public class Clarifai : ApiKeyFileChecker
     {
         private const string FILENAME_CLARIFAI = "Clarifai.json";
         private readonly string apiKey;
@@ -28,10 +28,11 @@ namespace BonfieFood
                 }
 
                 apiKey = config.ApiKey;
+                isFileAvailable = true;
             }
             else
             {
-                MessageBoxError.Show($"Файл «{FILENAME_CLARIFAI}» не знайдено.");
+                isFileAvailable = false;
             }
         }
         public async Task<(string dishName, List<string> products)> AnalyzePhoto(string imagePath)

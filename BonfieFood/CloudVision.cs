@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BonfieFood
 {
-    public class CloudVision
+    public class CloudVision : ApiKeyFileChecker
     {
         private const string CLOUDVISION_API = "client_secret_food_analyzer.json";
         private readonly ImageAnnotatorClient client;
@@ -26,10 +26,11 @@ namespace BonfieFood
                         Credential = credential
                     }.Build();
                 }
+                isFileAvailable = true;
             }
             else
             {
-                MessageBoxError.Show("Помилка аутентифікації. Файл «" + CLOUDVISION_API + "» не знайдено.");
+                isFileAvailable = false;
             }
         }
         public async Task<bool> IsFood(string imagePath)

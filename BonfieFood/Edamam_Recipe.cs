@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BonfieFood
 {
-    public class Edamam_Recipe
+    public class Edamam_Recipe : ApiKeyFileChecker
     {
         private const string FILENAME_EDAMAM = "Edamam_Recipes.json";
         private readonly string idEdamam;
@@ -45,10 +45,11 @@ namespace BonfieFood
                 idEdamam = config.Id;
                 apiKey = config.ApiKey;
                 idUser = config.IdUser;
+                isFileAvailable = true;
             }
             else
             {
-                MessageBoxError.Show($"Файл «{FILENAME_EDAMAM}» не знайдено.");
+                isFileAvailable = false;
             }
         }
 

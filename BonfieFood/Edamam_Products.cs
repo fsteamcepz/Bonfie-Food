@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace BonfieFood
 {
-    public class Edamam_Products
+    public class Edamam_Products : ApiKeyFileChecker
     {
         private const string FILENAME_EDAMAM = "Edamam_Products.json";
         public readonly string idEdamam;
@@ -57,10 +57,11 @@ namespace BonfieFood
                 }
                 idEdamam = config.Id;
                 apiKey = config.ApiKey;
+                isFileAvailable = true;
             }
             else
             {
-                MessageBoxError.Show($"Файл «{FILENAME_EDAMAM}» не знайдено.");
+                isFileAvailable = false;
             }
         }
     }
