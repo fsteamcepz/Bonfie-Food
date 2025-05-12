@@ -521,7 +521,7 @@
     <value>Dinner</value>
   </data>
   <data name="toolTip_Username" xml:space="preserve">
-    <value>User name</value>
+    <value>Username</value>
   </data>
   <data name="label_HistoryNotFound" xml:space="preserve">
     <value>History not found</value>

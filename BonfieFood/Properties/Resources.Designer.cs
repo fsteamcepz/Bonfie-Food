@@ -1314,7 +1314,7 @@ namespace BonfieFood.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to User name.
+        ///   Looks up a localized string similar to Username.
         /// </summary>
         internal static string toolTip_Username {
             get {
