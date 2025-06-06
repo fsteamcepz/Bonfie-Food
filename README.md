@@ -126,5 +126,5 @@ Once BMR and PAL are determined, the TDEE is calculated:
 This value represents the total number of calories needed per day to maintain the user's current body weight.
 
 <p align="center">
-  <img src="https://github.com/fsteamcepz/Bonfie-Food/blob/master/screens/chatbot.jpg?raw=true" alt="Calculation TDEE" />
+  <img src="https://github.com/fsteamcepz/Bonfie-Food/blob/master/screens/Calculation_TDEE.jpg?raw=true" alt="Calculation TDEE" />
 </p>
