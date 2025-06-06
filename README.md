@@ -103,7 +103,7 @@ private string GenerateRandomPassword(int length)
 
 # Calculation TDEE
 The TDEE Calculation feature estimates how many calories a user needs per day to maintain their current weight. It uses the [«Mifflin-St Jeor Equation»](https://nutrium.com/blog/mifflin-st-jeor-for-nutrition-professionals), one of the most accurate formulas for calculating Basal Metabolic Rate (BMR), and adjusts it based on the user’s Physical Activity Level (PAL) to determine Total Daily Energy Expenditure (TDEE).
-## How It Works
+## Algorithm
 ### 1. Basal Metabolic Rate (BMR)
 The BMR represents the number of calories your body needs at rest to perform basic life-sustaining functions.
 - Boys:  
