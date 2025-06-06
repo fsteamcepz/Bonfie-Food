@@ -100,3 +100,31 @@ private string GenerateRandomPassword(int length)
 <p align="center">
   <img src="https://github.com/fsteamcepz/Bonfie-Food/blob/master/screens/reset_password.jpg?raw=true" alt="forgot password form" />
 </p>
+
+# Calculation TDEE
+The TDEE Calculation feature estimates how many calories a user needs per day to maintain their current weight. It uses the [«Mifflin-St Jeor Equation»](https://nutrium.com/blog/mifflin-st-jeor-for-nutrition-professionals), one of the most accurate formulas for calculating Basal Metabolic Rate (BMR), and adjusts it based on the user’s Physical Activity Level (PAL) to determine Total Daily Energy Expenditure (TDEE).
+## How It Works
+### 1. Basal Metabolic Rate (BMR)
+The BMR represents the number of calories your body needs at rest to perform basic life-sustaining functions.
+- Boys:  
+&emsp;&emsp;&emsp;&emsp;`BMR = (10 × weight in kg) + (6.25 × height in cm) − (5 × age) + 5`  
+- Girls:  
+&emsp;&emsp;&emsp;&emsp;`BMR = (10 × weight in kg) + (6.25 × height in cm) − (5 × age) − 161`  
+### 2. Physical Activity Level (PAL)
+The PAL is a multiplier based on how physically active the user is:
+| Activity Level         | Description                                      | PAL Value |
+|------------------------|--------------------------------------------------|-----------|
+| Sedentary              | Little or no exercise                            | 1.2       |
+| Lightly Active         | Light exercise/sports 1–3 days/week              | 1.375     |
+| Moderately Active      | Moderate exercise/sports 3–5 days/week           | 1.55      |
+| Very Active            | Hard exercise/sports 6–7 days/week               | 1.725     |
+| Extra Active           | Very hard exercise, physical job or training 2×/day | 1.9    |
+
+### 3. Total Daily Energy Expenditure (TDEE)
+Once BMR and PAL are determined, the TDEE is calculated:  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`TDEE = BMR × PAL`  
+This value represents the total number of calories needed per day to maintain the user's current body weight.
+
+<p align="center">
+  <img src="https://github.com/fsteamcepz/Bonfie-Food/blob/master/screens/chatbot.jpg?raw=true" alt="Calculation TDEE" />
+</p>
